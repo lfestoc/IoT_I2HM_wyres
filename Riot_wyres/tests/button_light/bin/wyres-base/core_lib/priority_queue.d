@@ -1,6 +1,6 @@
-/home/sarah/github/campusiot/RIOT-wyres/tests/button_light/bin/wyres-base/core_lib/priority_queue.o: \
+/home/sarah/github/IoT_I2HM_wyres/Riot_wyres/tests/button_light/bin/wyres-base/core_lib/priority_queue.o: \
  /home/sarah/github/RIOT-OS/RIOT/core/lib/priority_queue.c \
- /home/sarah/github/campusiot/RIOT-wyres/tests/button_light/bin/wyres-base/riotbuild/riotbuild.h \
+ /home/sarah/github/IoT_I2HM_wyres/Riot_wyres/tests/button_light/bin/wyres-base/riotbuild/riotbuild.h \
  /usr/include/newlib/inttypes.h /usr/include/newlib/nano/newlib.h \
  /usr/include/newlib/_newlib_version.h /usr/include/newlib/sys/config.h \
  /usr/include/newlib/machine/ieeefp.h /usr/include/newlib/sys/features.h \
@@ -50,7 +50,7 @@
  /home/sarah/github/RIOT-OS/RIOT/sys/include/architecture.h \
  /home/sarah/github/RIOT-OS/RIOT/cpu/cortexm_common/include/architecture_arch.h
 
-/home/sarah/github/campusiot/RIOT-wyres/tests/button_light/bin/wyres-base/riotbuild/riotbuild.h:
+/home/sarah/github/IoT_I2HM_wyres/Riot_wyres/tests/button_light/bin/wyres-base/riotbuild/riotbuild.h:
 
 /usr/include/newlib/inttypes.h:
 

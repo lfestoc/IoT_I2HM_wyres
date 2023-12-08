@@ -57,14 +57,27 @@ int main(void)
 
 		btn_state = gpio_read(BTN1_PIN);
 
-		if(btn_state && sample > 0){
+		if(btn_state && sample < 500){
 			printf("Button 1 has been pressed!\r\n");
             printf("ADC_LINE(%u): raw value: %.4i, percent: %.2d %% \r\n", ADC_IN_USE, sample, sample*100/4096);
-            printf("\n%d\n", sample);
+			LED_RED_OFF;
             LED_GREEN_ON;
-		}else{
+		}else if (sample > 500){
+			printf("ADC_LINE(%u): raw value: %.4i, percent: %.2d %% \r\n", ADC_IN_USE, sample, sample*100/4096);
+			
+			LED_GREEN_OFF;
+            LED_RED_ON;
+		}
+		else{
 			printf("Button 1 has been released!\r\n");
-            LED_GREEN_OFF;
+			LED_GREEN_ON;
+			xtimer_sleep(1);
+			LED_RED_OFF;
+			xtimer_sleep(1);
+			LED_RED_OFF;
+			xtimer_sleep(1);
+			LED_GREEN_OFF;
+			xtimer_sleep(1);
 		}
 
         

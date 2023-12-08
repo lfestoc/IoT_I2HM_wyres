@@ -1,6 +1,6 @@
-/home/sarah/github/campusiot/RIOT-wyres/tests/button_light/bin/wyres-base/application_button_light/button_light.o: \
- /home/sarah/github/campusiot/RIOT-wyres/tests/button_light/button_light.c \
- /home/sarah/github/campusiot/RIOT-wyres/tests/button_light/bin/wyres-base/riotbuild/riotbuild.h \
+/home/sarah/github/IoT_I2HM_wyres/Riot_wyres/tests/button_light/bin/wyres-base/application_button_light/button_light.o: \
+ /home/sarah/github/IoT_I2HM_wyres/Riot_wyres/tests/button_light/button_light.c \
+ /home/sarah/github/IoT_I2HM_wyres/Riot_wyres/tests/button_light/bin/wyres-base/riotbuild/riotbuild.h \
  /home/sarah/github/RIOT-OS/RIOT/sys/include/xtimer.h \
  /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdbool.h \
  /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdint.h \
@@ -47,7 +47,7 @@
  /home/sarah/github/RIOT-OS/RIOT/cpu/cortexm_common/include/thread_arch.h \
  /home/sarah/github/RIOT-OS/RIOT/core/lib/include/rmutex.h \
  /home/sarah/github/RIOT-OS/RIOT/sys/include/ztimer/xtimer_compat.h \
- /home/sarah/github/campusiot/RIOT-wyres/boards/wyres-base/include/board.h \
+ /home/sarah/github/IoT_I2HM_wyres/Riot_wyres/boards/wyres-base/include/board.h \
  /home/sarah/github/RIOT-OS/RIOT/cpu/cortexm_common/include/cpu.h \
  /usr/include/newlib/stdio.h /usr/include/newlib/sys/cdefs.h \
  /usr/include/newlib/machine/_default_types.h \
@@ -62,7 +62,7 @@
  /home/sarah/github/RIOT-OS/RIOT/cpu/cortexm_common/include/irq_arch.h \
  /home/sarah/github/RIOT-OS/RIOT/sys/include/debug_irq_disable.h \
  /home/sarah/github/RIOT-OS/RIOT/core/include/thread.h \
- /home/sarah/github/campusiot/RIOT-wyres/boards/wyres-base/include/periph_conf.h \
+ /home/sarah/github/IoT_I2HM_wyres/Riot_wyres/boards/wyres-base/include/periph_conf.h \
  /home/sarah/github/RIOT-OS/RIOT/cpu/stm32/include/periph_cpu.h \
  /usr/lib/gcc/arm-none-eabi/9.2.1/include-fixed/limits.h \
  /home/sarah/github/RIOT-OS/RIOT/core/lib/include/macros/units.h \
@@ -95,10 +95,10 @@
  /home/sarah/github/RIOT-OS/RIOT/cpu/stm32/include/clk/l0l1/cfg_clock_default.h \
  /home/sarah/github/RIOT-OS/RIOT/sys/include/ztimer.h \
  /home/sarah/github/RIOT-OS/RIOT/drivers/include/periph/adc.h \
- /home/sarah/github/campusiot/RIOT-wyres/boards/wyres-base/include/periph_conf.h \
+ /home/sarah/github/IoT_I2HM_wyres/Riot_wyres/boards/wyres-base/include/periph_conf.h \
  /home/sarah/github/RIOT-OS/RIOT/drivers/include/periph/gpio.h
 
-/home/sarah/github/campusiot/RIOT-wyres/tests/button_light/bin/wyres-base/riotbuild/riotbuild.h:
+/home/sarah/github/IoT_I2HM_wyres/Riot_wyres/tests/button_light/bin/wyres-base/riotbuild/riotbuild.h:
 
 /home/sarah/github/RIOT-OS/RIOT/sys/include/xtimer.h:
 
@@ -200,7 +200,7 @@
 
 /home/sarah/github/RIOT-OS/RIOT/sys/include/ztimer/xtimer_compat.h:
 
-/home/sarah/github/campusiot/RIOT-wyres/boards/wyres-base/include/board.h:
+/home/sarah/github/IoT_I2HM_wyres/Riot_wyres/boards/wyres-base/include/board.h:
 
 /home/sarah/github/RIOT-OS/RIOT/cpu/cortexm_common/include/cpu.h:
 
@@ -240,7 +240,7 @@
 
 /home/sarah/github/RIOT-OS/RIOT/core/include/thread.h:
 
-/home/sarah/github/campusiot/RIOT-wyres/boards/wyres-base/include/periph_conf.h:
+/home/sarah/github/IoT_I2HM_wyres/Riot_wyres/boards/wyres-base/include/periph_conf.h:
 
 /home/sarah/github/RIOT-OS/RIOT/cpu/stm32/include/periph_cpu.h:
 
@@ -306,6 +306,6 @@
 
 /home/sarah/github/RIOT-OS/RIOT/drivers/include/periph/adc.h:
 
-/home/sarah/github/campusiot/RIOT-wyres/boards/wyres-base/include/periph_conf.h:
+/home/sarah/github/IoT_I2HM_wyres/Riot_wyres/boards/wyres-base/include/periph_conf.h:
 
 /home/sarah/github/RIOT-OS/RIOT/drivers/include/periph/gpio.h:

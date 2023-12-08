@@ -1,6 +1,6 @@
-/home/sarah/github/campusiot/RIOT-wyres/tests/button_light/bin/wyres-base/libc/string.o: \
+/home/sarah/github/IoT_I2HM_wyres/Riot_wyres/tests/button_light/bin/wyres-base/libc/string.o: \
  /home/sarah/github/RIOT-OS/RIOT/sys/libc/string.c \
- /home/sarah/github/campusiot/RIOT-wyres/tests/button_light/bin/wyres-base/riotbuild/riotbuild.h \
+ /home/sarah/github/IoT_I2HM_wyres/Riot_wyres/tests/button_light/bin/wyres-base/riotbuild/riotbuild.h \
  /usr/include/newlib/errno.h /usr/include/newlib/sys/errno.h \
  /usr/include/newlib/sys/reent.h /usr/include/newlib/_ansi.h \
  /usr/include/newlib/nano/newlib.h /usr/include/newlib/_newlib_version.h \
@@ -21,7 +21,7 @@
  /usr/include/newlib/machine/types.h \
  /home/sarah/github/RIOT-OS/RIOT/core/lib/include/modules.h
 
-/home/sarah/github/campusiot/RIOT-wyres/tests/button_light/bin/wyres-base/riotbuild/riotbuild.h:
+/home/sarah/github/IoT_I2HM_wyres/Riot_wyres/tests/button_light/bin/wyres-base/riotbuild/riotbuild.h:
 
 /usr/include/newlib/errno.h:
 

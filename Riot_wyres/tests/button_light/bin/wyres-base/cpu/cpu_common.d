@@ -1,7 +1,7 @@
-/home/sarah/github/campusiot/RIOT-wyres/tests/button_light/bin/wyres-base/cpu/cpu_common.o: \
+/home/sarah/github/IoT_I2HM_wyres/Riot_wyres/tests/button_light/bin/wyres-base/cpu/cpu_common.o: \
  /home/sarah/github/RIOT-OS/RIOT/cpu/stm32/cpu_common.c \
- /home/sarah/github/campusiot/RIOT-wyres/tests/button_light/bin/wyres-base/riotbuild/riotbuild.h \
- /home/sarah/github/campusiot/RIOT-wyres/boards/wyres-base/include/periph_conf.h \
+ /home/sarah/github/IoT_I2HM_wyres/Riot_wyres/tests/button_light/bin/wyres-base/riotbuild/riotbuild.h \
+ /home/sarah/github/IoT_I2HM_wyres/Riot_wyres/boards/wyres-base/include/periph_conf.h \
  /home/sarah/github/RIOT-OS/RIOT/cpu/stm32/include/periph_cpu.h \
  /usr/lib/gcc/arm-none-eabi/9.2.1/include-fixed/limits.h \
  /home/sarah/github/RIOT-OS/RIOT/cpu/cortexm_common/include/cpu.h \
@@ -85,9 +85,9 @@
  /home/sarah/github/RIOT-OS/RIOT/sys/include/architecture.h \
  /home/sarah/github/RIOT-OS/RIOT/cpu/cortexm_common/include/architecture_arch.h
 
-/home/sarah/github/campusiot/RIOT-wyres/tests/button_light/bin/wyres-base/riotbuild/riotbuild.h:
+/home/sarah/github/IoT_I2HM_wyres/Riot_wyres/tests/button_light/bin/wyres-base/riotbuild/riotbuild.h:
 
-/home/sarah/github/campusiot/RIOT-wyres/boards/wyres-base/include/periph_conf.h:
+/home/sarah/github/IoT_I2HM_wyres/Riot_wyres/boards/wyres-base/include/periph_conf.h:
 
 /home/sarah/github/RIOT-OS/RIOT/cpu/stm32/include/periph_cpu.h:
 

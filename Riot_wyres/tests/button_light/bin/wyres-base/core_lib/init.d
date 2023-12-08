@@ -1,6 +1,6 @@
-/home/sarah/github/campusiot/RIOT-wyres/tests/button_light/bin/wyres-base/core_lib/init.o: \
+/home/sarah/github/IoT_I2HM_wyres/Riot_wyres/tests/button_light/bin/wyres-base/core_lib/init.o: \
  /home/sarah/github/RIOT-OS/RIOT/core/lib/init.c \
- /home/sarah/github/campusiot/RIOT-wyres/tests/button_light/bin/wyres-base/riotbuild/riotbuild.h \
+ /home/sarah/github/IoT_I2HM_wyres/Riot_wyres/tests/button_light/bin/wyres-base/riotbuild/riotbuild.h \
  /usr/include/newlib/errno.h /usr/include/newlib/sys/errno.h \
  /usr/include/newlib/sys/reent.h /usr/include/newlib/_ansi.h \
  /usr/include/newlib/nano/newlib.h /usr/include/newlib/_newlib_version.h \
@@ -92,7 +92,7 @@
  /home/sarah/github/RIOT-OS/RIOT/core/lib/include/debug.h \
  /home/sarah/github/RIOT-OS/RIOT/sys/include/architecture.h
 
-/home/sarah/github/campusiot/RIOT-wyres/tests/button_light/bin/wyres-base/riotbuild/riotbuild.h:
+/home/sarah/github/IoT_I2HM_wyres/Riot_wyres/tests/button_light/bin/wyres-base/riotbuild/riotbuild.h:
 
 /usr/include/newlib/errno.h:
 

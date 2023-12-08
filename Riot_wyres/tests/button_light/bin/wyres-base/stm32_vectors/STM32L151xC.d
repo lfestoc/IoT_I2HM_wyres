@@ -1,6 +1,6 @@
-/home/sarah/github/campusiot/RIOT-wyres/tests/button_light/bin/wyres-base/stm32_vectors/STM32L151xC.o: \
+/home/sarah/github/IoT_I2HM_wyres/Riot_wyres/tests/button_light/bin/wyres-base/stm32_vectors/STM32L151xC.o: \
  /home/sarah/github/RIOT-OS/RIOT/cpu/stm32/vectors/STM32L151xC.c \
- /home/sarah/github/campusiot/RIOT-wyres/tests/button_light/bin/wyres-base/riotbuild/riotbuild.h \
+ /home/sarah/github/IoT_I2HM_wyres/Riot_wyres/tests/button_light/bin/wyres-base/riotbuild/riotbuild.h \
  /home/sarah/github/RIOT-OS/RIOT/cpu/cortexm_common/include/vectors_cortexm.h \
  /home/sarah/github/RIOT-OS/RIOT/cpu/stm32/include/cpu_conf.h \
  /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdint.h \
@@ -15,7 +15,7 @@
  /home/sarah/github/RIOT-OS/RIOT/build/stm32/cmsis/l1/Include/system_stm32l1xx.h \
  /home/sarah/github/RIOT-OS/RIOT/cpu/stm32/include/irqs/l1/irqs.h
 
-/home/sarah/github/campusiot/RIOT-wyres/tests/button_light/bin/wyres-base/riotbuild/riotbuild.h:
+/home/sarah/github/IoT_I2HM_wyres/Riot_wyres/tests/button_light/bin/wyres-base/riotbuild/riotbuild.h:
 
 /home/sarah/github/RIOT-OS/RIOT/cpu/cortexm_common/include/vectors_cortexm.h:
 

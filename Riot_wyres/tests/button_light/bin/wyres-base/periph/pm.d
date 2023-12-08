@@ -1,6 +1,6 @@
-/home/sarah/github/campusiot/RIOT-wyres/tests/button_light/bin/wyres-base/periph/pm.o: \
+/home/sarah/github/IoT_I2HM_wyres/Riot_wyres/tests/button_light/bin/wyres-base/periph/pm.o: \
  /home/sarah/github/RIOT-OS/RIOT/cpu/stm32/periph/pm.c \
- /home/sarah/github/campusiot/RIOT-wyres/tests/button_light/bin/wyres-base/riotbuild/riotbuild.h \
+ /home/sarah/github/IoT_I2HM_wyres/Riot_wyres/tests/button_light/bin/wyres-base/riotbuild/riotbuild.h \
  /home/sarah/github/RIOT-OS/RIOT/core/lib/include/irq.h \
  /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdbool.h \
  /home/sarah/github/RIOT-OS/RIOT/cpu/stm32/include/cpu_conf.h \
@@ -86,7 +86,7 @@
  /home/sarah/github/RIOT-OS/RIOT/core/lib/include/debug.h \
  /home/sarah/github/RIOT-OS/RIOT/sys/include/architecture.h
 
-/home/sarah/github/campusiot/RIOT-wyres/tests/button_light/bin/wyres-base/riotbuild/riotbuild.h:
+/home/sarah/github/IoT_I2HM_wyres/Riot_wyres/tests/button_light/bin/wyres-base/riotbuild/riotbuild.h:
 
 /home/sarah/github/RIOT-OS/RIOT/core/lib/include/irq.h:
 

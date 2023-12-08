@@ -1,6 +1,6 @@
-/home/sarah/github/campusiot/RIOT-wyres/tests/button_light/bin/wyres-base/auto_init/auto_init.o: \
+/home/sarah/github/IoT_I2HM_wyres/Riot_wyres/tests/button_light/bin/wyres-base/auto_init/auto_init.o: \
  /home/sarah/github/RIOT-OS/RIOT/sys/auto_init/auto_init.c \
- /home/sarah/github/campusiot/RIOT-wyres/tests/button_light/bin/wyres-base/riotbuild/riotbuild.h \
+ /home/sarah/github/IoT_I2HM_wyres/Riot_wyres/tests/button_light/bin/wyres-base/riotbuild/riotbuild.h \
  /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdint.h \
  /usr/include/newlib/stdio.h /usr/include/newlib/_ansi.h \
  /usr/include/newlib/nano/newlib.h /usr/include/newlib/_newlib_version.h \
@@ -32,7 +32,7 @@
  /home/sarah/github/RIOT-OS/RIOT/core/lib/include/xfa.h \
  /home/sarah/github/RIOT-OS/RIOT/core/lib/include/macros/xtstr.h \
  /home/sarah/github/RIOT-OS/RIOT/core/lib/include/modules.h \
- /home/sarah/github/campusiot/RIOT-wyres/tests/button_light/bin/wyres-base/preprocessor/preprocessor_successor.h \
+ /home/sarah/github/IoT_I2HM_wyres/Riot_wyres/tests/button_light/bin/wyres-base/preprocessor/preprocessor_successor.h \
  /home/sarah/github/RIOT-OS/RIOT/sys/auto_init/include/auto_init_priorities.h \
  /home/sarah/github/RIOT-OS/RIOT/core/lib/include/debug.h \
  /home/sarah/github/RIOT-OS/RIOT/core/include/thread.h \
@@ -56,7 +56,7 @@
  /home/sarah/github/RIOT-OS/RIOT/sys/include/architecture.h \
  /home/sarah/github/RIOT-OS/RIOT/cpu/cortexm_common/include/architecture_arch.h
 
-/home/sarah/github/campusiot/RIOT-wyres/tests/button_light/bin/wyres-base/riotbuild/riotbuild.h:
+/home/sarah/github/IoT_I2HM_wyres/Riot_wyres/tests/button_light/bin/wyres-base/riotbuild/riotbuild.h:
 
 /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdint.h:
 
@@ -138,7 +138,7 @@
 
 /home/sarah/github/RIOT-OS/RIOT/core/lib/include/modules.h:
 
-/home/sarah/github/campusiot/RIOT-wyres/tests/button_light/bin/wyres-base/preprocessor/preprocessor_successor.h:
+/home/sarah/github/IoT_I2HM_wyres/Riot_wyres/tests/button_light/bin/wyres-base/preprocessor/preprocessor_successor.h:
 
 /home/sarah/github/RIOT-OS/RIOT/sys/auto_init/include/auto_init_priorities.h:
 

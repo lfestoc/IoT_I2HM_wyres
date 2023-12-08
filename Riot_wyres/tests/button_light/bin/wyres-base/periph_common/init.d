@@ -1,6 +1,6 @@
-/home/sarah/github/campusiot/RIOT-wyres/tests/button_light/bin/wyres-base/periph_common/init.o: \
+/home/sarah/github/IoT_I2HM_wyres/Riot_wyres/tests/button_light/bin/wyres-base/periph_common/init.o: \
  /home/sarah/github/RIOT-OS/RIOT/drivers/periph_common/init.c \
- /home/sarah/github/campusiot/RIOT-wyres/tests/button_light/bin/wyres-base/riotbuild/riotbuild.h \
+ /home/sarah/github/IoT_I2HM_wyres/Riot_wyres/tests/button_light/bin/wyres-base/riotbuild/riotbuild.h \
  /home/sarah/github/RIOT-OS/RIOT/core/lib/include/kernel_defines.h \
  /home/sarah/github/RIOT-OS/RIOT/core/lib/include/modules.h \
  /home/sarah/github/RIOT-OS/RIOT/core/lib/include/riot_version.h \
@@ -9,7 +9,7 @@
  /home/sarah/github/RIOT-OS/RIOT/core/lib/include/assert.h \
  /home/sarah/github/RIOT-OS/RIOT/core/lib/include/container.h \
  /usr/lib/gcc/arm-none-eabi/9.2.1/include/stddef.h \
- /home/sarah/github/campusiot/RIOT-wyres/boards/wyres-base/include/periph_conf.h \
+ /home/sarah/github/IoT_I2HM_wyres/Riot_wyres/boards/wyres-base/include/periph_conf.h \
  /home/sarah/github/RIOT-OS/RIOT/cpu/stm32/include/periph_cpu.h \
  /usr/lib/gcc/arm-none-eabi/9.2.1/include-fixed/limits.h \
  /home/sarah/github/RIOT-OS/RIOT/cpu/cortexm_common/include/cpu.h \
@@ -82,7 +82,7 @@
  /home/sarah/github/RIOT-OS/RIOT/cpu/stm32/include/clk/cfg_clock_common_lx_u5_wx.h \
  /home/sarah/github/RIOT-OS/RIOT/cpu/stm32/include/clk/l0l1/cfg_clock_default.h
 
-/home/sarah/github/campusiot/RIOT-wyres/tests/button_light/bin/wyres-base/riotbuild/riotbuild.h:
+/home/sarah/github/IoT_I2HM_wyres/Riot_wyres/tests/button_light/bin/wyres-base/riotbuild/riotbuild.h:
 
 /home/sarah/github/RIOT-OS/RIOT/core/lib/include/kernel_defines.h:
 
@@ -100,7 +100,7 @@
 
 /usr/lib/gcc/arm-none-eabi/9.2.1/include/stddef.h:
 
-/home/sarah/github/campusiot/RIOT-wyres/boards/wyres-base/include/periph_conf.h:
+/home/sarah/github/IoT_I2HM_wyres/Riot_wyres/boards/wyres-base/include/periph_conf.h:
 
 /home/sarah/github/RIOT-OS/RIOT/cpu/stm32/include/periph_cpu.h:
 

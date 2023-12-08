@@ -1,6 +1,6 @@
-/home/sarah/github/campusiot/RIOT-wyres/tests/button_light/bin/wyres-base/cortexm_common/vectors_cortexm.o: \
+/home/sarah/github/IoT_I2HM_wyres/Riot_wyres/tests/button_light/bin/wyres-base/cortexm_common/vectors_cortexm.o: \
  /home/sarah/github/RIOT-OS/RIOT/cpu/cortexm_common/vectors_cortexm.c \
- /home/sarah/github/campusiot/RIOT-wyres/tests/button_light/bin/wyres-base/riotbuild/riotbuild.h \
+ /home/sarah/github/IoT_I2HM_wyres/Riot_wyres/tests/button_light/bin/wyres-base/riotbuild/riotbuild.h \
  /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdint.h \
  /usr/include/newlib/stdio.h /usr/include/newlib/_ansi.h \
  /usr/include/newlib/nano/newlib.h /usr/include/newlib/_newlib_version.h \
@@ -78,8 +78,8 @@
  /home/sarah/github/RIOT-OS/RIOT/sys/include/time_units.h \
  /home/sarah/github/RIOT-OS/RIOT/cpu/stm32/include/periph/cpu_common.h \
  /home/sarah/github/RIOT-OS/RIOT/core/lib/include/kernel_init.h \
- /home/sarah/github/campusiot/RIOT-wyres/boards/wyres-base/include/board.h \
- /home/sarah/github/campusiot/RIOT-wyres/boards/wyres-base/include/periph_conf.h \
+ /home/sarah/github/IoT_I2HM_wyres/Riot_wyres/boards/wyres-base/include/board.h \
+ /home/sarah/github/IoT_I2HM_wyres/Riot_wyres/boards/wyres-base/include/periph_conf.h \
  /home/sarah/github/RIOT-OS/RIOT/cpu/stm32/include/clk/clk_conf.h \
  /home/sarah/github/RIOT-OS/RIOT/cpu/stm32/include/clk/cfg_clock_common_lx_u5_wx.h \
  /home/sarah/github/RIOT-OS/RIOT/cpu/stm32/include/clk/l0l1/cfg_clock_default.h \
@@ -88,7 +88,7 @@
  /home/sarah/github/RIOT-OS/RIOT/core/lib/include/kernel_defines.h \
  /home/sarah/github/RIOT-OS/RIOT/cpu/cortexm_common/include/vectors_cortexm.h
 
-/home/sarah/github/campusiot/RIOT-wyres/tests/button_light/bin/wyres-base/riotbuild/riotbuild.h:
+/home/sarah/github/IoT_I2HM_wyres/Riot_wyres/tests/button_light/bin/wyres-base/riotbuild/riotbuild.h:
 
 /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdint.h:
 
@@ -262,9 +262,9 @@
 
 /home/sarah/github/RIOT-OS/RIOT/core/lib/include/kernel_init.h:
 
-/home/sarah/github/campusiot/RIOT-wyres/boards/wyres-base/include/board.h:
+/home/sarah/github/IoT_I2HM_wyres/Riot_wyres/boards/wyres-base/include/board.h:
 
-/home/sarah/github/campusiot/RIOT-wyres/boards/wyres-base/include/periph_conf.h:
+/home/sarah/github/IoT_I2HM_wyres/Riot_wyres/boards/wyres-base/include/periph_conf.h:
 
 /home/sarah/github/RIOT-OS/RIOT/cpu/stm32/include/clk/clk_conf.h:
 

@@ -1,6 +1,6 @@
-/Users/leof/Documents/GitHub/IoT/campusiot/RIOT-wyres/tests/shell/bin/wyres-base/shell_cmds/rtc.o: \
+/Users/leof/Documents/GitHub/IoT/IoT_I2HM_wyres/Riot_wyres/tests/shell/bin/wyres-base/shell_cmds/rtc.o: \
  /Users/leof/Documents/GitHub/IoT/RIOT-OS/RIOT/sys/shell/cmds/rtc.c \
- /Users/leof/Documents/GitHub/IoT/campusiot/RIOT-wyres/tests/shell/bin/wyres-base/riotbuild/riotbuild.h \
+ /Users/leof/Documents/GitHub/IoT/IoT_I2HM_wyres/Riot_wyres/tests/shell/bin/wyres-base/riotbuild/riotbuild.h \
  /usr/local/Cellar/gcc-arm-none-eabi-80/20181220/arm-none-eabi/include/stdio.h \
  /usr/local/Cellar/gcc-arm-none-eabi-80/20181220/arm-none-eabi/include/_ansi.h \
  /usr/local/Cellar/gcc-arm-none-eabi-80/20181220/arm-none-eabi/include/newlib-nano/newlib.h \
@@ -37,7 +37,7 @@
  /usr/local/Cellar/gcc-arm-none-eabi-80/20181220/arm-none-eabi/include/sys/timespec.h \
  /usr/local/Cellar/gcc-arm-none-eabi-80/20181220/arm-none-eabi/include/sys/_timespec.h \
  /Users/leof/Documents/GitHub/IoT/RIOT-OS/RIOT/sys/include/rtc_utils.h \
- /Users/leof/Documents/GitHub/IoT/campusiot/RIOT-wyres/boards/wyres-base/include/periph_conf.h \
+ /Users/leof/Documents/GitHub/IoT/IoT_I2HM_wyres/Riot_wyres/boards/wyres-base/include/periph_conf.h \
  /Users/leof/Documents/GitHub/IoT/RIOT-OS/RIOT/cpu/stm32/include/periph_cpu.h \
  /usr/local/Cellar/gcc-arm-none-eabi-80/20181220/lib/gcc/arm-none-eabi/8.2.1/include-fixed/limits.h \
  /usr/local/Cellar/gcc-arm-none-eabi-80/20181220/lib/gcc/arm-none-eabi/8.2.1/include-fixed/syslimits.h \
@@ -114,7 +114,7 @@
  /Users/leof/Documents/GitHub/IoT/RIOT-OS/RIOT/core/lib/include/xfa.h \
  /Users/leof/Documents/GitHub/IoT/RIOT-OS/RIOT/sys/include/flash_utils.h
 
-/Users/leof/Documents/GitHub/IoT/campusiot/RIOT-wyres/tests/shell/bin/wyres-base/riotbuild/riotbuild.h:
+/Users/leof/Documents/GitHub/IoT/IoT_I2HM_wyres/Riot_wyres/tests/shell/bin/wyres-base/riotbuild/riotbuild.h:
 
 /usr/local/Cellar/gcc-arm-none-eabi-80/20181220/arm-none-eabi/include/stdio.h:
 
@@ -188,7 +188,7 @@
 
 /Users/leof/Documents/GitHub/IoT/RIOT-OS/RIOT/sys/include/rtc_utils.h:
 
-/Users/leof/Documents/GitHub/IoT/campusiot/RIOT-wyres/boards/wyres-base/include/periph_conf.h:
+/Users/leof/Documents/GitHub/IoT/IoT_I2HM_wyres/Riot_wyres/boards/wyres-base/include/periph_conf.h:
 
 /Users/leof/Documents/GitHub/IoT/RIOT-OS/RIOT/cpu/stm32/include/periph_cpu.h:
 

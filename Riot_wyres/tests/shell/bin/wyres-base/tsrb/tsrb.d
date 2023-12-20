@@ -1,6 +1,6 @@
-/Users/leof/Documents/GitHub/IoT/campusiot/RIOT-wyres/tests/shell/bin/wyres-base/tsrb/tsrb.o: \
+/Users/leof/Documents/GitHub/IoT/IoT_I2HM_wyres/Riot_wyres/tests/shell/bin/wyres-base/tsrb/tsrb.o: \
  /Users/leof/Documents/GitHub/IoT/RIOT-OS/RIOT/sys/tsrb/tsrb.c \
- /Users/leof/Documents/GitHub/IoT/campusiot/RIOT-wyres/tests/shell/bin/wyres-base/riotbuild/riotbuild.h \
+ /Users/leof/Documents/GitHub/IoT/IoT_I2HM_wyres/Riot_wyres/tests/shell/bin/wyres-base/riotbuild/riotbuild.h \
  /Users/leof/Documents/GitHub/IoT/RIOT-OS/RIOT/core/lib/include/irq.h \
  /usr/local/Cellar/gcc-arm-none-eabi-80/20181220/lib/gcc/arm-none-eabi/8.2.1/include/stdbool.h \
  /Users/leof/Documents/GitHub/IoT/RIOT-OS/RIOT/cpu/stm32/include/cpu_conf.h \
@@ -32,7 +32,7 @@
  /Users/leof/Documents/GitHub/IoT/RIOT-OS/RIOT/sys/include/debug_irq_disable.h \
  /Users/leof/Documents/GitHub/IoT/RIOT-OS/RIOT/sys/include/tsrb.h
 
-/Users/leof/Documents/GitHub/IoT/campusiot/RIOT-wyres/tests/shell/bin/wyres-base/riotbuild/riotbuild.h:
+/Users/leof/Documents/GitHub/IoT/IoT_I2HM_wyres/Riot_wyres/tests/shell/bin/wyres-base/riotbuild/riotbuild.h:
 
 /Users/leof/Documents/GitHub/IoT/RIOT-OS/RIOT/core/lib/include/irq.h:
 

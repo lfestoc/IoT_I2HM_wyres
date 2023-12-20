@@ -1,8 +1,8 @@
 loramac help
 
-loramac set deveui 38b8ebe00000f003
+loramac set deveui CAFEBABEc6b0daf7
 loramac set appeui 0000000000000000
-loramac set appkey 00112233445566778899AABBCCDDEEFF
+loramac set appkey d69093718baa94739388fa5b586678b2
 loramac save
 
 loramac set adr on

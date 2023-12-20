@@ -9,7 +9,7 @@
 static semtech_loramac_t loramac;
 
 const uint8_t deveui[8] = {0xCA, 0xFE, 0xBA, 0xBE, 0xC6, 0xB0, 0xDA, 0xF7};
-const uint8_t appeui[8] = {0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00};
+const uint8_t appeui[12] = {0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00};
 const uint8_t appkey[16] = {0xD6, 0x90, 0x93, 0x71, 0x8B, 0xAA, 0x94, 0x73, 0x93, 0x88, 0xFA, 0x5B, 0x58, 0x66, 0x78, 0xB2};
 
 static char stack[THREAD_STACKSIZE_DEFAULT];
@@ -53,10 +53,11 @@ int main(void)
     semtech_loramac_set_appeui(&loramac, appeui);
     semtech_loramac_set_appkey(&loramac, appkey);
     semtech_loramac_set_dr(&loramac, 5);
-    semtech_loramac_set_tx_power(&loramac, 14);
+    semtech_loramac_set_tx_power(&loramac, 20);
 
     // Démarrer le thread d'envoi
     thread_create(stack, sizeof(stack), THREAD_PRIORITY_MAIN - 1, 0, send_thread, NULL, "send_thread");
+    puts("Message envoyé !");
 
     // Attendre indéfiniment
     while (1) {

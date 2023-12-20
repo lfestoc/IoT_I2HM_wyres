@@ -1,83 +1,56 @@
-/Users/leof/Documents/GitHub/IoT/campusiot/RIOT-wyres/tests/button/bin/wyres-base/div/div.o: \
- /Users/leof/Documents/GitHub/IoT/RIOT-OS/RIOT/sys/div/div.c \
- /Users/leof/Documents/GitHub/IoT/campusiot/RIOT-wyres/tests/button/bin/wyres-base/riotbuild/riotbuild.h \
- /usr/local/Cellar/gcc-arm-none-eabi-80/20181220/lib/gcc/arm-none-eabi/8.2.1/include/stdint.h \
- /usr/local/Cellar/gcc-arm-none-eabi-80/20181220/arm-none-eabi/include/stdint.h \
- /usr/local/Cellar/gcc-arm-none-eabi-80/20181220/arm-none-eabi/include/machine/_default_types.h \
- /usr/local/Cellar/gcc-arm-none-eabi-80/20181220/arm-none-eabi/include/sys/features.h \
- /usr/local/Cellar/gcc-arm-none-eabi-80/20181220/arm-none-eabi/include/_newlib_version.h \
- /usr/local/Cellar/gcc-arm-none-eabi-80/20181220/arm-none-eabi/include/sys/_intsup.h \
- /usr/local/Cellar/gcc-arm-none-eabi-80/20181220/arm-none-eabi/include/sys/_stdint.h \
- /usr/local/Cellar/gcc-arm-none-eabi-80/20181220/arm-none-eabi/include/stdio.h \
- /usr/local/Cellar/gcc-arm-none-eabi-80/20181220/arm-none-eabi/include/_ansi.h \
- /usr/local/Cellar/gcc-arm-none-eabi-80/20181220/arm-none-eabi/include/newlib-nano/newlib.h \
- /usr/local/Cellar/gcc-arm-none-eabi-80/20181220/arm-none-eabi/include/sys/config.h \
- /usr/local/Cellar/gcc-arm-none-eabi-80/20181220/arm-none-eabi/include/machine/ieeefp.h \
- /usr/local/Cellar/gcc-arm-none-eabi-80/20181220/arm-none-eabi/include/sys/cdefs.h \
- /usr/local/Cellar/gcc-arm-none-eabi-80/20181220/lib/gcc/arm-none-eabi/8.2.1/include/stddef.h \
- /usr/local/Cellar/gcc-arm-none-eabi-80/20181220/lib/gcc/arm-none-eabi/8.2.1/include/stdarg.h \
- /usr/local/Cellar/gcc-arm-none-eabi-80/20181220/arm-none-eabi/include/sys/reent.h \
- /usr/local/Cellar/gcc-arm-none-eabi-80/20181220/arm-none-eabi/include/_ansi.h \
- /usr/local/Cellar/gcc-arm-none-eabi-80/20181220/arm-none-eabi/include/sys/_types.h \
- /usr/local/Cellar/gcc-arm-none-eabi-80/20181220/arm-none-eabi/include/machine/_types.h \
- /usr/local/Cellar/gcc-arm-none-eabi-80/20181220/arm-none-eabi/include/sys/lock.h \
- /usr/local/Cellar/gcc-arm-none-eabi-80/20181220/arm-none-eabi/include/sys/types.h \
- /usr/local/Cellar/gcc-arm-none-eabi-80/20181220/arm-none-eabi/include/sys/_pthreadtypes.h \
- /usr/local/Cellar/gcc-arm-none-eabi-80/20181220/arm-none-eabi/include/machine/types.h \
- /usr/local/Cellar/gcc-arm-none-eabi-80/20181220/arm-none-eabi/include/sys/stdio.h \
- /Users/leof/Documents/GitHub/IoT/RIOT-OS/RIOT/sys/include/div.h \
- /Users/leof/Documents/GitHub/IoT/RIOT-OS/RIOT/core/lib/include/assert.h
-
-/Users/leof/Documents/GitHub/IoT/campusiot/RIOT-wyres/tests/button/bin/wyres-base/riotbuild/riotbuild.h:
-
-/usr/local/Cellar/gcc-arm-none-eabi-80/20181220/lib/gcc/arm-none-eabi/8.2.1/include/stdint.h:
-
-/usr/local/Cellar/gcc-arm-none-eabi-80/20181220/arm-none-eabi/include/stdint.h:
-
-/usr/local/Cellar/gcc-arm-none-eabi-80/20181220/arm-none-eabi/include/machine/_default_types.h:
-
-/usr/local/Cellar/gcc-arm-none-eabi-80/20181220/arm-none-eabi/include/sys/features.h:
-
-/usr/local/Cellar/gcc-arm-none-eabi-80/20181220/arm-none-eabi/include/_newlib_version.h:
-
-/usr/local/Cellar/gcc-arm-none-eabi-80/20181220/arm-none-eabi/include/sys/_intsup.h:
-
-/usr/local/Cellar/gcc-arm-none-eabi-80/20181220/arm-none-eabi/include/sys/_stdint.h:
-
-/usr/local/Cellar/gcc-arm-none-eabi-80/20181220/arm-none-eabi/include/stdio.h:
-
-/usr/local/Cellar/gcc-arm-none-eabi-80/20181220/arm-none-eabi/include/_ansi.h:
-
-/usr/local/Cellar/gcc-arm-none-eabi-80/20181220/arm-none-eabi/include/newlib-nano/newlib.h:
-
-/usr/local/Cellar/gcc-arm-none-eabi-80/20181220/arm-none-eabi/include/sys/config.h:
-
-/usr/local/Cellar/gcc-arm-none-eabi-80/20181220/arm-none-eabi/include/machine/ieeefp.h:
-
-/usr/local/Cellar/gcc-arm-none-eabi-80/20181220/arm-none-eabi/include/sys/cdefs.h:
-
-/usr/local/Cellar/gcc-arm-none-eabi-80/20181220/lib/gcc/arm-none-eabi/8.2.1/include/stddef.h:
-
-/usr/local/Cellar/gcc-arm-none-eabi-80/20181220/lib/gcc/arm-none-eabi/8.2.1/include/stdarg.h:
-
-/usr/local/Cellar/gcc-arm-none-eabi-80/20181220/arm-none-eabi/include/sys/reent.h:
-
-/usr/local/Cellar/gcc-arm-none-eabi-80/20181220/arm-none-eabi/include/_ansi.h:
-
-/usr/local/Cellar/gcc-arm-none-eabi-80/20181220/arm-none-eabi/include/sys/_types.h:
-
-/usr/local/Cellar/gcc-arm-none-eabi-80/20181220/arm-none-eabi/include/machine/_types.h:
-
-/usr/local/Cellar/gcc-arm-none-eabi-80/20181220/arm-none-eabi/include/sys/lock.h:
-
-/usr/local/Cellar/gcc-arm-none-eabi-80/20181220/arm-none-eabi/include/sys/types.h:
-
-/usr/local/Cellar/gcc-arm-none-eabi-80/20181220/arm-none-eabi/include/sys/_pthreadtypes.h:
-
-/usr/local/Cellar/gcc-arm-none-eabi-80/20181220/arm-none-eabi/include/machine/types.h:
-
-/usr/local/Cellar/gcc-arm-none-eabi-80/20181220/arm-none-eabi/include/sys/stdio.h:
-
-/Users/leof/Documents/GitHub/IoT/RIOT-OS/RIOT/sys/include/div.h:
-
-/Users/leof/Documents/GitHub/IoT/RIOT-OS/RIOT/core/lib/include/assert.h:
+/data/riotbuild/riotproject/Riot_wyres/tests/button/bin/wyres-base/div/div.o: \
+ /data/riotbuild/riotbase/sys/div/div.c \
+ /data/riotbuild/riotproject/Riot_wyres/tests/button/bin/wyres-base/riotbuild/riotbuild.h \
+ /opt/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
+ /opt/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/stdint.h \
+ /opt/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/_default_types.h \
+ /opt/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/features.h \
+ /opt/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/_newlib_version.h \
+ /opt/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_intsup.h \
+ /opt/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_stdint.h \
+ /opt/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/stdio.h \
+ /opt/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/_ansi.h \
+ /opt/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/newlib-nano/newlib.h \
+ /opt/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/config.h \
+ /opt/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/ieeefp.h \
+ /opt/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/cdefs.h \
+ /opt/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
+ /opt/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
+ /opt/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/reent.h \
+ /opt/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/_ansi.h \
+ /opt/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_types.h \
+ /opt/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/_types.h \
+ /opt/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/lock.h \
+ /data/riotbuild/riotbase/core/lib/include/assert.h \
+ /opt/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/types.h \
+ /opt/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_pthreadtypes.h \
+ /opt/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/types.h \
+ /opt/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/stdio.h \
+ /data/riotbuild/riotbase/sys/include/div.h
+/data/riotbuild/riotproject/Riot_wyres/tests/button/bin/wyres-base/riotbuild/riotbuild.h:
+/opt/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h:
+/opt/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/stdint.h:
+/opt/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/_default_types.h:
+/opt/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/features.h:
+/opt/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/_newlib_version.h:
+/opt/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_intsup.h:
+/opt/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_stdint.h:
+/opt/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/stdio.h:
+/opt/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/_ansi.h:
+/opt/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/newlib-nano/newlib.h:
+/opt/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/config.h:
+/opt/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/ieeefp.h:
+/opt/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/cdefs.h:
+/opt/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h:
+/opt/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h:
+/opt/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/reent.h:
+/opt/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/_ansi.h:
+/opt/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_types.h:
+/opt/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/_types.h:
+/opt/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/lock.h:
+/data/riotbuild/riotbase/core/lib/include/assert.h:
+/opt/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/types.h:
+/opt/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_pthreadtypes.h:
+/opt/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/types.h:
+/opt/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/stdio.h:
+/data/riotbuild/riotbase/sys/include/div.h:

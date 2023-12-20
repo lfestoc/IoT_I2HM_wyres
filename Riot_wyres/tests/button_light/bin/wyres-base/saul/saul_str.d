@@ -1,5 +1,5 @@
 /data/riotbuild/riotproject/Riot_wyres/tests/button_light/bin/wyres-base/saul/saul_str.o: \
- /data/riotbuild/external/modules/saul/saul_str.c \
+ /data/riotbuild/riotbase/drivers/saul/saul_str.c \
  /data/riotbuild/riotproject/Riot_wyres/tests/button_light/bin/wyres-base/riotbuild/riotbuild.h \
  /opt/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
  /opt/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \

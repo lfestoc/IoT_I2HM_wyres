@@ -1,5 +1,5 @@
 /data/riotbuild/riotproject/Riot_wyres/tests/button_light/bin/wyres-base/saul/saul.o: \
- /data/riotbuild/external/modules/saul/saul.c \
+ /data/riotbuild/riotbase/drivers/saul/saul.c \
  /data/riotbuild/riotproject/Riot_wyres/tests/button_light/bin/wyres-base/riotbuild/riotbuild.h \
  /opt/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/errno.h \
  /opt/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/errno.h \

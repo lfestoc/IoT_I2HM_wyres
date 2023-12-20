@@ -104,7 +104,7 @@
  /data/riotbuild/riotbase/cpu/stm32/include/clk/clk_conf.h \
  /data/riotbuild/riotbase/cpu/stm32/include/clk/cfg_clock_common_lx_u5_wx.h \
  /data/riotbuild/riotbase/cpu/stm32/include/clk/l0l1/cfg_clock_default.h \
- /data/riotbuild/external/modules/lpsxxx/include/lpsxxx_params.h \
+ /data/riotbuild/riotbase/drivers/lpsxxx/include/lpsxxx_params.h \
  /data/riotbuild/riotbase/boards/wyres-base/include/board.h \
  /data/riotbuild/riotbase/boards/wyres-base/include/periph_conf.h
 /data/riotbuild/riotproject/Riot_wyres/tests/button_light/bin/wyres-base/riotbuild/riotbuild.h:
@@ -211,6 +211,6 @@
 /data/riotbuild/riotbase/cpu/stm32/include/clk/clk_conf.h:
 /data/riotbuild/riotbase/cpu/stm32/include/clk/cfg_clock_common_lx_u5_wx.h:
 /data/riotbuild/riotbase/cpu/stm32/include/clk/l0l1/cfg_clock_default.h:
-/data/riotbuild/external/modules/lpsxxx/include/lpsxxx_params.h:
+/data/riotbuild/riotbase/drivers/lpsxxx/include/lpsxxx_params.h:
 /data/riotbuild/riotbase/boards/wyres-base/include/board.h:
 /data/riotbuild/riotbase/boards/wyres-base/include/periph_conf.h:

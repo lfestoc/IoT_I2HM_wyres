@@ -1,5 +1,5 @@
 /data/riotbuild/riotproject/Riot_wyres/tests/button_light/bin/wyres-base/lpsxxx/lpsxxx.o: \
- /data/riotbuild/external/modules/lpsxxx/lpsxxx.c \
+ /data/riotbuild/riotbase/drivers/lpsxxx/lpsxxx.c \
  /data/riotbuild/riotproject/Riot_wyres/tests/button_light/bin/wyres-base/riotbuild/riotbuild.h \
  /opt/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
  /opt/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/stdint.h \
@@ -97,7 +97,7 @@
  /data/riotbuild/riotbase/cpu/stm32/include/clk/l0l1/cfg_clock_default.h \
  /data/riotbuild/riotbase/drivers/include/lpsxxx.h \
  /data/riotbuild/riotbase/drivers/include/periph/i2c.h \
- /data/riotbuild/external/modules/lpsxxx/include/lpsxxx_internal.h \
+ /data/riotbuild/riotbase/drivers/lpsxxx/include/lpsxxx_internal.h \
  /data/riotbuild/riotbase/core/lib/include/macros/math.h \
  /data/riotbuild/riotbase/core/lib/include/debug.h \
  /data/riotbuild/riotbase/sys/include/architecture.h \
@@ -199,7 +199,7 @@
 /data/riotbuild/riotbase/cpu/stm32/include/clk/l0l1/cfg_clock_default.h:
 /data/riotbuild/riotbase/drivers/include/lpsxxx.h:
 /data/riotbuild/riotbase/drivers/include/periph/i2c.h:
-/data/riotbuild/external/modules/lpsxxx/include/lpsxxx_internal.h:
+/data/riotbuild/riotbase/drivers/lpsxxx/include/lpsxxx_internal.h:
 /data/riotbuild/riotbase/core/lib/include/macros/math.h:
 /data/riotbuild/riotbase/core/lib/include/debug.h:
 /data/riotbuild/riotbase/sys/include/architecture.h:

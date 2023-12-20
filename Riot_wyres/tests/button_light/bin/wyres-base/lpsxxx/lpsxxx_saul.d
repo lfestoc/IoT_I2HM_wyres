@@ -1,5 +1,5 @@
 /data/riotbuild/riotproject/Riot_wyres/tests/button_light/bin/wyres-base/lpsxxx/lpsxxx_saul.o: \
- /data/riotbuild/external/modules/lpsxxx/lpsxxx_saul.c \
+ /data/riotbuild/riotbase/drivers/lpsxxx/lpsxxx_saul.c \
  /data/riotbuild/riotproject/Riot_wyres/tests/button_light/bin/wyres-base/riotbuild/riotbuild.h \
  /opt/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/string.h \
  /opt/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/_ansi.h \

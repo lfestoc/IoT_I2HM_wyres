@@ -65,7 +65,19 @@
  /Users/leof/Documents/GitHub/IoT/RIOT-OS/RIOT/cpu/stm32/include/irqs/l1/irqs.h \
  /Users/leof/Documents/GitHub/IoT/RIOT-OS/RIOT/cpu/cortexm_common/include/thread_arch.h \
  /Users/leof/Documents/GitHub/IoT/RIOT-OS/RIOT/core/lib/include/rmutex.h \
- /Users/leof/Documents/GitHub/IoT/RIOT-OS/RIOT/build/pkg/cayenne-lpp/cayenne_lpp.h
+ /Users/leof/Documents/GitHub/IoT/RIOT-OS/RIOT/build/pkg/cayenne-lpp/cayenne_lpp.h \
+ /Users/leof/Documents/GitHub/IoT/RIOT-OS/RIOT/sys/include/net/loramac.h \
+ /usr/local/Cellar/gcc-arm-none-eabi-80/20181220/arm-none-eabi/include/stdlib.h \
+ /usr/local/Cellar/gcc-arm-none-eabi-80/20181220/arm-none-eabi/include/machine/stdlib.h \
+ /Users/leof/Documents/GitHub/IoT/RIOT-OS/RIOT/core/lib/include/modules.h \
+ /Users/leof/Documents/GitHub/IoT/RIOT-OS/RIOT/pkg/semtech-loramac/include/semtech_loramac.h \
+ /Users/leof/Documents/GitHub/IoT/RIOT-OS/RIOT/drivers/include/net/netdev.h \
+ /usr/local/Cellar/gcc-arm-none-eabi-80/20181220/arm-none-eabi/include/errno.h \
+ /usr/local/Cellar/gcc-arm-none-eabi-80/20181220/arm-none-eabi/include/sys/errno.h \
+ /Users/leof/Documents/GitHub/IoT/RIOT-OS/RIOT/sys/include/iolist.h \
+ /usr/local/Cellar/gcc-arm-none-eabi-80/20181220/arm-none-eabi/include/unistd.h \
+ /usr/local/Cellar/gcc-arm-none-eabi-80/20181220/arm-none-eabi/include/sys/unistd.h \
+ /Users/leof/Documents/GitHub/IoT/RIOT-OS/RIOT/sys/include/net/netopt.h
 
 /Users/leof/Documents/GitHub/IoT/IoT_I2HM_wyres/Riot_wyres/tests/cayenne-lpp/bin/wyres-base/riotbuild/riotbuild.h:
 
@@ -198,3 +210,27 @@
 /Users/leof/Documents/GitHub/IoT/RIOT-OS/RIOT/core/lib/include/rmutex.h:
 
 /Users/leof/Documents/GitHub/IoT/RIOT-OS/RIOT/build/pkg/cayenne-lpp/cayenne_lpp.h:
+
+/Users/leof/Documents/GitHub/IoT/RIOT-OS/RIOT/sys/include/net/loramac.h:
+
+/usr/local/Cellar/gcc-arm-none-eabi-80/20181220/arm-none-eabi/include/stdlib.h:
+
+/usr/local/Cellar/gcc-arm-none-eabi-80/20181220/arm-none-eabi/include/machine/stdlib.h:
+
+/Users/leof/Documents/GitHub/IoT/RIOT-OS/RIOT/core/lib/include/modules.h:
+
+/Users/leof/Documents/GitHub/IoT/RIOT-OS/RIOT/pkg/semtech-loramac/include/semtech_loramac.h:
+
+/Users/leof/Documents/GitHub/IoT/RIOT-OS/RIOT/drivers/include/net/netdev.h:
+
+/usr/local/Cellar/gcc-arm-none-eabi-80/20181220/arm-none-eabi/include/errno.h:
+
+/usr/local/Cellar/gcc-arm-none-eabi-80/20181220/arm-none-eabi/include/sys/errno.h:
+
+/Users/leof/Documents/GitHub/IoT/RIOT-OS/RIOT/sys/include/iolist.h:
+
+/usr/local/Cellar/gcc-arm-none-eabi-80/20181220/arm-none-eabi/include/unistd.h:
+
+/usr/local/Cellar/gcc-arm-none-eabi-80/20181220/arm-none-eabi/include/sys/unistd.h:
+
+/Users/leof/Documents/GitHub/IoT/RIOT-OS/RIOT/sys/include/net/netopt.h:

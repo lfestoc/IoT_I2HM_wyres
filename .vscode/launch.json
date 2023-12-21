@@ -6,8 +6,8 @@
       "type": "lldb",
       "request": "launch",
       "args": [],
-      "cwd": "/Users/leof/Documents/GitHub/IoT/IoT_I2HM_wyres/Riot_wyres/tests/button_light",
-      "program": "/Users/leof/Documents/GitHub/IoT/IoT_I2HM_wyres/Riot_wyres/tests/button_light/build/Debug/outDebug"
+      "cwd": "/Users/leof/Documents/GitHub/IoT/IoT_I2HM_wyres/Riot_wyres/tests/pkg_semtech-loramac",
+      "program": "/Users/leof/Documents/GitHub/IoT/IoT_I2HM_wyres/Riot_wyres/tests/pkg_semtech-loramac/build/Debug/outDebug"
     }
   ]
 }

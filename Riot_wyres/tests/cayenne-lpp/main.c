@@ -27,6 +27,27 @@
 #include "ztimer.h"
 
 #include "cayenne_lpp.h"
+#include <stdio.h>
+#include "net/loramac.h"     /* core loramac definitions */
+#include "semtech_loramac.h" /* package API */
+
+#ifdef MODULE_SEMTECH_LORAMAC_RX
+#include "thread.h"
+#include "msg.h"
+#endif
+
+  semtech_loramac_t loramac;  /* The loramac stack device descriptor */
+      /* define the required keys for OTAA, e.g over-the-air activation (the
+         null arrays need to be updated with valid LoRa values) */
+     static const uint8_t deveui[LORAMAC_DEVEUI_LEN] = { 0xCA, 0xFE, 0xBA, 0xBE, \
+                                                         0xC6, 0xB0, 0xDA, 0xF7 };
+     static const uint8_t appeui[LORAMAC_APPEUI_LEN] = { 0xCA, 0xFE, 0xBA, 0xBE, \
+                                                         0x00, 0x00, 0x00, 0x00 };
+     static const uint8_t appkey[LORAMAC_APPKEY_LEN] = { 0xD6, 0x90, 0x93, 0x71, \
+                                                          0x8B, 0xAA, 0x94, 0x73, \
+                                                        0x93, 0x88, 0xFA, 0x5B, \
+                                                        0x58, 0x66, 0x78, 0xB2 };
+
 
 static cayenne_lpp_t lpp;
 
@@ -52,6 +73,30 @@ static void cassiniOval(double time, double a, double b, double *x, double *y)
 
 int main(void)
 {
+    puts("LORAMAC CAYENNE START ");
+
+    /* 1. initialize the LoRaMAC MAC layer */
+    //semtech_loramac_init(&loramac); // ne fonctionne pas 
+ 
+    /* 2. set the keys identifying the device */
+    semtech_loramac_set_deveui(&loramac, deveui);
+    semtech_loramac_set_appeui(&loramac, appeui);
+    semtech_loramac_set_appkey(&loramac, appkey);
+    puts("LORAMAC CAYENNE join procedure ");
+      /* 3. join the network */
+      
+     if (semtech_loramac_join(&loramac, LORAMAC_JOIN_OTAA) != SEMTECH_LORAMAC_JOIN_SUCCEEDED) {
+         puts("Join procedure failed");
+         return 1;
+     }
+    puts("Join procedure succeeded");
+    puts("LORAMAC CAYENNE send data ");
+    /* 4. send some data */
+        char *message = "This is RIOT";
+        if (semtech_loramac_send(&loramac,(uint8_t *)message, strlen(message)) != SEMTECH_LORAMAC_TX_DONE) {
+            printf("Cannot send message '%s'\n", message);
+            return 1;
+        }
 
     puts("High altitude balloon track simulator");
 
@@ -99,7 +144,11 @@ int main(void)
         printf(" battery_voltage: %.1f mV\n",battery_voltage);
 
         _print_buffer(lpp.buffer, lpp.cursor, "LPP: ");
-
+        /* 5. send some data buffer */
+        if (semtech_loramac_send(&loramac,lpp.buffer, sizeof(lpp.buffer)) != SEMTECH_LORAMAC_TX_DONE) {
+                _print_buffer(lpp.buffer, lpp.cursor, "Cannot send message LPP: ");
+                return 1;
+        }
         ztimer_sleep(ZTIMER_SEC, 1);
 
         t++;

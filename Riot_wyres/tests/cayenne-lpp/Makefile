@@ -9,7 +9,8 @@ RIOTBASE ?= ../../../../RIOT-OS/RIOT
 EXTERNAL_BOARD_DIRS ?= ../../boards
 # If no BOARD is found in the environment, use this default:
 BOARD ?= wyres-base
-
+USEPKG += semtech-loramac
+LORA_REGION = EU868
 USEPKG += cayenne-lpp
 
 USEMODULE += ztimer

@@ -13,7 +13,7 @@ int main(void)
 {
 	printf("\r\nRead button 1 state\r\n");
 
-	uint8_t btn_state = 0;
+	//uint8_t btn_state = 0;
 
 	
 	/* initialize the ADC line */
@@ -35,58 +35,28 @@ int main(void)
 
     }
 	
-	int sample = 0;
-	
+	uint32_t sample = 0;
+	//uint8_t data[4];
+
+   /* data[0] = (donnee & 0xFF);           // Masque pour extraire les 8 bits de poids faible.
+    data[1] = ((donnee >> 8) & 0xFF);    // Décalage de 8 bits vers la droite pour extraire la prochaine partie.
+    data[2] = ((donnee >> 16) & 0xFF);   // Décalage de 16 bits vers la droite pour extraire la prochaine partie.
+    data[3] = ((donnee >> 24) & 0xFF);   // Décalage de 24 bits vers la droite pour extraire les 8 bits de poids fort.
+
+    // Affichage des résultats.
+    printf("data[0] = 0x%02X\n", data[0]);
+    printf("data[1] = 0x%02X\n", data[1]);
+    printf("data[2] = 0x%02X\n", data[2]);
+    printf("data[3] = 0x%02X\n", data[3]);	*/
 
 	while(1){
 
-		while(gpio_read(BTN1_PIN) == btn_state);
-
         sample = adc_sample(ADC_th_sensor,ADC_RES);
 
-		btn_state = gpio_read(BTN1_PIN);
-
-		if(btn_state && sample < 500){
-			printf("Button 1 has been pressed!\r\n");
-            printf("ADC_LINE(%u): raw value: %.4i, percent: %.2d %% \r\n", ADC_IN_USE, sample, sample*100/4096);
-			LED_RED_OFF;
-            LED_GREEN_ON;
-		}else if (sample > 500){
-			printf("ADC_LINE(%u): raw value: %.4i, percent: %.2d %% \r\n", ADC_IN_USE, sample, sample*100/4096);
-			
-			LED_GREEN_OFF;
-            LED_RED_ON;
-		}
-		else{
-			printf("Button 1 has been released!\r\n");
-			LED_GREEN_ON;
-			xtimer_sleep(1);
-			LED_RED_OFF;
-			xtimer_sleep(1);
-			LED_RED_OFF;
-			xtimer_sleep(1);
-			LED_GREEN_OFF;
-			xtimer_sleep(1);
-		}
-
-        
+		printf("Val : %010lX\n", sample );
 		
-		/*if (sample < 0) {
-            printf("\r\nADC_LINE(%u): selected resolution not applicable\r\n",ADC_IN_USE);
-        }else {
-            printf("ADC_LINE(%u): raw value: %.4i, percent: %.2d %% \r\n", ADC_IN_USE, sample, sample*100/4096);
-            if(sample > 4096/2) {
-            	LED_GREEN_ON;
-            	xtimer_msleep(500);
-            	LED_GREEN_OFF;
-            } else {
-            	LED_RED_ON;
-            	xtimer_msleep(500);
-            	LED_RED_OFF;
-            }
-        }
-		
-    	xtimer_msleep(500);*/
+
+
 	}
 	
     return 0;

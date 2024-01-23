@@ -62,7 +62,9 @@
  /Users/leof/Documents/GitHub/IoT/RIOT-OS/RIOT/cpu/cortexm_common/include/irq_arch.h \
  /Users/leof/Documents/GitHub/IoT/RIOT-OS/RIOT/sys/include/debug_irq_disable.h \
  /Users/leof/Documents/GitHub/IoT/RIOT-OS/RIOT/core/lib/include/bitarithm.h \
- /Users/leof/Documents/GitHub/IoT/RIOT-OS/RIOT/core/lib/include/debug.h
+ /Users/leof/Documents/GitHub/IoT/RIOT-OS/RIOT/core/lib/include/debug.h \
+ /Users/leof/Documents/GitHub/IoT/RIOT-OS/RIOT/sys/include/architecture.h \
+ /Users/leof/Documents/GitHub/IoT/RIOT-OS/RIOT/cpu/cortexm_common/include/architecture_arch.h
 
 /Users/leof/Documents/GitHub/IoT/IoT_I2HM_wyres/Riot_wyres/tests/cayenne-lpp/bin/wyres-base/riotbuild/riotbuild.h:
 
@@ -189,3 +191,7 @@
 /Users/leof/Documents/GitHub/IoT/RIOT-OS/RIOT/core/lib/include/bitarithm.h:
 
 /Users/leof/Documents/GitHub/IoT/RIOT-OS/RIOT/core/lib/include/debug.h:
+
+/Users/leof/Documents/GitHub/IoT/RIOT-OS/RIOT/sys/include/architecture.h:
+
+/Users/leof/Documents/GitHub/IoT/RIOT-OS/RIOT/cpu/cortexm_common/include/architecture_arch.h:

@@ -61,7 +61,9 @@
  /usr/local/Cellar/gcc-arm-none-eabi-80/20181220/arm-none-eabi/include/sys/types.h \
  /usr/local/Cellar/gcc-arm-none-eabi-80/20181220/arm-none-eabi/include/sys/_pthreadtypes.h \
  /usr/local/Cellar/gcc-arm-none-eabi-80/20181220/arm-none-eabi/include/machine/types.h \
- /usr/local/Cellar/gcc-arm-none-eabi-80/20181220/arm-none-eabi/include/sys/stdio.h
+ /usr/local/Cellar/gcc-arm-none-eabi-80/20181220/arm-none-eabi/include/sys/stdio.h \
+ /Users/leof/Documents/GitHub/IoT/RIOT-OS/RIOT/sys/include/architecture.h \
+ /Users/leof/Documents/GitHub/IoT/RIOT-OS/RIOT/cpu/cortexm_common/include/architecture_arch.h
 
 /Users/leof/Documents/GitHub/IoT/IoT_I2HM_wyres/Riot_wyres/tests/cayenne-lpp/bin/wyres-base/riotbuild/riotbuild.h:
 
@@ -186,3 +188,7 @@
 /usr/local/Cellar/gcc-arm-none-eabi-80/20181220/arm-none-eabi/include/machine/types.h:
 
 /usr/local/Cellar/gcc-arm-none-eabi-80/20181220/arm-none-eabi/include/sys/stdio.h:
+
+/Users/leof/Documents/GitHub/IoT/RIOT-OS/RIOT/sys/include/architecture.h:
+
+/Users/leof/Documents/GitHub/IoT/RIOT-OS/RIOT/cpu/cortexm_common/include/architecture_arch.h:

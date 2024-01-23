@@ -62,7 +62,10 @@
  /Users/leof/Documents/GitHub/IoT/RIOT-OS/RIOT/cpu/cortexm_common/include/thread_arch.h \
  /Users/leof/Documents/GitHub/IoT/RIOT-OS/RIOT/core/lib/include/panic.h \
  /Users/leof/Documents/GitHub/IoT/RIOT-OS/RIOT/core/lib/include/kernel_defines.h \
- /Users/leof/Documents/GitHub/IoT/RIOT-OS/RIOT/core/lib/include/debug.h
+ /Users/leof/Documents/GitHub/IoT/RIOT-OS/RIOT/cpu/cortexm_common/include/mpu.h \
+ /Users/leof/Documents/GitHub/IoT/RIOT-OS/RIOT/core/lib/include/debug.h \
+ /Users/leof/Documents/GitHub/IoT/RIOT-OS/RIOT/sys/include/architecture.h \
+ /Users/leof/Documents/GitHub/IoT/RIOT-OS/RIOT/cpu/cortexm_common/include/architecture_arch.h
 
 /Users/leof/Documents/GitHub/IoT/IoT_I2HM_wyres/Riot_wyres/tests/cayenne-lpp/bin/wyres-base/riotbuild/riotbuild.h:
 
@@ -188,4 +191,10 @@
 
 /Users/leof/Documents/GitHub/IoT/RIOT-OS/RIOT/core/lib/include/kernel_defines.h:
 
+/Users/leof/Documents/GitHub/IoT/RIOT-OS/RIOT/cpu/cortexm_common/include/mpu.h:
+
 /Users/leof/Documents/GitHub/IoT/RIOT-OS/RIOT/core/lib/include/debug.h:
+
+/Users/leof/Documents/GitHub/IoT/RIOT-OS/RIOT/sys/include/architecture.h:
+
+/Users/leof/Documents/GitHub/IoT/RIOT-OS/RIOT/cpu/cortexm_common/include/architecture_arch.h:

@@ -103,7 +103,8 @@
  /usr/local/Cellar/gcc-arm-none-eabi-80/20181220/arm-none-eabi/include/unistd.h \
  /usr/local/Cellar/gcc-arm-none-eabi-80/20181220/arm-none-eabi/include/sys/unistd.h \
  /Users/leof/Documents/GitHub/IoT/RIOT-OS/RIOT/core/lib/include/modules.h \
- /Users/leof/Documents/GitHub/IoT/RIOT-OS/RIOT/core/lib/include/debug.h
+ /Users/leof/Documents/GitHub/IoT/RIOT-OS/RIOT/core/lib/include/debug.h \
+ /Users/leof/Documents/GitHub/IoT/RIOT-OS/RIOT/sys/include/architecture.h
 
 /Users/leof/Documents/GitHub/IoT/IoT_I2HM_wyres/Riot_wyres/tests/cayenne-lpp/bin/wyres-base/riotbuild/riotbuild.h:
 
@@ -312,3 +313,5 @@
 /Users/leof/Documents/GitHub/IoT/RIOT-OS/RIOT/core/lib/include/modules.h:
 
 /Users/leof/Documents/GitHub/IoT/RIOT-OS/RIOT/core/lib/include/debug.h:
+
+/Users/leof/Documents/GitHub/IoT/RIOT-OS/RIOT/sys/include/architecture.h:

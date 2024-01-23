@@ -59,6 +59,7 @@
   "files.associations": {
     "stdio.h": "c",
     "system_error": "c",
-    "cstdint": "c"
+    "cstdint": "c",
+    "loramac_utils.h": "c"
   }
 }

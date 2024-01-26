@@ -37,7 +37,7 @@
 #define M_PI  (3.14159265358979323846)
 
 /* LoRaMac values */
-#define JOIN_NEXT_RETRY_TIME            10 // Next join tentative in 1 minute
+#define JOIN_NEXT_RETRY_TIME            30 // Next join tentative in 1 minute
 #define SECONDS_PER_DAY                 24 * 60 * 60
 
 /* Use a fast datarate, e.g. BW125/SF7 in EU868 */
@@ -57,16 +57,27 @@
   extern semtech_loramac_t loramac;  /* The loramac stack device descriptor */
       /* define the required keys for OTAA, e.g over-the-air activation (the
          null arrays need to be updated with valid LoRa values) */
-     static const uint8_t deveui[LORAMAC_DEVEUI_LEN] = { 0xCA, 0xFE, 0xBA, 0xBE, \
+   //Wyres Groupe 4
+ /*    static const uint8_t deveui[LORAMAC_DEVEUI_LEN] = { 0xCA, 0xFE, 0xBA, 0xBE, \
                                                          0xC6, 0xB0, 0xDA, 0xF7 };
      static const uint8_t appeui[LORAMAC_APPEUI_LEN] = { 0xCA, 0xFE, 0xBA, 0xBE, \
                                                          0x00, 0x00, 0x00, 0x00 };
-     /*static const uint8_t appeui[LORAMAC_APPEUI_LEN] = { 0x00, 0x00, 0x00, 0x00, \
-                                                         0x00, 0x00, 0x00, 0x00 };*/
      static const uint8_t appkey[LORAMAC_APPKEY_LEN] = { 0xD6, 0x90, 0x93, 0x71, \
                                                           0x8B, 0xAA, 0x94, 0x73, \
                                                         0x93, 0x88, 0xFA, 0x5B, \
-                                                        0x58, 0x66, 0x78, 0xB2 };
+                                                      0x58, 0x66, 0x78, 0xB2 };
+*/  
+     //Wyres Groupe 5
+    static const uint8_t deveui[LORAMAC_DEVEUI_LEN] = { 0xCA, 0xFE, 0xBA, 0xBE, \
+                                                         0x62, 0x58, 0x3C, 0xCC };
+                                                    
+     static const uint8_t appeui[LORAMAC_APPEUI_LEN] = { 0x00, 0x00, 0x00, 0x00, \
+                                                         0x00, 0x00, 0x00, 0x00 };
+     static const uint8_t appkey[LORAMAC_APPKEY_LEN] = { 0xa1, 0x71, 0xda, 0xe2, \
+                                                          0x6e, 0xa4, 0x0a, 0x6f, \
+                                                        0xc7, 0xc1, 0xe3, 0xae, \
+                                                        0x21, 0xcf, 0xe2, 0xde };
+                                                                       
 
 
 static cayenne_lpp_t lpp;
@@ -126,7 +137,6 @@ int main(void)
     /*uint8_t joinRes = */ loramac_utils_join_retry_loop(&loramac, DR_INIT, JOIN_NEXT_RETRY_TIME, SECONDS_PER_DAY);
     puts("Join procedure succeeded");
     
-    puts("High altitude balloon track simulator");
 
     double init_latitude = 45.5;
     double init_longitude = 5.5;
@@ -135,8 +145,7 @@ int main(void)
     double init_temperature = -20; // °C
     double init_humidity = 50;
     //double init_luninosity = 500;
-    double init_battery_voltage = 3600; // mV
-
+    double init_battery_voltage = 3.6; // mV
     int sample = 0;
     
     while (true)
@@ -197,7 +206,7 @@ int main(void)
         //double temperature = init_temperature ; // °C
         double humidity = init_humidity ;
         double luninosity = (double) sample;
-        double battery_voltage = init_battery_voltage; // mV
+        double battery_voltage = init_battery_voltage; // V
 
         
         cayenne_lpp_reset(&lpp);
@@ -218,18 +227,18 @@ int main(void)
         printf(" position:        lat=%.5f° lon=%.5f° alt=%.0fm\n",latitude, longitude, altitude);
         printf(" battery_voltage: %.1f mV\n",battery_voltage);
 
-        uint8_t cnf = LORAMAC_TX_UNCNF;  /* Default: confirmable */
-        uint8_t port = CONFIG_LORAMAC_DEFAULT_TX_PORT; /* Default: 2 */
-        semtech_loramac_set_tx_mode(&loramac, cnf);
-        semtech_loramac_set_tx_port(&loramac, port);
-        semtech_loramac_set_dr(&loramac, 5);
+       // uint8_t ucnf = LORAMAC_TX_UNCNF;  /* Default: confirmable */
+      //  uint8_t port = CONFIG_LORAMAC_DEFAULT_TX_PORT; /* Default: 2 */
+       // semtech_loramac_set_tx_mode(&loramac, ucnf);
+        //semtech_loramac_set_tx_port(&loramac, port);
+        //semtech_loramac_set_dr(&loramac, 5);
         // _print_buffer(lpp.buffer, lpp.cursor, "LPP: ");
        // semtech_loramac_set_class(&lorama, loramac_class_t cls);
 
         /*Sending of the buffer */
         puts("LORAMAC start sending buffer ");
-        printf("tx mode :  %d",semtech_loramac_get_tx_mode(&loramac));
-        printf("dr : %d",semtech_loramac_get_dr(&loramac));
+        printf("tx mode : %d",semtech_loramac_get_tx_mode(&loramac));
+        printf("\n dr : %d",semtech_loramac_get_dr(&loramac));
 
     LED_GREEN_OFF;
     LED_RED_ON;
@@ -263,7 +272,7 @@ int main(void)
         
     }   
         puts("LORAMAC buffer sent");
-         puts("LORAMAC start waiting");
+        puts("LORAMAC start waiting");
         LED_RED_OFF;
         ztimer_sleep(ZTIMER_SEC, 60);
        

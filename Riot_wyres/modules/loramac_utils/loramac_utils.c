@@ -125,7 +125,8 @@ uint8_t loramac_utils_join_retry_loop(semtech_loramac_t *loramac, uint8_t initDa
             }
             else
             {
-                nextRetryTime = maxNextRetryTime;
+                if (joinRes == SEMTECH_LORAMAC_DUTYCYCLE_RESTRICTED) nextRetryTime += (nextRetryTime * RETRYTIME_PERCENT) / 100;
+                else nextRetryTime = maxNextRetryTime;
             }
         }
         DEBUG("[otaa] Retry join procedure in %ld sec. at dr=%d\n", nextRetryTime, initDataRate);

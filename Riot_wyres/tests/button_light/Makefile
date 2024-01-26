@@ -33,6 +33,7 @@ QUIET ?= 1
 # Modules to include:
 USEMODULE += xtimer
 USEMODULE += analog_util
+USEMODULE += printf_float
 
 FEATURES_REQUIRED += periph_adc
 

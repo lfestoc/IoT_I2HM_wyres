@@ -19,5 +19,6 @@ QUIET ?= 1
 
 # Modules to include:
 USEMODULE += xtimer
+USEMODULE += printf_float
 
 include $(RIOTBASE)/Makefile.include

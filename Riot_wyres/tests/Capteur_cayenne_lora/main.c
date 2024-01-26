@@ -95,6 +95,8 @@ int main(void)
 {      
     puts("LORAMAC CAYENNE SENSORS START ");
     phydat_t res;
+
+    double test = 3.3;
     	/* initialize the ADC line */
     if (adc_init(ADC_IN_USE) < 0) {
         printf("\r\nInitialization of ADC_LINE(%u) failed\r\n", ADC_IN_USE);
@@ -164,6 +166,7 @@ int main(void)
         double pressure = init_pressure;      // hPa
         double temperature = init_temperature ; // °C
         if( sample > 0){
+            printf("TEST = %f\n", test);
             printf("ADC_LINE(%u): raw value: %.4i, percent: %.2d %% \r\n", ADC_IN_USE, sample, sample*100/4096);
             printf("\n%d\n", sample);
 			// Lecture capteur pression

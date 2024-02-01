@@ -11,7 +11,7 @@
  * @{
  *
  * @file
- * @brief       I2HM climate station sent with semtech-Loramac 
+ * @brief       sen15901 functions library
  *
  * @author      Leo Festoc <leo.festoc@univ-grenoble-alpes.fr>
  * @author      Sarah Sabri <Sarah.sabri@univ-grenoble-alpes.fr>

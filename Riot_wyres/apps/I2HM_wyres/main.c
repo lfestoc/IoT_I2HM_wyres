@@ -14,9 +14,10 @@
  * @brief       I2HM climate station sent with semtech-Loramac 
  *
  * @author      Leo Festoc <leo.festoc@univ-grenoble-alpes.fr>
- *              Sarah Sabri <Sarah.sabri@univ-grenoble-alpes.fr>
- *              Dorian Poissonnet <Dorian.Poissonnet@univ-grenoble-alpes.fr>
- *
+ * @author      Sarah Sabri <Sarah.sabri@univ-grenoble-alpes.fr>
+ * @author      Dorian Poissonnet <Dorian.Poissonnet@univ-grenoble-alpes.fr>
+ * @author      Thibault Abry <Thibault.abry@univ-grenoble-alpes.fr>
+ * @author      Didier Donsez <didier.donsez@univ-grenoble-alpes.fr>
  * @}
  */
 

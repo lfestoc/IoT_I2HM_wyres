@@ -41,7 +41,6 @@ static void _timer_cb(void *arg)
 int main(void)
 {
     mutex_t timer_mtx = MUTEX_INIT_LOCKED;
-   // phydat_t TEST_data;
     bme680_t dev[BME680_NUMOF];
 
     for (unsigned i = 0; i < BME680_NUMOF; i++) {

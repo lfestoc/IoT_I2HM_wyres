@@ -1,5 +1,5 @@
 # name of your application
-APPLICATION = test-Cayenne-loramac-sensor-WYRES
+APPLICATION = test_BME680
 
 # This has to be the absolute path to the RIOT base directory:
 RIOTBASE ?= ../../../../RIOT-OS/RIOT

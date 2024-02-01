@@ -1,5 +1,5 @@
 # name of your application
-APPLICATION = test-Cayenne-loramac-sensor-WYRES
+APPLICATION = I2HM_CLIMATE_STATION
 
 # This has to be the absolute path to the RIOT base directory:
 RIOTBASE ?= ../../../../RIOT-OS/RIOT
@@ -56,6 +56,12 @@ USEMODULE += lps22hb
 # include and auto-initialize all available sensors
 USEMODULE += saul_default
 
+# include BM680 driver I2C
+USEMODULE += bme680_i2c
+
+ifeq ($(ENABLE_FP),1)
+  USEMODULE += bme680_fp
+endif
 
 USEMODULE += fmt
 

@@ -4,14 +4,18 @@
  /home/sarah/github/RIOT-OS/RIOT/drivers/include/periph/timer.h \
  /usr/lib/gcc/arm-none-eabi/9.2.1/include-fixed/limits.h \
  /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdint.h \
+ /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdbool.h \
+ /home/sarah/github/RIOT-OS/RIOT/sys/include/architecture.h \
+ /usr/include/newlib/inttypes.h /usr/include/newlib/nano/newlib.h \
+ /usr/include/newlib/_newlib_version.h /usr/include/newlib/sys/config.h \
+ /usr/include/newlib/machine/ieeefp.h /usr/include/newlib/sys/features.h \
+ /usr/include/newlib/sys/_intsup.h /usr/include/newlib/_ansi.h \
+ /usr/lib/gcc/arm-none-eabi/9.2.1/include/stddef.h \
+ /home/sarah/github/RIOT-OS/RIOT/cpu/cortexm_common/include/architecture_arch.h \
  /home/sarah/github/RIOT-OS/RIOT/cpu/stm32/include/periph_cpu.h \
  /home/sarah/github/RIOT-OS/RIOT/cpu/cortexm_common/include/cpu.h \
- /usr/include/newlib/stdio.h /usr/include/newlib/_ansi.h \
- /usr/include/newlib/nano/newlib.h /usr/include/newlib/_newlib_version.h \
- /usr/include/newlib/sys/config.h /usr/include/newlib/machine/ieeefp.h \
- /usr/include/newlib/sys/features.h /usr/include/newlib/sys/cdefs.h \
+ /usr/include/newlib/stdio.h /usr/include/newlib/sys/cdefs.h \
  /usr/include/newlib/machine/_default_types.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stddef.h \
  /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
  /usr/include/newlib/sys/reent.h /usr/include/newlib/_ansi.h \
  /usr/include/newlib/sys/_types.h /usr/include/newlib/machine/_types.h \
@@ -21,7 +25,6 @@
  /usr/include/newlib/sys/_pthreadtypes.h \
  /usr/include/newlib/machine/types.h /usr/include/newlib/sys/stdio.h \
  /home/sarah/github/RIOT-OS/RIOT/core/lib/include/irq.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdbool.h \
  /home/sarah/github/RIOT-OS/RIOT/cpu/stm32/include/cpu_conf.h \
  /home/sarah/github/RIOT-OS/RIOT/cpu/cortexm_common/include/cpu_conf_common.h \
  /home/sarah/github/RIOT-OS/RIOT/build/stm32/cmsis/l1/Include/stm32l1xx.h \
@@ -41,7 +44,6 @@
  /home/sarah/github/RIOT-OS/RIOT/core/lib/include/container.h \
  /home/sarah/github/RIOT-OS/RIOT/sys/include/debug_irq_disable.h \
  /home/sarah/github/RIOT-OS/RIOT/core/include/sched.h \
- /usr/include/newlib/inttypes.h /usr/include/newlib/sys/_intsup.h \
  /home/sarah/github/RIOT-OS/RIOT/core/include/native_sched.h \
  /home/sarah/github/RIOT-OS/RIOT/core/lib/include/clist.h \
  /home/sarah/github/RIOT-OS/RIOT/core/lib/include/list.h \
@@ -62,14 +64,16 @@
  /home/sarah/github/RIOT-OS/RIOT/cpu/stm32/include/periph/cpu_fmc.h \
  /home/sarah/github/RIOT-OS/RIOT/cpu/stm32/include/periph/cpu_gpio.h \
  /home/sarah/github/RIOT-OS/RIOT/cpu/stm32/include/periph/cpu_gpio_ll.h \
+ /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdalign.h \
  /home/sarah/github/RIOT-OS/RIOT/cpu/stm32/include/periph/cpu_i2c.h \
  /home/sarah/github/RIOT-OS/RIOT/cpu/stm32/include/periph/cpu_ltdc.h \
  /home/sarah/github/RIOT-OS/RIOT/cpu/stm32/include/periph/cpu_pm.h \
  /home/sarah/github/RIOT-OS/RIOT/cpu/stm32/include/periph/cpu_pwm.h \
  /home/sarah/github/RIOT-OS/RIOT/cpu/stm32/include/periph/cpu_timer.h \
  /home/sarah/github/RIOT-OS/RIOT/cpu/stm32/include/periph/cpu_qdec.h \
- /home/sarah/github/RIOT-OS/RIOT/cpu/stm32/include/periph/cpu_spi.h \
+ /home/sarah/github/RIOT-OS/RIOT/cpu/stm32/include/periph/cpu_sdmmc.h \
  /home/sarah/github/RIOT-OS/RIOT/cpu/stm32/include/periph/cpu_dma.h \
+ /home/sarah/github/RIOT-OS/RIOT/cpu/stm32/include/periph/cpu_spi.h \
  /home/sarah/github/RIOT-OS/RIOT/cpu/stm32/include/periph/cpu_timer.h \
  /home/sarah/github/RIOT-OS/RIOT/cpu/stm32/include/periph/cpu_uart.h \
  /home/sarah/github/RIOT-OS/RIOT/cpu/stm32/include/periph/cpu_usbdev.h \
@@ -91,13 +95,11 @@
 
 /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdint.h:
 
-/home/sarah/github/RIOT-OS/RIOT/cpu/stm32/include/periph_cpu.h:
+/usr/lib/gcc/arm-none-eabi/9.2.1/include/stdbool.h:
 
-/home/sarah/github/RIOT-OS/RIOT/cpu/cortexm_common/include/cpu.h:
+/home/sarah/github/RIOT-OS/RIOT/sys/include/architecture.h:
 
-/usr/include/newlib/stdio.h:
-
-/usr/include/newlib/_ansi.h:
+/usr/include/newlib/inttypes.h:
 
 /usr/include/newlib/nano/newlib.h:
 
@@ -109,11 +111,23 @@
 
 /usr/include/newlib/sys/features.h:
 
+/usr/include/newlib/sys/_intsup.h:
+
+/usr/include/newlib/_ansi.h:
+
+/usr/lib/gcc/arm-none-eabi/9.2.1/include/stddef.h:
+
+/home/sarah/github/RIOT-OS/RIOT/cpu/cortexm_common/include/architecture_arch.h:
+
+/home/sarah/github/RIOT-OS/RIOT/cpu/stm32/include/periph_cpu.h:
+
+/home/sarah/github/RIOT-OS/RIOT/cpu/cortexm_common/include/cpu.h:
+
+/usr/include/newlib/stdio.h:
+
 /usr/include/newlib/sys/cdefs.h:
 
 /usr/include/newlib/machine/_default_types.h:
-
-/usr/lib/gcc/arm-none-eabi/9.2.1/include/stddef.h:
 
 /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h:
 
@@ -140,8 +154,6 @@
 /usr/include/newlib/sys/stdio.h:
 
 /home/sarah/github/RIOT-OS/RIOT/core/lib/include/irq.h:
-
-/usr/lib/gcc/arm-none-eabi/9.2.1/include/stdbool.h:
 
 /home/sarah/github/RIOT-OS/RIOT/cpu/stm32/include/cpu_conf.h:
 
@@ -180,10 +192,6 @@
 /home/sarah/github/RIOT-OS/RIOT/sys/include/debug_irq_disable.h:
 
 /home/sarah/github/RIOT-OS/RIOT/core/include/sched.h:
-
-/usr/include/newlib/inttypes.h:
-
-/usr/include/newlib/sys/_intsup.h:
 
 /home/sarah/github/RIOT-OS/RIOT/core/include/native_sched.h:
 
@@ -225,6 +233,8 @@
 
 /home/sarah/github/RIOT-OS/RIOT/cpu/stm32/include/periph/cpu_gpio_ll.h:
 
+/usr/lib/gcc/arm-none-eabi/9.2.1/include/stdalign.h:
+
 /home/sarah/github/RIOT-OS/RIOT/cpu/stm32/include/periph/cpu_i2c.h:
 
 /home/sarah/github/RIOT-OS/RIOT/cpu/stm32/include/periph/cpu_ltdc.h:
@@ -237,9 +247,11 @@
 
 /home/sarah/github/RIOT-OS/RIOT/cpu/stm32/include/periph/cpu_qdec.h:
 
-/home/sarah/github/RIOT-OS/RIOT/cpu/stm32/include/periph/cpu_spi.h:
+/home/sarah/github/RIOT-OS/RIOT/cpu/stm32/include/periph/cpu_sdmmc.h:
 
 /home/sarah/github/RIOT-OS/RIOT/cpu/stm32/include/periph/cpu_dma.h:
+
+/home/sarah/github/RIOT-OS/RIOT/cpu/stm32/include/periph/cpu_spi.h:
 
 /home/sarah/github/RIOT-OS/RIOT/cpu/stm32/include/periph/cpu_timer.h:
 

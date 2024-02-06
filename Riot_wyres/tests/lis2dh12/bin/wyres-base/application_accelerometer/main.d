@@ -66,14 +66,16 @@
  /home/sarah/github/RIOT-OS/RIOT/cpu/stm32/include/periph/cpu_fmc.h \
  /home/sarah/github/RIOT-OS/RIOT/cpu/stm32/include/periph/cpu_gpio.h \
  /home/sarah/github/RIOT-OS/RIOT/cpu/stm32/include/periph/cpu_gpio_ll.h \
+ /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdalign.h \
  /home/sarah/github/RIOT-OS/RIOT/cpu/stm32/include/periph/cpu_i2c.h \
  /home/sarah/github/RIOT-OS/RIOT/cpu/stm32/include/periph/cpu_ltdc.h \
  /home/sarah/github/RIOT-OS/RIOT/cpu/stm32/include/periph/cpu_pm.h \
  /home/sarah/github/RIOT-OS/RIOT/cpu/stm32/include/periph/cpu_pwm.h \
  /home/sarah/github/RIOT-OS/RIOT/cpu/stm32/include/periph/cpu_timer.h \
  /home/sarah/github/RIOT-OS/RIOT/cpu/stm32/include/periph/cpu_qdec.h \
- /home/sarah/github/RIOT-OS/RIOT/cpu/stm32/include/periph/cpu_spi.h \
+ /home/sarah/github/RIOT-OS/RIOT/cpu/stm32/include/periph/cpu_sdmmc.h \
  /home/sarah/github/RIOT-OS/RIOT/cpu/stm32/include/periph/cpu_dma.h \
+ /home/sarah/github/RIOT-OS/RIOT/cpu/stm32/include/periph/cpu_spi.h \
  /home/sarah/github/RIOT-OS/RIOT/cpu/stm32/include/periph/cpu_timer.h \
  /home/sarah/github/RIOT-OS/RIOT/cpu/stm32/include/periph/cpu_uart.h \
  /home/sarah/github/RIOT-OS/RIOT/cpu/stm32/include/periph/cpu_usbdev.h \
@@ -92,7 +94,7 @@
  /home/sarah/github/RIOT-OS/RIOT/drivers/include/saul.h \
  /usr/include/newlib/errno.h /usr/include/newlib/sys/errno.h \
  /home/sarah/github/RIOT-OS/RIOT/sys/include/phydat.h \
- /home/sarah/github/RIOT-OS/RIOT/drivers/lis2dh12/include/lis2dh12_registers.h \
+ /home/sarah/github/IoT_I2HM_wyres/Riot_wyres/modules/lis2dh12/include/lis2dh12_registers.h \
  /home/sarah/github/RIOT-OS/RIOT/drivers/include/periph/gpio.h \
  /home/sarah/github/IoT_I2HM_wyres/Riot_wyres/boards/wyres-base/include/periph_conf.h \
  /home/sarah/github/RIOT-OS/RIOT/cpu/stm32/include/clk/clk_conf.h \
@@ -100,7 +102,7 @@
  /home/sarah/github/RIOT-OS/RIOT/cpu/stm32/include/clk/l0l1/cfg_clock_default.h \
  /home/sarah/github/RIOT-OS/RIOT/drivers/include/periph/spi.h \
  /home/sarah/github/RIOT-OS/RIOT/drivers/include/periph/gpio.h \
- /home/sarah/github/RIOT-OS/RIOT/drivers/lis2dh12/include/lis2dh12_params.h \
+ /home/sarah/github/IoT_I2HM_wyres/Riot_wyres/modules/lis2dh12/include/lis2dh12_params.h \
  /home/sarah/github/IoT_I2HM_wyres/Riot_wyres/boards/wyres-base/include/board.h \
  /home/sarah/github/IoT_I2HM_wyres/Riot_wyres/boards/wyres-base/include/periph_conf.h \
  /home/sarah/github/RIOT-OS/RIOT/sys/include/saul_reg.h \
@@ -263,6 +265,8 @@
 
 /home/sarah/github/RIOT-OS/RIOT/cpu/stm32/include/periph/cpu_gpio_ll.h:
 
+/usr/lib/gcc/arm-none-eabi/9.2.1/include/stdalign.h:
+
 /home/sarah/github/RIOT-OS/RIOT/cpu/stm32/include/periph/cpu_i2c.h:
 
 /home/sarah/github/RIOT-OS/RIOT/cpu/stm32/include/periph/cpu_ltdc.h:
@@ -275,9 +279,11 @@
 
 /home/sarah/github/RIOT-OS/RIOT/cpu/stm32/include/periph/cpu_qdec.h:
 
-/home/sarah/github/RIOT-OS/RIOT/cpu/stm32/include/periph/cpu_spi.h:
+/home/sarah/github/RIOT-OS/RIOT/cpu/stm32/include/periph/cpu_sdmmc.h:
 
 /home/sarah/github/RIOT-OS/RIOT/cpu/stm32/include/periph/cpu_dma.h:
+
+/home/sarah/github/RIOT-OS/RIOT/cpu/stm32/include/periph/cpu_spi.h:
 
 /home/sarah/github/RIOT-OS/RIOT/cpu/stm32/include/periph/cpu_timer.h:
 
@@ -317,7 +323,7 @@
 
 /home/sarah/github/RIOT-OS/RIOT/sys/include/phydat.h:
 
-/home/sarah/github/RIOT-OS/RIOT/drivers/lis2dh12/include/lis2dh12_registers.h:
+/home/sarah/github/IoT_I2HM_wyres/Riot_wyres/modules/lis2dh12/include/lis2dh12_registers.h:
 
 /home/sarah/github/RIOT-OS/RIOT/drivers/include/periph/gpio.h:
 
@@ -333,7 +339,7 @@
 
 /home/sarah/github/RIOT-OS/RIOT/drivers/include/periph/gpio.h:
 
-/home/sarah/github/RIOT-OS/RIOT/drivers/lis2dh12/include/lis2dh12_params.h:
+/home/sarah/github/IoT_I2HM_wyres/Riot_wyres/modules/lis2dh12/include/lis2dh12_params.h:
 
 /home/sarah/github/IoT_I2HM_wyres/Riot_wyres/boards/wyres-base/include/board.h:
 

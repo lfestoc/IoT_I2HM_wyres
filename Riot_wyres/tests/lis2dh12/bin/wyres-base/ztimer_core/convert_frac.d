@@ -39,6 +39,7 @@
  /home/sarah/github/RIOT-OS/RIOT/core/include/sched.h \
  /home/sarah/github/RIOT-OS/RIOT/core/include/mutex.h \
  /home/sarah/github/RIOT-OS/RIOT/sys/include/architecture.h \
+ /usr/lib/gcc/arm-none-eabi/9.2.1/include-fixed/limits.h \
  /home/sarah/github/RIOT-OS/RIOT/cpu/cortexm_common/include/architecture_arch.h \
  /home/sarah/github/RIOT-OS/RIOT/core/lib/include/list.h \
  /home/sarah/github/RIOT-OS/RIOT/core/include/thread.h \
@@ -146,6 +147,8 @@
 /home/sarah/github/RIOT-OS/RIOT/core/include/mutex.h:
 
 /home/sarah/github/RIOT-OS/RIOT/sys/include/architecture.h:
+
+/usr/lib/gcc/arm-none-eabi/9.2.1/include-fixed/limits.h:
 
 /home/sarah/github/RIOT-OS/RIOT/cpu/cortexm_common/include/architecture_arch.h:
 

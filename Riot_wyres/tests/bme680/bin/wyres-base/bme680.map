@@ -690,6 +690,10 @@ Discarded input sections
                 0x0000000000000000        0x8 /home/sarah/github/IoT_I2HM_wyres/Riot_wyres/tests/bme680/bin/wyres-base/periph/timer.o
  .text.timer_set_absolute
                 0x0000000000000000       0x50 /home/sarah/github/IoT_I2HM_wyres/Riot_wyres/tests/bme680/bin/wyres-base/periph/timer.o
+ .text.timer_query_freqs_numof
+                0x0000000000000000        0x6 /home/sarah/github/IoT_I2HM_wyres/Riot_wyres/tests/bme680/bin/wyres-base/periph/timer.o
+ .text.timer_query_freqs
+                0x0000000000000000       0x28 /home/sarah/github/IoT_I2HM_wyres/Riot_wyres/tests/bme680/bin/wyres-base/periph/timer.o
  .text.timer_stop
                 0x0000000000000000       0x20 /home/sarah/github/IoT_I2HM_wyres/Riot_wyres/tests/bme680/bin/wyres-base/periph/timer.o
  .text          0x0000000000000000        0x0 /home/sarah/github/IoT_I2HM_wyres/Riot_wyres/tests/bme680/bin/wyres-base/periph/uart.o
@@ -1118,7 +1122,7 @@ END GROUP
                 0x0000000000000000                _backup_ram_start_addr = DEFINED (_backup_ram_start_addr)?_backup_ram_start_addr:0x0
                 0x0000000000000000                _backup_ram_len = DEFINED (_backup_ram_len)?_backup_ram_len:0x0
 
-.text           0x0000000008000000     0x4c24
+.text           0x0000000008000000     0x4c44
                 0x0000000008000000                . = ALIGN (0x4)
                 0x0000000008000000                _sfixed = .
                 0x0000000008000000                _isr_vectors = DEFINED (_isr_vectors)?_isr_vectors:.
@@ -1365,408 +1369,410 @@ END GROUP
  .text._wait_for_bus
                 0x0000000008001bb8       0x24 /home/sarah/github/IoT_I2HM_wyres/Riot_wyres/tests/bme680/bin/wyres-base/periph/i2c_2.o
  .text._stop    0x0000000008001bdc       0x3c /home/sarah/github/IoT_I2HM_wyres/Riot_wyres/tests/bme680/bin/wyres-base/periph/i2c_2.o
- .text._init    0x0000000008001c18       0xbc /home/sarah/github/IoT_I2HM_wyres/Riot_wyres/tests/bme680/bin/wyres-base/periph/i2c_2.o
+ .text._disable_periph
+                0x0000000008001c18       0x28 /home/sarah/github/IoT_I2HM_wyres/Riot_wyres/tests/bme680/bin/wyres-base/periph/i2c_2.o
+ .text._init    0x0000000008001c40       0xc8 /home/sarah/github/IoT_I2HM_wyres/Riot_wyres/tests/bme680/bin/wyres-base/periph/i2c_2.o
  .text._is_sr1_mask_set
-                0x0000000008001cd4       0x66 /home/sarah/github/IoT_I2HM_wyres/Riot_wyres/tests/bme680/bin/wyres-base/periph/i2c_2.o
+                0x0000000008001d08       0x66 /home/sarah/github/IoT_I2HM_wyres/Riot_wyres/tests/bme680/bin/wyres-base/periph/i2c_2.o
  .text._i2c_start
-                0x0000000008001d3a       0x8c /home/sarah/github/IoT_I2HM_wyres/Riot_wyres/tests/bme680/bin/wyres-base/periph/i2c_2.o
- *fill*         0x0000000008001dc6        0x2 
+                0x0000000008001d6e       0x8c /home/sarah/github/IoT_I2HM_wyres/Riot_wyres/tests/bme680/bin/wyres-base/periph/i2c_2.o
+ *fill*         0x0000000008001dfa        0x2 
  .text.i2c_init
-                0x0000000008001dc8       0x38 /home/sarah/github/IoT_I2HM_wyres/Riot_wyres/tests/bme680/bin/wyres-base/periph/i2c_2.o
-                0x0000000008001dc8                i2c_init
+                0x0000000008001dfc       0x3c /home/sarah/github/IoT_I2HM_wyres/Riot_wyres/tests/bme680/bin/wyres-base/periph/i2c_2.o
+                0x0000000008001dfc                i2c_init
  .text.i2c_acquire
-                0x0000000008001e00       0x38 /home/sarah/github/IoT_I2HM_wyres/Riot_wyres/tests/bme680/bin/wyres-base/periph/i2c_2.o
-                0x0000000008001e00                i2c_acquire
+                0x0000000008001e38       0x38 /home/sarah/github/IoT_I2HM_wyres/Riot_wyres/tests/bme680/bin/wyres-base/periph/i2c_2.o
+                0x0000000008001e38                i2c_acquire
  .text.i2c_release
-                0x0000000008001e38       0x3c /home/sarah/github/IoT_I2HM_wyres/Riot_wyres/tests/bme680/bin/wyres-base/periph/i2c_2.o
-                0x0000000008001e38                i2c_release
+                0x0000000008001e70       0x20 /home/sarah/github/IoT_I2HM_wyres/Riot_wyres/tests/bme680/bin/wyres-base/periph/i2c_2.o
+                0x0000000008001e70                i2c_release
  .text.i2c_read_bytes
-                0x0000000008001e74       0xd4 /home/sarah/github/IoT_I2HM_wyres/Riot_wyres/tests/bme680/bin/wyres-base/periph/i2c_2.o
-                0x0000000008001e74                i2c_read_bytes
+                0x0000000008001e90       0xd4 /home/sarah/github/IoT_I2HM_wyres/Riot_wyres/tests/bme680/bin/wyres-base/periph/i2c_2.o
+                0x0000000008001e90                i2c_read_bytes
  .text.i2c_write_bytes
-                0x0000000008001f48       0x88 /home/sarah/github/IoT_I2HM_wyres/Riot_wyres/tests/bme680/bin/wyres-base/periph/i2c_2.o
-                0x0000000008001f48                i2c_write_bytes
- .text.pm_set   0x0000000008001fd0       0x7c /home/sarah/github/IoT_I2HM_wyres/Riot_wyres/tests/bme680/bin/wyres-base/periph/pm.o
-                0x0000000008001fd0                pm_set
+                0x0000000008001f64       0x88 /home/sarah/github/IoT_I2HM_wyres/Riot_wyres/tests/bme680/bin/wyres-base/periph/i2c_2.o
+                0x0000000008001f64                i2c_write_bytes
+ .text.pm_set   0x0000000008001fec       0x80 /home/sarah/github/IoT_I2HM_wyres/Riot_wyres/tests/bme680/bin/wyres-base/periph/pm.o
+                0x0000000008001fec                pm_set
  .text.timer_set
-                0x000000000800204c       0x64 /home/sarah/github/IoT_I2HM_wyres/Riot_wyres/tests/bme680/bin/wyres-base/periph/timer.o
-                0x000000000800204c                timer_set
+                0x000000000800206c       0x64 /home/sarah/github/IoT_I2HM_wyres/Riot_wyres/tests/bme680/bin/wyres-base/periph/timer.o
+                0x000000000800206c                timer_set
  .text.timer_clear
-                0x00000000080020b0       0x40 /home/sarah/github/IoT_I2HM_wyres/Riot_wyres/tests/bme680/bin/wyres-base/periph/timer.o
-                0x00000000080020b0                timer_clear
+                0x00000000080020d0       0x40 /home/sarah/github/IoT_I2HM_wyres/Riot_wyres/tests/bme680/bin/wyres-base/periph/timer.o
+                0x00000000080020d0                timer_clear
  .text.timer_read
-                0x00000000080020f0       0x10 /home/sarah/github/IoT_I2HM_wyres/Riot_wyres/tests/bme680/bin/wyres-base/periph/timer.o
-                0x00000000080020f0                timer_read
+                0x0000000008002110       0x10 /home/sarah/github/IoT_I2HM_wyres/Riot_wyres/tests/bme680/bin/wyres-base/periph/timer.o
+                0x0000000008002110                timer_read
  .text.timer_start
-                0x0000000008002100       0x20 /home/sarah/github/IoT_I2HM_wyres/Riot_wyres/tests/bme680/bin/wyres-base/periph/timer.o
-                0x0000000008002100                timer_start
+                0x0000000008002120       0x20 /home/sarah/github/IoT_I2HM_wyres/Riot_wyres/tests/bme680/bin/wyres-base/periph/timer.o
+                0x0000000008002120                timer_start
  .text.timer_init
-                0x0000000008002120       0x58 /home/sarah/github/IoT_I2HM_wyres/Riot_wyres/tests/bme680/bin/wyres-base/periph/timer.o
-                0x0000000008002120                timer_init
+                0x0000000008002140       0x58 /home/sarah/github/IoT_I2HM_wyres/Riot_wyres/tests/bme680/bin/wyres-base/periph/timer.o
+                0x0000000008002140                timer_init
  .text.isr_tim3
-                0x0000000008002178       0x78 /home/sarah/github/IoT_I2HM_wyres/Riot_wyres/tests/bme680/bin/wyres-base/periph/timer.o
-                0x0000000008002178                isr_tim3
+                0x0000000008002198       0x78 /home/sarah/github/IoT_I2HM_wyres/Riot_wyres/tests/bme680/bin/wyres-base/periph/timer.o
+                0x0000000008002198                isr_tim3
  .text.uart_enable_clock
-                0x00000000080021f0       0x30 /home/sarah/github/IoT_I2HM_wyres/Riot_wyres/tests/bme680/bin/wyres-base/periph/uart.o
+                0x0000000008002210       0x30 /home/sarah/github/IoT_I2HM_wyres/Riot_wyres/tests/bme680/bin/wyres-base/periph/uart.o
  .text.uart_init
-                0x0000000008002220       0x78 /home/sarah/github/IoT_I2HM_wyres/Riot_wyres/tests/bme680/bin/wyres-base/periph/uart.o
-                0x0000000008002220                uart_init
+                0x0000000008002240       0x78 /home/sarah/github/IoT_I2HM_wyres/Riot_wyres/tests/bme680/bin/wyres-base/periph/uart.o
+                0x0000000008002240                uart_init
  .text.uart_write
-                0x0000000008002298       0x30 /home/sarah/github/IoT_I2HM_wyres/Riot_wyres/tests/bme680/bin/wyres-base/periph/uart.o
-                0x0000000008002298                uart_write
+                0x00000000080022b8       0x30 /home/sarah/github/IoT_I2HM_wyres/Riot_wyres/tests/bme680/bin/wyres-base/periph/uart.o
+                0x00000000080022b8                uart_write
  .text.isr_usart1
-                0x00000000080022c8       0x44 /home/sarah/github/IoT_I2HM_wyres/Riot_wyres/tests/bme680/bin/wyres-base/periph/uart.o
-                0x00000000080022c8                isr_usart1
+                0x00000000080022e8       0x44 /home/sarah/github/IoT_I2HM_wyres/Riot_wyres/tests/bme680/bin/wyres-base/periph/uart.o
+                0x00000000080022e8                isr_usart1
  .text.pm_set_lowest
-                0x000000000800230c       0x2c /home/sarah/github/IoT_I2HM_wyres/Riot_wyres/tests/bme680/bin/wyres-base/pm_layered/pm.o
-                0x000000000800230c                pm_set_lowest
+                0x000000000800232c       0x2c /home/sarah/github/IoT_I2HM_wyres/Riot_wyres/tests/bme680/bin/wyres-base/pm_layered/pm.o
+                0x000000000800232c                pm_set_lowest
  .text.pm_block
-                0x0000000008002338       0x24 /home/sarah/github/IoT_I2HM_wyres/Riot_wyres/tests/bme680/bin/wyres-base/pm_layered/pm.o
-                0x0000000008002338                pm_block
+                0x0000000008002358       0x24 /home/sarah/github/IoT_I2HM_wyres/Riot_wyres/tests/bme680/bin/wyres-base/pm_layered/pm.o
+                0x0000000008002358                pm_block
  .text.pm_unblock
-                0x000000000800235c       0x20 /home/sarah/github/IoT_I2HM_wyres/Riot_wyres/tests/bme680/bin/wyres-base/pm_layered/pm.o
-                0x000000000800235c                pm_unblock
- .text.pm_off   0x000000000800237c       0x10 /home/sarah/github/IoT_I2HM_wyres/Riot_wyres/tests/bme680/bin/wyres-base/pm_layered/pm.o
-                0x000000000800237c                pm_off
+                0x000000000800237c       0x20 /home/sarah/github/IoT_I2HM_wyres/Riot_wyres/tests/bme680/bin/wyres-base/pm_layered/pm.o
+                0x000000000800237c                pm_unblock
+ .text.pm_off   0x000000000800239c       0x10 /home/sarah/github/IoT_I2HM_wyres/Riot_wyres/tests/bme680/bin/wyres-base/pm_layered/pm.o
+                0x000000000800239c                pm_off
  .text.stdio_init
-                0x000000000800238c        0xe /home/sarah/github/IoT_I2HM_wyres/Riot_wyres/tests/bme680/bin/wyres-base/stdio_uart/stdio_uart.o
-                0x000000000800238c                stdio_init
+                0x00000000080023ac        0xe /home/sarah/github/IoT_I2HM_wyres/Riot_wyres/tests/bme680/bin/wyres-base/stdio_uart/stdio_uart.o
+                0x00000000080023ac                stdio_init
  .text.stdio_read
-                0x000000000800239a        0x6 /home/sarah/github/IoT_I2HM_wyres/Riot_wyres/tests/bme680/bin/wyres-base/stdio_uart/stdio_uart.o
-                0x000000000800239a                stdio_read
+                0x00000000080023ba        0x6 /home/sarah/github/IoT_I2HM_wyres/Riot_wyres/tests/bme680/bin/wyres-base/stdio_uart/stdio_uart.o
+                0x00000000080023ba                stdio_read
  .text.stdio_write
-                0x00000000080023a0       0x12 /home/sarah/github/IoT_I2HM_wyres/Riot_wyres/tests/bme680/bin/wyres-base/stdio_uart/stdio_uart.o
-                0x00000000080023a0                stdio_write
- *fill*         0x00000000080023b2        0x2 
+                0x00000000080023c0       0x12 /home/sarah/github/IoT_I2HM_wyres/Riot_wyres/tests/bme680/bin/wyres-base/stdio_uart/stdio_uart.o
+                0x00000000080023c0                stdio_write
+ *fill*         0x00000000080023d2        0x2 
  .text.stmclk_enable_hsi
-                0x00000000080023b4       0x18 /home/sarah/github/IoT_I2HM_wyres/Riot_wyres/tests/bme680/bin/wyres-base/stm32_clk/stmclk_common.o
-                0x00000000080023b4                stmclk_enable_hsi
+                0x00000000080023d4       0x18 /home/sarah/github/IoT_I2HM_wyres/Riot_wyres/tests/bme680/bin/wyres-base/stm32_clk/stmclk_common.o
+                0x00000000080023d4                stmclk_enable_hsi
  .text.stmclk_disable_hsi
-                0x00000000080023cc       0x10 /home/sarah/github/IoT_I2HM_wyres/Riot_wyres/tests/bme680/bin/wyres-base/stm32_clk/stmclk_common.o
-                0x00000000080023cc                stmclk_disable_hsi
+                0x00000000080023ec       0x10 /home/sarah/github/IoT_I2HM_wyres/Riot_wyres/tests/bme680/bin/wyres-base/stm32_clk/stmclk_common.o
+                0x00000000080023ec                stmclk_disable_hsi
  .text.stmclk_init_sysclk
-                0x00000000080023dc       0xac /home/sarah/github/IoT_I2HM_wyres/Riot_wyres/tests/bme680/bin/wyres-base/stm32_clk/stmclk_l0l1.o
-                0x00000000080023dc                stmclk_init_sysclk
+                0x00000000080023fc       0xac /home/sarah/github/IoT_I2HM_wyres/Riot_wyres/tests/bme680/bin/wyres-base/stm32_clk/stmclk_l0l1.o
+                0x00000000080023fc                stmclk_init_sysclk
  .text.dummy_handler
-                0x0000000008002488        0x4 /home/sarah/github/IoT_I2HM_wyres/Riot_wyres/tests/bme680/bin/wyres-base/stm32_vectors/STM32L151xC.o
-                0x0000000008002488                isr_pvd
-                0x0000000008002488                isr_rtc_wkup
-                0x0000000008002488                isr_comp_acq
-                0x0000000008002488                isr_tim10
-                0x0000000008002488                isr_dac
-                0x0000000008002488                isr_exti
-                0x0000000008002488                isr_dma1_channel4
-                0x0000000008002488                isr_tim7
-                0x0000000008002488                isr_tim5
-                0x0000000008002488                isr_i2c1_ev
-                0x0000000008002488                isr_usart2
-                0x0000000008002488                isr_dma1_channel5
-                0x0000000008002488                isr_tim4
-                0x0000000008002488                isr_dma1_channel2
-                0x0000000008002488                isr_dma1_channel7
-                0x0000000008002488                isr_tim2
-                0x0000000008002488                isr_dma2_channel4
-                0x0000000008002488                isr_spi2
-                0x0000000008002488                isr_dma1_channel1
-                0x0000000008002488                dummy_handler
-                0x0000000008002488                isr_usb_hp
-                0x0000000008002488                isr_tim9
-                0x0000000008002488                isr_comp
-                0x0000000008002488                isr_spi1
-                0x0000000008002488                isr_tim6
-                0x0000000008002488                isr_usb_lp
-                0x0000000008002488                isr_rcc
-                0x0000000008002488                isr_flash
-                0x0000000008002488                isr_dma2_channel5
-                0x0000000008002488                isr_dma2_channel1
-                0x0000000008002488                isr_adc1
-                0x0000000008002488                isr_i2c2_er
-                0x0000000008002488                isr_usb_fs_wkup
-                0x0000000008002488                isr_dma1_channel6
-                0x0000000008002488                isr_tim11
-                0x0000000008002488                isr_spi3
-                0x0000000008002488                isr_usart3
-                0x0000000008002488                isr_i2c2_ev
-                0x0000000008002488                isr_dma2_channel2
-                0x0000000008002488                isr_dma2_channel3
-                0x0000000008002488                isr_rtc_alarm
-                0x0000000008002488                isr_dma1_channel3
-                0x0000000008002488                isr_tamper_stamp
-                0x0000000008002488                isr_i2c1_er
-                0x0000000008002488                isr_wwdg
+                0x00000000080024a8        0x4 /home/sarah/github/IoT_I2HM_wyres/Riot_wyres/tests/bme680/bin/wyres-base/stm32_vectors/STM32L151xC.o
+                0x00000000080024a8                isr_pvd
+                0x00000000080024a8                isr_rtc_wkup
+                0x00000000080024a8                isr_comp_acq
+                0x00000000080024a8                isr_tim10
+                0x00000000080024a8                isr_dac
+                0x00000000080024a8                isr_exti
+                0x00000000080024a8                isr_dma1_channel4
+                0x00000000080024a8                isr_tim7
+                0x00000000080024a8                isr_tim5
+                0x00000000080024a8                isr_i2c1_ev
+                0x00000000080024a8                isr_usart2
+                0x00000000080024a8                isr_dma1_channel5
+                0x00000000080024a8                isr_tim4
+                0x00000000080024a8                isr_dma1_channel2
+                0x00000000080024a8                isr_dma1_channel7
+                0x00000000080024a8                isr_tim2
+                0x00000000080024a8                isr_dma2_channel4
+                0x00000000080024a8                isr_spi2
+                0x00000000080024a8                isr_dma1_channel1
+                0x00000000080024a8                dummy_handler
+                0x00000000080024a8                isr_usb_hp
+                0x00000000080024a8                isr_tim9
+                0x00000000080024a8                isr_comp
+                0x00000000080024a8                isr_spi1
+                0x00000000080024a8                isr_tim6
+                0x00000000080024a8                isr_usb_lp
+                0x00000000080024a8                isr_rcc
+                0x00000000080024a8                isr_flash
+                0x00000000080024a8                isr_dma2_channel5
+                0x00000000080024a8                isr_dma2_channel1
+                0x00000000080024a8                isr_adc1
+                0x00000000080024a8                isr_i2c2_er
+                0x00000000080024a8                isr_usb_fs_wkup
+                0x00000000080024a8                isr_dma1_channel6
+                0x00000000080024a8                isr_tim11
+                0x00000000080024a8                isr_spi3
+                0x00000000080024a8                isr_usart3
+                0x00000000080024a8                isr_i2c2_ev
+                0x00000000080024a8                isr_dma2_channel2
+                0x00000000080024a8                isr_dma2_channel3
+                0x00000000080024a8                isr_rtc_alarm
+                0x00000000080024a8                isr_dma1_channel3
+                0x00000000080024a8                isr_tamper_stamp
+                0x00000000080024a8                isr_i2c1_er
+                0x00000000080024a8                isr_wwdg
  .text.ztimer_convert_frac_op_now
-                0x000000000800248c       0x3e /home/sarah/github/IoT_I2HM_wyres/Riot_wyres/tests/bme680/bin/wyres-base/ztimer_core/convert_frac.o
+                0x00000000080024ac       0x3e /home/sarah/github/IoT_I2HM_wyres/Riot_wyres/tests/bme680/bin/wyres-base/ztimer_core/convert_frac.o
  .text.ztimer_convert_frac_op_set
-                0x00000000080024ca       0x34 /home/sarah/github/IoT_I2HM_wyres/Riot_wyres/tests/bme680/bin/wyres-base/ztimer_core/convert_frac.o
- *fill*         0x00000000080024fe        0x2 
+                0x00000000080024ea       0x34 /home/sarah/github/IoT_I2HM_wyres/Riot_wyres/tests/bme680/bin/wyres-base/ztimer_core/convert_frac.o
+ *fill*         0x000000000800251e        0x2 
  .text.ztimer_convert_frac_init
-                0x0000000008002500       0x94 /home/sarah/github/IoT_I2HM_wyres/Riot_wyres/tests/bme680/bin/wyres-base/ztimer_core/convert_frac.o
-                0x0000000008002500                ztimer_convert_frac_init
+                0x0000000008002520       0x94 /home/sarah/github/IoT_I2HM_wyres/Riot_wyres/tests/bme680/bin/wyres-base/ztimer_core/convert_frac.o
+                0x0000000008002520                ztimer_convert_frac_init
  .text.ztimer_convert_cancel
-                0x0000000008002594        0xa /home/sarah/github/IoT_I2HM_wyres/Riot_wyres/tests/bme680/bin/wyres-base/ztimer_core/convert.o
-                0x0000000008002594                ztimer_convert_cancel
- .text._is_set  0x000000000800259e       0x18 /home/sarah/github/IoT_I2HM_wyres/Riot_wyres/tests/bme680/bin/wyres-base/ztimer_core/core.o
+                0x00000000080025b4        0xa /home/sarah/github/IoT_I2HM_wyres/Riot_wyres/tests/bme680/bin/wyres-base/ztimer_core/convert.o
+                0x00000000080025b4                ztimer_convert_cancel
+ .text._is_set  0x00000000080025be       0x18 /home/sarah/github/IoT_I2HM_wyres/Riot_wyres/tests/bme680/bin/wyres-base/ztimer_core/core.o
  .text._now_next
-                0x00000000080025b6       0x2a /home/sarah/github/IoT_I2HM_wyres/Riot_wyres/tests/bme680/bin/wyres-base/ztimer_core/core.o
+                0x00000000080025d6       0x2a /home/sarah/github/IoT_I2HM_wyres/Riot_wyres/tests/bme680/bin/wyres-base/ztimer_core/core.o
  .text._ztimer_update
-                0x00000000080025e0       0x28 /home/sarah/github/IoT_I2HM_wyres/Riot_wyres/tests/bme680/bin/wyres-base/ztimer_core/core.o
+                0x0000000008002600       0x28 /home/sarah/github/IoT_I2HM_wyres/Riot_wyres/tests/bme680/bin/wyres-base/ztimer_core/core.o
  .text._del_entry_from_list
-                0x0000000008002608       0x5a /home/sarah/github/IoT_I2HM_wyres/Riot_wyres/tests/bme680/bin/wyres-base/ztimer_core/core.o
+                0x0000000008002628       0x5a /home/sarah/github/IoT_I2HM_wyres/Riot_wyres/tests/bme680/bin/wyres-base/ztimer_core/core.o
  .text._ztimer_now_extend
-                0x0000000008002662       0x3a /home/sarah/github/IoT_I2HM_wyres/Riot_wyres/tests/bme680/bin/wyres-base/ztimer_core/core.o
-                0x0000000008002662                _ztimer_now_extend
+                0x0000000008002682       0x3a /home/sarah/github/IoT_I2HM_wyres/Riot_wyres/tests/bme680/bin/wyres-base/ztimer_core/core.o
+                0x0000000008002682                _ztimer_now_extend
  .text.ztimer_now
-                0x000000000800269c       0x10 /home/sarah/github/IoT_I2HM_wyres/Riot_wyres/tests/bme680/bin/wyres-base/ztimer_core/core.o
+                0x00000000080026bc       0x10 /home/sarah/github/IoT_I2HM_wyres/Riot_wyres/tests/bme680/bin/wyres-base/ztimer_core/core.o
  .text._ztimer_update_head_offset
-                0x00000000080026ac       0x32 /home/sarah/github/IoT_I2HM_wyres/Riot_wyres/tests/bme680/bin/wyres-base/ztimer_core/core.o
+                0x00000000080026cc       0x32 /home/sarah/github/IoT_I2HM_wyres/Riot_wyres/tests/bme680/bin/wyres-base/ztimer_core/core.o
  .text.ztimer_remove
-                0x00000000080026de       0x32 /home/sarah/github/IoT_I2HM_wyres/Riot_wyres/tests/bme680/bin/wyres-base/ztimer_core/core.o
-                0x00000000080026de                ztimer_remove
+                0x00000000080026fe       0x32 /home/sarah/github/IoT_I2HM_wyres/Riot_wyres/tests/bme680/bin/wyres-base/ztimer_core/core.o
+                0x00000000080026fe                ztimer_remove
  .text.ztimer_set
-                0x0000000008002710       0x9c /home/sarah/github/IoT_I2HM_wyres/Riot_wyres/tests/bme680/bin/wyres-base/ztimer_core/core.o
-                0x0000000008002710                ztimer_set
+                0x0000000008002730       0x9c /home/sarah/github/IoT_I2HM_wyres/Riot_wyres/tests/bme680/bin/wyres-base/ztimer_core/core.o
+                0x0000000008002730                ztimer_set
  .text.ztimer_handler
-                0x00000000080027ac       0x94 /home/sarah/github/IoT_I2HM_wyres/Riot_wyres/tests/bme680/bin/wyres-base/ztimer_core/core.o
-                0x00000000080027ac                ztimer_handler
+                0x00000000080027cc       0x94 /home/sarah/github/IoT_I2HM_wyres/Riot_wyres/tests/bme680/bin/wyres-base/ztimer_core/core.o
+                0x00000000080027cc                ztimer_handler
  .text.ztimer_init
-                0x0000000008002840       0x38 /home/sarah/github/IoT_I2HM_wyres/Riot_wyres/tests/bme680/bin/wyres-base/ztimer_core/init.o
-                0x0000000008002840                ztimer_init
+                0x0000000008002860       0x38 /home/sarah/github/IoT_I2HM_wyres/Riot_wyres/tests/bme680/bin/wyres-base/ztimer_core/init.o
+                0x0000000008002860                ztimer_init
  .text._ztimer_periph_timer_callback
-                0x0000000008002878        0x4 /home/sarah/github/IoT_I2HM_wyres/Riot_wyres/tests/bme680/bin/wyres-base/ztimer_core/periph_timer.o
+                0x0000000008002898        0x4 /home/sarah/github/IoT_I2HM_wyres/Riot_wyres/tests/bme680/bin/wyres-base/ztimer_core/periph_timer.o
  .text._ztimer_periph_timer_cancel
-                0x000000000800287c        0x8 /home/sarah/github/IoT_I2HM_wyres/Riot_wyres/tests/bme680/bin/wyres-base/ztimer_core/periph_timer.o
+                0x000000000800289c        0x8 /home/sarah/github/IoT_I2HM_wyres/Riot_wyres/tests/bme680/bin/wyres-base/ztimer_core/periph_timer.o
  .text._ztimer_periph_timer_now
-                0x0000000008002884        0x6 /home/sarah/github/IoT_I2HM_wyres/Riot_wyres/tests/bme680/bin/wyres-base/ztimer_core/periph_timer.o
+                0x00000000080028a4        0x6 /home/sarah/github/IoT_I2HM_wyres/Riot_wyres/tests/bme680/bin/wyres-base/ztimer_core/periph_timer.o
  .text._ztimer_periph_timer_set
-                0x000000000800288a       0x1e /home/sarah/github/IoT_I2HM_wyres/Riot_wyres/tests/bme680/bin/wyres-base/ztimer_core/periph_timer.o
+                0x00000000080028aa       0x1e /home/sarah/github/IoT_I2HM_wyres/Riot_wyres/tests/bme680/bin/wyres-base/ztimer_core/periph_timer.o
  .text.ztimer_periph_timer_init
-                0x00000000080028a8       0x3c /home/sarah/github/IoT_I2HM_wyres/Riot_wyres/tests/bme680/bin/wyres-base/ztimer_core/periph_timer.o
-                0x00000000080028a8                ztimer_periph_timer_init
+                0x00000000080028c8       0x3c /home/sarah/github/IoT_I2HM_wyres/Riot_wyres/tests/bme680/bin/wyres-base/ztimer_core/periph_timer.o
+                0x00000000080028c8                ztimer_periph_timer_init
  .text._callback_unlock_mutex
-                0x00000000080028e4        0x4 /home/sarah/github/IoT_I2HM_wyres/Riot_wyres/tests/bme680/bin/wyres-base/ztimer_core/util.o
+                0x0000000008002904        0x4 /home/sarah/github/IoT_I2HM_wyres/Riot_wyres/tests/bme680/bin/wyres-base/ztimer_core/util.o
  .text.ztimer_sleep
-                0x00000000080028e8       0x44 /home/sarah/github/IoT_I2HM_wyres/Riot_wyres/tests/bme680/bin/wyres-base/ztimer_core/util.o
-                0x00000000080028e8                ztimer_sleep
- .text          0x000000000800292c       0xa0 /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v7-m/nofp/libgcc.a(_aeabi_ldivmod.o)
-                0x000000000800292c                __aeabi_ldivmod
- .text          0x00000000080029cc      0x2c4 /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v7-m/nofp/libgcc.a(_udivmoddi4.o)
-                0x00000000080029cc                __udivmoddi4
- .text          0x0000000008002c90        0x4 /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v7-m/nofp/libgcc.a(_dvmd_tls.o)
-                0x0000000008002c90                __aeabi_ldiv0
-                0x0000000008002c90                __aeabi_idiv0
- .text          0x0000000008002c94       0x48 /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-init.o)
-                0x0000000008002c94                __libc_init_array
- .text          0x0000000008002cdc       0xec /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-memcpy.o)
-                0x0000000008002cdc                memcpy
- .text          0x0000000008002dc8       0xa0 /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-memset.o)
-                0x0000000008002dc8                memset
- .text          0x0000000008002e68       0xa8 /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-nano-freer.o)
-                0x0000000008002e68                _free_r
- .text          0x0000000008002f10       0xc8 /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-nano-mallocr.o)
-                0x0000000008002f10                _malloc_r
- .text          0x0000000008002fd8       0x68 /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-printf.o)
-                0x0000000008002fd8                _printf_r
-                0x0000000008002fd8                _iprintf_r
-                0x0000000008003008                printf
-                0x0000000008003008                iprintf
- .text          0x0000000008003040       0x58 /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-putchar.o)
-                0x0000000008003040                _putchar_r
-                0x0000000008003064                putchar
- .text          0x0000000008003098       0xd4 /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-puts.o)
-                0x0000000008003098                _puts_r
-                0x000000000800315c                puts
- .text          0x000000000800316c       0xc0 /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-wbuf.o)
-                0x000000000800316c                __swbuf_r
-                0x000000000800321c                __swbuf
- .text          0x000000000800322c      0x100 /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-wsetup.o)
-                0x000000000800322c                __swsetup_r
- .text          0x000000000800332c      0x1b0 /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-fflush.o)
-                0x000000000800332c                __sflush_r
-                0x0000000008003458                _fflush_r
-                0x00000000080034b8                fflush
- .text          0x00000000080034dc      0x210 /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-findfp.o)
-                0x00000000080034e0                _cleanup_r
-                0x00000000080034f0                __sfmoreglue
-                0x0000000008003520                __sfp
-                0x0000000008003698                _cleanup
-                0x00000000080036ac                __sinit
-                0x00000000080036b4                __sfp_lock_acquire
-                0x00000000080036b8                __sfp_lock_release
-                0x00000000080036bc                __sinit_lock_acquire
-                0x00000000080036c0                __sinit_lock_release
-                0x00000000080036c4                __fp_lock_all
-                0x00000000080036d8                __fp_unlock_all
- .text          0x00000000080036ec       0x98 /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-fwalk.o)
-                0x00000000080036ec                _fwalk
-                0x0000000008003734                _fwalk_reent
- .text          0x0000000008003784       0xf0 /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-makebuf.o)
-                0x0000000008003784                __swhatbuf_r
-                0x00000000080037e0                __smakebuf_r
- .text          0x0000000008003874        0x8 /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-mlock.o)
-                0x0000000008003874                __malloc_lock
-                0x0000000008003878                __malloc_unlock
- .text          0x000000000800387c       0x4c /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-nano-reallocr.o)
-                0x000000000800387c                _realloc_r
- .text          0x00000000080038c8      0x364 /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-nano-vfprintf.o)
-                0x0000000008003900                __sfputs_r
-                0x0000000008003930                __sprint_r
-                0x000000000800394c                _vfiprintf_r
-                0x000000000800394c                _vfprintf_r
-                0x0000000008003c14                vfiprintf
-                0x0000000008003c14                vfprintf
- .text          0x0000000008003c2c      0x3bc /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-nano-vfprintf_i.o)
-                0x0000000008003c2c                _printf_common
-                0x0000000008003d54                _printf_i
- .text          0x0000000008003fe8      0x10c /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-putc.o)
-                0x0000000008003fe8                _putc_r
-                0x0000000008004068                putc
- .text          0x00000000080040f4       0x90 /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-stdio.o)
-                0x00000000080040f4                __sread
-                0x0000000008004118                __seofread
-                0x000000000800411c                __swrite
-                0x000000000800415c                __sseek
-                0x000000000800417c                __sclose
- .text          0x0000000008004184      0x300 /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-fvwrite.o)
-                0x0000000008004184                __sfvwrite_r
- .text          0x0000000008004484       0x8c /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-memchr-stub.o)
-                0x0000000008004484                memchr
- .text          0x0000000008004510       0xcc /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-memmove.o)
-                0x0000000008004510                memmove
- .text          0x00000000080045dc       0x10 /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-nano-msizer.o)
-                0x00000000080045dc                _malloc_usable_size_r
+                0x0000000008002908       0x44 /home/sarah/github/IoT_I2HM_wyres/Riot_wyres/tests/bme680/bin/wyres-base/ztimer_core/util.o
+                0x0000000008002908                ztimer_sleep
+ .text          0x000000000800294c       0xa0 /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v7-m/nofp/libgcc.a(_aeabi_ldivmod.o)
+                0x000000000800294c                __aeabi_ldivmod
+ .text          0x00000000080029ec      0x2c4 /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v7-m/nofp/libgcc.a(_udivmoddi4.o)
+                0x00000000080029ec                __udivmoddi4
+ .text          0x0000000008002cb0        0x4 /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v7-m/nofp/libgcc.a(_dvmd_tls.o)
+                0x0000000008002cb0                __aeabi_ldiv0
+                0x0000000008002cb0                __aeabi_idiv0
+ .text          0x0000000008002cb4       0x48 /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-init.o)
+                0x0000000008002cb4                __libc_init_array
+ .text          0x0000000008002cfc       0xec /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-memcpy.o)
+                0x0000000008002cfc                memcpy
+ .text          0x0000000008002de8       0xa0 /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-memset.o)
+                0x0000000008002de8                memset
+ .text          0x0000000008002e88       0xa8 /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-nano-freer.o)
+                0x0000000008002e88                _free_r
+ .text          0x0000000008002f30       0xc8 /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-nano-mallocr.o)
+                0x0000000008002f30                _malloc_r
+ .text          0x0000000008002ff8       0x68 /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-printf.o)
+                0x0000000008002ff8                _printf_r
+                0x0000000008002ff8                _iprintf_r
+                0x0000000008003028                printf
+                0x0000000008003028                iprintf
+ .text          0x0000000008003060       0x58 /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-putchar.o)
+                0x0000000008003060                _putchar_r
+                0x0000000008003084                putchar
+ .text          0x00000000080030b8       0xd4 /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-puts.o)
+                0x00000000080030b8                _puts_r
+                0x000000000800317c                puts
+ .text          0x000000000800318c       0xc0 /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-wbuf.o)
+                0x000000000800318c                __swbuf_r
+                0x000000000800323c                __swbuf
+ .text          0x000000000800324c      0x100 /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-wsetup.o)
+                0x000000000800324c                __swsetup_r
+ .text          0x000000000800334c      0x1b0 /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-fflush.o)
+                0x000000000800334c                __sflush_r
+                0x0000000008003478                _fflush_r
+                0x00000000080034d8                fflush
+ .text          0x00000000080034fc      0x210 /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-findfp.o)
+                0x0000000008003500                _cleanup_r
+                0x0000000008003510                __sfmoreglue
+                0x0000000008003540                __sfp
+                0x00000000080036b8                _cleanup
+                0x00000000080036cc                __sinit
+                0x00000000080036d4                __sfp_lock_acquire
+                0x00000000080036d8                __sfp_lock_release
+                0x00000000080036dc                __sinit_lock_acquire
+                0x00000000080036e0                __sinit_lock_release
+                0x00000000080036e4                __fp_lock_all
+                0x00000000080036f8                __fp_unlock_all
+ .text          0x000000000800370c       0x98 /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-fwalk.o)
+                0x000000000800370c                _fwalk
+                0x0000000008003754                _fwalk_reent
+ .text          0x00000000080037a4       0xf0 /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-makebuf.o)
+                0x00000000080037a4                __swhatbuf_r
+                0x0000000008003800                __smakebuf_r
+ .text          0x0000000008003894        0x8 /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-mlock.o)
+                0x0000000008003894                __malloc_lock
+                0x0000000008003898                __malloc_unlock
+ .text          0x000000000800389c       0x4c /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-nano-reallocr.o)
+                0x000000000800389c                _realloc_r
+ .text          0x00000000080038e8      0x364 /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-nano-vfprintf.o)
+                0x0000000008003920                __sfputs_r
+                0x0000000008003950                __sprint_r
+                0x000000000800396c                _vfiprintf_r
+                0x000000000800396c                _vfprintf_r
+                0x0000000008003c34                vfiprintf
+                0x0000000008003c34                vfprintf
+ .text          0x0000000008003c4c      0x3bc /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-nano-vfprintf_i.o)
+                0x0000000008003c4c                _printf_common
+                0x0000000008003d74                _printf_i
+ .text          0x0000000008004008      0x10c /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-putc.o)
+                0x0000000008004008                _putc_r
+                0x0000000008004088                putc
+ .text          0x0000000008004114       0x90 /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-stdio.o)
+                0x0000000008004114                __sread
+                0x0000000008004138                __seofread
+                0x000000000800413c                __swrite
+                0x000000000800417c                __sseek
+                0x000000000800419c                __sclose
+ .text          0x00000000080041a4      0x300 /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-fvwrite.o)
+                0x00000000080041a4                __sfvwrite_r
+ .text          0x00000000080044a4       0x8c /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-memchr-stub.o)
+                0x00000000080044a4                memchr
+ .text          0x0000000008004530       0xcc /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-memmove.o)
+                0x0000000008004530                memmove
+ .text          0x00000000080045fc       0x10 /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-nano-msizer.o)
+                0x00000000080045fc                _malloc_usable_size_r
  *(.glue_7t)
- .glue_7t       0x00000000080045ec        0x0 linker stubs
+ .glue_7t       0x000000000800460c        0x0 linker stubs
  *(.glue_7)
- .glue_7        0x00000000080045ec        0x0 linker stubs
+ .glue_7        0x000000000800460c        0x0 linker stubs
  *(.rodata .rodata* .gnu.linkonce.r.*)
  .rodata.main.str1.1
-                0x00000000080045ec       0xfd /home/sarah/github/IoT_I2HM_wyres/Riot_wyres/tests/bme680/bin/wyres-base/application_bme680/main.o
- *fill*         0x00000000080046e9        0x3 
+                0x000000000800460c       0xfd /home/sarah/github/IoT_I2HM_wyres/Riot_wyres/tests/bme680/bin/wyres-base/application_bme680/main.o
+ *fill*         0x0000000008004709        0x3 
  .rodata.bme680_params
-                0x00000000080046ec       0x14 /home/sarah/github/IoT_I2HM_wyres/Riot_wyres/tests/bme680/bin/wyres-base/application_bme680/main.o
+                0x000000000800470c       0x14 /home/sarah/github/IoT_I2HM_wyres/Riot_wyres/tests/bme680/bin/wyres-base/application_bme680/main.o
  .rodata.bme680_init.str1.1
-                0x0000000008004700       0x28 /home/sarah/github/IoT_I2HM_wyres/Riot_wyres/tests/bme680/bin/wyres-base/bme680/bme680.o
+                0x0000000008004720       0x28 /home/sarah/github/IoT_I2HM_wyres/Riot_wyres/tests/bme680/bin/wyres-base/bme680/bme680.o
  .rodata._assert_failure.str1.1
-                0x0000000008004728       0x1c /home/sarah/github/IoT_I2HM_wyres/Riot_wyres/tests/bme680/bin/wyres-base/core_lib/assert.o
+                0x0000000008004748       0x1c /home/sarah/github/IoT_I2HM_wyres/Riot_wyres/tests/bme680/bin/wyres-base/core_lib/assert.o
  .rodata._assert_panic.str1.1
-                0x0000000008004744        0x4 /home/sarah/github/IoT_I2HM_wyres/Riot_wyres/tests/bme680/bin/wyres-base/core_lib/assert.o
+                0x0000000008004764        0x4 /home/sarah/github/IoT_I2HM_wyres/Riot_wyres/tests/bme680/bin/wyres-base/core_lib/assert.o
  .rodata.main_trampoline.str1.1
-                0x0000000008004748       0x3a /home/sarah/github/IoT_I2HM_wyres/Riot_wyres/tests/bme680/bin/wyres-base/core_lib/init.o
+                0x0000000008004768       0x39 /home/sarah/github/IoT_I2HM_wyres/Riot_wyres/tests/bme680/bin/wyres-base/core_lib/init.o
  .rodata.kernel_init.str1.1
-                0x0000000008004782        0x5 /home/sarah/github/IoT_I2HM_wyres/Riot_wyres/tests/bme680/bin/wyres-base/core_lib/init.o
+                0x00000000080047a1        0x5 /home/sarah/github/IoT_I2HM_wyres/Riot_wyres/tests/bme680/bin/wyres-base/core_lib/init.o
  .rodata.core_panic.str1.1
-                0x0000000008004787       0x29 /home/sarah/github/IoT_I2HM_wyres/Riot_wyres/tests/bme680/bin/wyres-base/core_lib/panic.o
+                0x00000000080047a6       0x29 /home/sarah/github/IoT_I2HM_wyres/Riot_wyres/tests/bme680/bin/wyres-base/core_lib/panic.o
  .rodata._unschedule.str1.1
-                0x00000000080047b0       0x3e /home/sarah/github/IoT_I2HM_wyres/Riot_wyres/tests/bme680/bin/wyres-base/core/sched.o
+                0x00000000080047cf       0x3e /home/sarah/github/IoT_I2HM_wyres/Riot_wyres/tests/bme680/bin/wyres-base/core/sched.o
  .rodata.panic_arch.str1.1
-                0x00000000080047ee        0xf /home/sarah/github/IoT_I2HM_wyres/Riot_wyres/tests/bme680/bin/wyres-base/cortexm_common/panic.o
+                0x000000000800480d        0xf /home/sarah/github/IoT_I2HM_wyres/Riot_wyres/tests/bme680/bin/wyres-base/cortexm_common/panic.o
  .rodata.nmi_handler.str1.1
-                0x00000000080047fd        0xc /home/sarah/github/IoT_I2HM_wyres/Riot_wyres/tests/bme680/bin/wyres-base/cortexm_common/vectors_cortexm.o
+                0x000000000800481c        0xc /home/sarah/github/IoT_I2HM_wyres/Riot_wyres/tests/bme680/bin/wyres-base/cortexm_common/vectors_cortexm.o
  .rodata.mem_manage_default.str1.1
-                0x0000000008004809       0x13 /home/sarah/github/IoT_I2HM_wyres/Riot_wyres/tests/bme680/bin/wyres-base/cortexm_common/vectors_cortexm.o
+                0x0000000008004828       0x13 /home/sarah/github/IoT_I2HM_wyres/Riot_wyres/tests/bme680/bin/wyres-base/cortexm_common/vectors_cortexm.o
  .rodata.bus_fault_default.str1.1
-                0x000000000800481c       0x12 /home/sarah/github/IoT_I2HM_wyres/Riot_wyres/tests/bme680/bin/wyres-base/cortexm_common/vectors_cortexm.o
+                0x000000000800483b       0x12 /home/sarah/github/IoT_I2HM_wyres/Riot_wyres/tests/bme680/bin/wyres-base/cortexm_common/vectors_cortexm.o
  .rodata.usage_fault_default.str1.1
-                0x000000000800482e       0x14 /home/sarah/github/IoT_I2HM_wyres/Riot_wyres/tests/bme680/bin/wyres-base/cortexm_common/vectors_cortexm.o
+                0x000000000800484d       0x14 /home/sarah/github/IoT_I2HM_wyres/Riot_wyres/tests/bme680/bin/wyres-base/cortexm_common/vectors_cortexm.o
  .rodata.debug_mon_default.str1.1
-                0x0000000008004842       0x12 /home/sarah/github/IoT_I2HM_wyres/Riot_wyres/tests/bme680/bin/wyres-base/cortexm_common/vectors_cortexm.o
+                0x0000000008004861       0x12 /home/sarah/github/IoT_I2HM_wyres/Riot_wyres/tests/bme680/bin/wyres-base/cortexm_common/vectors_cortexm.o
  .rodata.dummy_handler_default.str1.1
-                0x0000000008004854        0xe /home/sarah/github/IoT_I2HM_wyres/Riot_wyres/tests/bme680/bin/wyres-base/cortexm_common/vectors_cortexm.o
+                0x0000000008004873        0xe /home/sarah/github/IoT_I2HM_wyres/Riot_wyres/tests/bme680/bin/wyres-base/cortexm_common/vectors_cortexm.o
  .rodata.hard_fault_handler.str1.1
-                0x0000000008004862      0x233 /home/sarah/github/IoT_I2HM_wyres/Riot_wyres/tests/bme680/bin/wyres-base/cortexm_common/vectors_cortexm.o
+                0x0000000008004881      0x233 /home/sarah/github/IoT_I2HM_wyres/Riot_wyres/tests/bme680/bin/wyres-base/cortexm_common/vectors_cortexm.o
  .rodata.apbmul
-                0x0000000008004a95        0x2 /home/sarah/github/IoT_I2HM_wyres/Riot_wyres/tests/bme680/bin/wyres-base/cpu/cpu_common.o
- *fill*         0x0000000008004a97        0x1 
- .rodata        0x0000000008004a98       0x88 /home/sarah/github/IoT_I2HM_wyres/Riot_wyres/tests/bme680/bin/wyres-base/driver_bme680/bme680_internal.o
+                0x0000000008004ab4        0x2 /home/sarah/github/IoT_I2HM_wyres/Riot_wyres/tests/bme680/bin/wyres-base/cpu/cpu_common.o
+ *fill*         0x0000000008004ab6        0x2 
+ .rodata        0x0000000008004ab8       0x88 /home/sarah/github/IoT_I2HM_wyres/Riot_wyres/tests/bme680/bin/wyres-base/driver_bme680/bme680_internal.o
  .rodata.i2c_config
-                0x0000000008004b20       0x20 /home/sarah/github/IoT_I2HM_wyres/Riot_wyres/tests/bme680/bin/wyres-base/periph/i2c_2.o
+                0x0000000008004b40       0x20 /home/sarah/github/IoT_I2HM_wyres/Riot_wyres/tests/bme680/bin/wyres-base/periph/i2c_2.o
  .rodata.timer_config
-                0x0000000008004b40       0x10 /home/sarah/github/IoT_I2HM_wyres/Riot_wyres/tests/bme680/bin/wyres-base/periph/timer.o
+                0x0000000008004b60       0x10 /home/sarah/github/IoT_I2HM_wyres/Riot_wyres/tests/bme680/bin/wyres-base/periph/timer.o
  .rodata.uart_config
-                0x0000000008004b50       0x14 /home/sarah/github/IoT_I2HM_wyres/Riot_wyres/tests/bme680/bin/wyres-base/periph/uart.o
+                0x0000000008004b70       0x14 /home/sarah/github/IoT_I2HM_wyres/Riot_wyres/tests/bme680/bin/wyres-base/periph/uart.o
  .rodata.ztimer_convert_frac_ops
-                0x0000000008004b64        0xc /home/sarah/github/IoT_I2HM_wyres/Riot_wyres/tests/bme680/bin/wyres-base/ztimer_core/convert_frac.o
+                0x0000000008004b84        0xc /home/sarah/github/IoT_I2HM_wyres/Riot_wyres/tests/bme680/bin/wyres-base/ztimer_core/convert_frac.o
  .rodata.ZTIMER_MSEC
-                0x0000000008004b70        0x4 /home/sarah/github/IoT_I2HM_wyres/Riot_wyres/tests/bme680/bin/wyres-base/ztimer_core/init.o
-                0x0000000008004b70                ZTIMER_MSEC
+                0x0000000008004b90        0x4 /home/sarah/github/IoT_I2HM_wyres/Riot_wyres/tests/bme680/bin/wyres-base/ztimer_core/init.o
+                0x0000000008004b90                ZTIMER_MSEC
  .rodata._ztimer_periph_timer_ops
-                0x0000000008004b74        0xc /home/sarah/github/IoT_I2HM_wyres/Riot_wyres/tests/bme680/bin/wyres-base/ztimer_core/periph_timer.o
- .rodata        0x0000000008004b80        0x4 /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-impure.o)
-                0x0000000008004b80                _global_impure_ptr
- .rodata        0x0000000008004b84       0x60 /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-findfp.o)
-                0x0000000008004b84                __sf_fake_stderr
-                0x0000000008004ba4                __sf_fake_stdout
-                0x0000000008004bc4                __sf_fake_stdin
+                0x0000000008004b94        0xc /home/sarah/github/IoT_I2HM_wyres/Riot_wyres/tests/bme680/bin/wyres-base/ztimer_core/periph_timer.o
+ .rodata        0x0000000008004ba0        0x4 /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-impure.o)
+                0x0000000008004ba0                _global_impure_ptr
+ .rodata        0x0000000008004ba4       0x60 /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-findfp.o)
+                0x0000000008004ba4                __sf_fake_stderr
+                0x0000000008004bc4                __sf_fake_stdout
+                0x0000000008004be4                __sf_fake_stdin
  .rodata.str1.4
-                0x0000000008004be4       0x13 /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-nano-vfprintf.o)
- *fill*         0x0000000008004bf7        0x1 
+                0x0000000008004c04       0x13 /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-nano-vfprintf.o)
+ *fill*         0x0000000008004c17        0x1 
  .rodata.str1.4
-                0x0000000008004bf8       0x25 /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-nano-vfprintf_i.o)
+                0x0000000008004c18       0x25 /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-nano-vfprintf_i.o)
  *(SORT_BY_NAME(.roxfa.*))
- *fill*         0x0000000008004c1d        0x3 
+ *fill*         0x0000000008004c3d        0x3 
  .roxfa.auto_init_xfa.0_
-                0x0000000008004c20        0x0 /home/sarah/github/IoT_I2HM_wyres/Riot_wyres/tests/bme680/bin/wyres-base/auto_init/auto_init.o
-                0x0000000008004c20                auto_init_xfa
+                0x0000000008004c40        0x0 /home/sarah/github/IoT_I2HM_wyres/Riot_wyres/tests/bme680/bin/wyres-base/auto_init/auto_init.o
+                0x0000000008004c40                auto_init_xfa
  .roxfa.auto_init_xfa.5_1010
-                0x0000000008004c20        0x4 /home/sarah/github/IoT_I2HM_wyres/Riot_wyres/tests/bme680/bin/wyres-base/auto_init/auto_init.o
-                0x0000000008004c20                auto_init_xfa_ztimer_init
+                0x0000000008004c40        0x4 /home/sarah/github/IoT_I2HM_wyres/Riot_wyres/tests/bme680/bin/wyres-base/auto_init/auto_init.o
+                0x0000000008004c40                auto_init_xfa_ztimer_init
  .roxfa.auto_init_xfa.9_
-                0x0000000008004c24        0x0 /home/sarah/github/IoT_I2HM_wyres/Riot_wyres/tests/bme680/bin/wyres-base/auto_init/auto_init.o
-                0x0000000008004c24                auto_init_xfa_end
+                0x0000000008004c44        0x0 /home/sarah/github/IoT_I2HM_wyres/Riot_wyres/tests/bme680/bin/wyres-base/auto_init/auto_init.o
+                0x0000000008004c44                auto_init_xfa_end
  *(.ARM.extab* .gnu.linkonce.armextab.*)
-                0x0000000008004c24                . = ALIGN (0x4)
+                0x0000000008004c44                . = ALIGN (0x4)
  *(.init)
-                0x0000000008004c24                . = ALIGN (0x4)
-                0x0000000008004c24                __preinit_array_start = .
+                0x0000000008004c44                . = ALIGN (0x4)
+                0x0000000008004c44                __preinit_array_start = .
  *(.preinit_array)
-                0x0000000008004c24                __preinit_array_end = .
-                0x0000000008004c24                . = ALIGN (0x4)
-                0x0000000008004c24                __init_array_start = .
+                0x0000000008004c44                __preinit_array_end = .
+                0x0000000008004c44                . = ALIGN (0x4)
+                0x0000000008004c44                __init_array_start = .
  *(SORT_BY_NAME(.init_array.*))
  *(.init_array)
-                0x0000000008004c24                __init_array_end = .
-                0x0000000008004c24                . = ALIGN (0x4)
+                0x0000000008004c44                __init_array_end = .
+                0x0000000008004c44                . = ALIGN (0x4)
  *crtbegin.o(.ctors)
  *(EXCLUDE_FILE(*crtend.o) .ctors)
  *(SORT_BY_NAME(.ctors.*))
  *crtend.o(.ctors)
-                0x0000000008004c24                . = ALIGN (0x4)
+                0x0000000008004c44                . = ALIGN (0x4)
  *(.fini)
-                0x0000000008004c24                . = ALIGN (0x4)
-                0x0000000008004c24                __fini_array_start = .
+                0x0000000008004c44                . = ALIGN (0x4)
+                0x0000000008004c44                __fini_array_start = .
  *(.fini_array)
  *(SORT_BY_NAME(.fini_array.*))
-                0x0000000008004c24                __fini_array_end = .
+                0x0000000008004c44                __fini_array_end = .
  *crtbegin.o(.dtors)
  *(EXCLUDE_FILE(*crtend.o) .dtors)
  *(SORT_BY_NAME(.dtors.*))
  *crtend.o(.dtors)
-                0x0000000008004c24                . = ALIGN (0x4)
-                0x0000000008004c24                _efixed = .
+                0x0000000008004c44                . = ALIGN (0x4)
+                0x0000000008004c44                _efixed = .
 
-.vfp11_veneer   0x0000000008004c24        0x0
- .vfp11_veneer  0x0000000008004c24        0x0 linker stubs
+.vfp11_veneer   0x0000000008004c44        0x0
+ .vfp11_veneer  0x0000000008004c44        0x0 linker stubs
 
-.v4_bx          0x0000000008004c24        0x0
- .v4_bx         0x0000000008004c24        0x0 linker stubs
+.v4_bx          0x0000000008004c44        0x0
+ .v4_bx         0x0000000008004c44        0x0 linker stubs
 
-.iplt           0x0000000008004c24        0x0
- .iplt          0x0000000008004c24        0x0 /home/sarah/github/IoT_I2HM_wyres/Riot_wyres/tests/bme680/bin/wyres-base/application_bme680/main.o
+.iplt           0x0000000008004c44        0x0
+ .iplt          0x0000000008004c44        0x0 /home/sarah/github/IoT_I2HM_wyres/Riot_wyres/tests/bme680/bin/wyres-base/application_bme680/main.o
 
-.igot.plt       0x0000000008004c24        0x0
- .igot.plt      0x0000000008004c24        0x0 /home/sarah/github/IoT_I2HM_wyres/Riot_wyres/tests/bme680/bin/wyres-base/application_bme680/main.o
+.igot.plt       0x0000000008004c44        0x0
+ .igot.plt      0x0000000008004c44        0x0 /home/sarah/github/IoT_I2HM_wyres/Riot_wyres/tests/bme680/bin/wyres-base/application_bme680/main.o
 
-.tdata          0x0000000008004c24        0x0
-                0x0000000008004c24                __tdata_start = .
+.tdata          0x0000000008004c44        0x0
+                0x0000000008004c44                __tdata_start = .
  *(.tdata .tdata.* .gnu.linkonce.td.*)
-                0x0000000008004c24                __tdata_end = .
-                0x0000000008004c24                __tdata_source = LOADADDR (.tdata)
+                0x0000000008004c44                __tdata_end = .
+                0x0000000008004c44                __tdata_source = LOADADDR (.tdata)
                 0x0000000000000000                __tdata_size = SIZEOF (.tdata)
 
-.tbss           0x0000000008004c24        0x0
+.tbss           0x0000000008004c44        0x0
  *(.tbss .tbss.* .gnu.linkonce.tb.*)
  *(.tcommon)
-                0x0000000008004c24                __tbss_end = .
+                0x0000000008004c44                __tbss_end = .
                 0x0000000000000000                __tls_size = (__tbss_end - __tdata_start)
                 0x0000000000000000                __tbss_size = (__tls_size - __tdata_size)
                 [!provide]                        PROVIDE (__tbss_offset = (ADDR (.tbss) - ADDR (.tdata)))
@@ -1775,19 +1781,19 @@ END GROUP
                 [!provide]                        PROVIDE (__arm64_tls_tcb_offset = MAX (0x10, __tls_align))
                 [!provide]                        PROVIDE (__exidx_start = .)
 
-.ARM.exidx      0x0000000008004c24        0x8
+.ARM.exidx      0x0000000008004c44        0x8
  *(.ARM.exidx* .gnu.linkonce.armexidx.*)
- .ARM.exidx     0x0000000008004c24        0x8 /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v7-m/nofp/libgcc.a(_udivmoddi4.o)
+ .ARM.exidx     0x0000000008004c44        0x8 /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v7-m/nofp/libgcc.a(_udivmoddi4.o)
                 [!provide]                        PROVIDE (__exidx_end = .)
 
-.rel.dyn        0x0000000008004c2c        0x0
- .rel.iplt      0x0000000008004c2c        0x0 /home/sarah/github/IoT_I2HM_wyres/Riot_wyres/tests/bme680/bin/wyres-base/application_bme680/main.o
-                0x0000000008004c2c                . = ALIGN (0x4)
+.rel.dyn        0x0000000008004c4c        0x0
+ .rel.iplt      0x0000000008004c4c        0x0 /home/sarah/github/IoT_I2HM_wyres/Riot_wyres/tests/bme680/bin/wyres-base/application_bme680/main.o
+                0x0000000008004c4c                . = ALIGN (0x4)
 
 .eh_frame
  *(.eh_frame)
-                0x0000000008004c2c                . = ALIGN (0x4)
-                0x0000000008004c2c                _etext = .
+                0x0000000008004c4c                . = ALIGN (0x4)
+                0x0000000008004c4c                _etext = .
 
 .stack          0x0000000020000000      0x200
  *(.puf)
@@ -1799,7 +1805,7 @@ END GROUP
                 0x0000000020000200                . = ALIGN (0x8)
                 0x0000000020000200                _estack = .
 
-.relocate       0x0000000020000200       0x9c load address 0x0000000008004c2c
+.relocate       0x0000000020000200       0x9c load address 0x0000000008004c4c
                 0x0000000020000200                . = ALIGN (0x4)
                 0x0000000020000200                _srelocate = .
  *(.ramfunc .ramfunc.*)
@@ -1821,7 +1827,7 @@ END GROUP
  *fill*         0x000000002000029a        0x2 
                 0x000000002000029c                _erelocate = .
 
-.bss            0x000000002000029c      0x760 load address 0x0000000008004cc8
+.bss            0x000000002000029c      0x760 load address 0x0000000008004ce8
                 0x000000002000029c                . = ALIGN (0x4)
                 0x000000002000029c                _sbss = .
                 0x000000002000029c                _szero = .
@@ -1871,7 +1877,7 @@ END GROUP
                 0x00000000200009fc                _ebss = .
                 0x00000000200009fc                _ezero = .
 
-.noinit         0x00000000200009fc        0x0 load address 0x0000000008004cc8
+.noinit         0x00000000200009fc        0x0 load address 0x0000000008004ce8
                 0x00000000200009fc                __noinit_start = .
  *(.noinit)
                 0x00000000200009fc                . = ALIGN (0x4)
@@ -1883,29 +1889,29 @@ END GROUP
                 0x0000000020008000                _eram = (ORIGIN (ram) + LENGTH (ram))
                 0x0000000008000000                _srom = ORIGIN (rom)
                 0x0000000008040000                _erom = (ORIGIN (rom) + LENGTH (rom))
-                0x0000000008004cc8                _sbackup_data_load = LOADADDR (.backup.data)
+                0x0000000008004ce8                _sbackup_data_load = LOADADDR (.backup.data)
 
-.backup.data    0x0000000000000000        0x0 load address 0x0000000008004cc8
+.backup.data    0x0000000000000000        0x0 load address 0x0000000008004ce8
                 0x0000000000000000                _sbackup_data = .
  *(.backup.data)
                 0x0000000000000000                _ebackup_data = .
                 0x0000000000000000                . = ALIGN (0x4)
 
-.backup.bss     0x0000000000000000        0x0 load address 0x0000000008004cc8
+.backup.bss     0x0000000000000000        0x0 load address 0x0000000008004ce8
                 0x0000000000000000                _sbackup_bss = .
  *(.backup.bss)
                 0x0000000000000000                _ebackup_bss = .
                 0x0000000000000000                . = ALIGN (0x4)
 
-.heap3          0x0000000000000000        0x0 load address 0x0000000008004cc8
+.heap3          0x0000000000000000        0x0 load address 0x0000000008004ce8
                 0x0000000000000000                _sheap1 = .
                 0x0000000000000000                _eheap1 = (ORIGIN (bkup_ram) + LENGTH (bkup_ram))
 
 .flash_writable
  *(SORT_BY_NAME(.flash_writable.*))
 
-.end_fw         0x0000000008004cc8        0x0
-                0x0000000008004cc8                _end_fw = .
+.end_fw         0x0000000008004ce8        0x0
+                0x0000000008004ce8                _end_fw = .
 OUTPUT(/home/sarah/github/IoT_I2HM_wyres/Riot_wyres/tests/bme680/bin/wyres-base/bme680.elf elf32-littlearm)
 LOAD linker stubs
 

@@ -51,6 +51,8 @@
  /home/sarah/github/RIOT-OS/RIOT/cpu/cortexm_common/include/thread_arch.h \
  /home/sarah/github/RIOT-OS/RIOT/drivers/include/periph/timer.h \
  /usr/lib/gcc/arm-none-eabi/9.2.1/include-fixed/limits.h \
+ /home/sarah/github/RIOT-OS/RIOT/sys/include/architecture.h \
+ /home/sarah/github/RIOT-OS/RIOT/cpu/cortexm_common/include/architecture_arch.h \
  /home/sarah/github/RIOT-OS/RIOT/cpu/stm32/include/periph_cpu.h \
  /home/sarah/github/RIOT-OS/RIOT/core/lib/include/macros/units.h \
  /home/sarah/github/RIOT-OS/RIOT/cpu/stm32/include/periph/l1/periph_cpu.h \
@@ -62,14 +64,16 @@
  /home/sarah/github/RIOT-OS/RIOT/cpu/stm32/include/periph/cpu_fmc.h \
  /home/sarah/github/RIOT-OS/RIOT/cpu/stm32/include/periph/cpu_gpio.h \
  /home/sarah/github/RIOT-OS/RIOT/cpu/stm32/include/periph/cpu_gpio_ll.h \
+ /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdalign.h \
  /home/sarah/github/RIOT-OS/RIOT/cpu/stm32/include/periph/cpu_i2c.h \
  /home/sarah/github/RIOT-OS/RIOT/cpu/stm32/include/periph/cpu_ltdc.h \
  /home/sarah/github/RIOT-OS/RIOT/cpu/stm32/include/periph/cpu_pm.h \
  /home/sarah/github/RIOT-OS/RIOT/cpu/stm32/include/periph/cpu_pwm.h \
  /home/sarah/github/RIOT-OS/RIOT/cpu/stm32/include/periph/cpu_timer.h \
  /home/sarah/github/RIOT-OS/RIOT/cpu/stm32/include/periph/cpu_qdec.h \
- /home/sarah/github/RIOT-OS/RIOT/cpu/stm32/include/periph/cpu_spi.h \
+ /home/sarah/github/RIOT-OS/RIOT/cpu/stm32/include/periph/cpu_sdmmc.h \
  /home/sarah/github/RIOT-OS/RIOT/cpu/stm32/include/periph/cpu_dma.h \
+ /home/sarah/github/RIOT-OS/RIOT/cpu/stm32/include/periph/cpu_spi.h \
  /home/sarah/github/RIOT-OS/RIOT/cpu/stm32/include/periph/cpu_timer.h \
  /home/sarah/github/RIOT-OS/RIOT/cpu/stm32/include/periph/cpu_uart.h \
  /home/sarah/github/RIOT-OS/RIOT/cpu/stm32/include/periph/cpu_usbdev.h \
@@ -203,6 +207,10 @@
 
 /usr/lib/gcc/arm-none-eabi/9.2.1/include-fixed/limits.h:
 
+/home/sarah/github/RIOT-OS/RIOT/sys/include/architecture.h:
+
+/home/sarah/github/RIOT-OS/RIOT/cpu/cortexm_common/include/architecture_arch.h:
+
 /home/sarah/github/RIOT-OS/RIOT/cpu/stm32/include/periph_cpu.h:
 
 /home/sarah/github/RIOT-OS/RIOT/core/lib/include/macros/units.h:
@@ -225,6 +233,8 @@
 
 /home/sarah/github/RIOT-OS/RIOT/cpu/stm32/include/periph/cpu_gpio_ll.h:
 
+/usr/lib/gcc/arm-none-eabi/9.2.1/include/stdalign.h:
+
 /home/sarah/github/RIOT-OS/RIOT/cpu/stm32/include/periph/cpu_i2c.h:
 
 /home/sarah/github/RIOT-OS/RIOT/cpu/stm32/include/periph/cpu_ltdc.h:
@@ -237,9 +247,11 @@
 
 /home/sarah/github/RIOT-OS/RIOT/cpu/stm32/include/periph/cpu_qdec.h:
 
-/home/sarah/github/RIOT-OS/RIOT/cpu/stm32/include/periph/cpu_spi.h:
+/home/sarah/github/RIOT-OS/RIOT/cpu/stm32/include/periph/cpu_sdmmc.h:
 
 /home/sarah/github/RIOT-OS/RIOT/cpu/stm32/include/periph/cpu_dma.h:
+
+/home/sarah/github/RIOT-OS/RIOT/cpu/stm32/include/periph/cpu_spi.h:
 
 /home/sarah/github/RIOT-OS/RIOT/cpu/stm32/include/periph/cpu_timer.h:
 

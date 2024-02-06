@@ -18,6 +18,7 @@
  /usr/include/newlib/machine/types.h /usr/include/newlib/sys/stdio.h \
  /home/sarah/github/RIOT-OS/RIOT/sys/include/architecture.h \
  /usr/include/newlib/inttypes.h /usr/include/newlib/sys/_intsup.h \
+ /usr/lib/gcc/arm-none-eabi/9.2.1/include-fixed/limits.h \
  /home/sarah/github/RIOT-OS/RIOT/cpu/cortexm_common/include/architecture_arch.h \
  /home/sarah/github/RIOT-OS/RIOT/cpu/cortexm_common/include/cpu.h \
  /home/sarah/github/RIOT-OS/RIOT/core/lib/include/irq.h \
@@ -108,6 +109,8 @@
 /usr/include/newlib/inttypes.h:
 
 /usr/include/newlib/sys/_intsup.h:
+
+/usr/lib/gcc/arm-none-eabi/9.2.1/include-fixed/limits.h:
 
 /home/sarah/github/RIOT-OS/RIOT/cpu/cortexm_common/include/architecture_arch.h:
 

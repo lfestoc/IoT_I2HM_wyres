@@ -11,6 +11,7 @@
  /usr/include/newlib/_newlib_version.h /usr/include/newlib/sys/config.h \
  /usr/include/newlib/machine/ieeefp.h /usr/include/newlib/sys/features.h \
  /usr/include/newlib/sys/_intsup.h /usr/include/newlib/_ansi.h \
+ /usr/lib/gcc/arm-none-eabi/9.2.1/include-fixed/limits.h \
  /home/sarah/github/RIOT-OS/RIOT/cpu/cortexm_common/include/architecture_arch.h \
  /home/sarah/github/RIOT-OS/RIOT/core/lib/include/kernel_defines.h \
  /home/sarah/github/RIOT-OS/RIOT/core/lib/include/modules.h \
@@ -75,6 +76,8 @@
 /usr/include/newlib/sys/_intsup.h:
 
 /usr/include/newlib/_ansi.h:
+
+/usr/lib/gcc/arm-none-eabi/9.2.1/include-fixed/limits.h:
 
 /home/sarah/github/RIOT-OS/RIOT/cpu/cortexm_common/include/architecture_arch.h:
 

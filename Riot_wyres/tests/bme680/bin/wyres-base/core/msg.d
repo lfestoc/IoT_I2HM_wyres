@@ -53,6 +53,7 @@
  /usr/include/newlib/sys/_pthreadtypes.h \
  /usr/include/newlib/machine/types.h /usr/include/newlib/sys/stdio.h \
  /home/sarah/github/RIOT-OS/RIOT/sys/include/architecture.h \
+ /usr/lib/gcc/arm-none-eabi/9.2.1/include-fixed/limits.h \
  /home/sarah/github/RIOT-OS/RIOT/cpu/cortexm_common/include/architecture_arch.h
 
 /home/sarah/github/IoT_I2HM_wyres/Riot_wyres/tests/bme680/bin/wyres-base/riotbuild/riotbuild.h:
@@ -178,5 +179,7 @@
 /usr/include/newlib/sys/stdio.h:
 
 /home/sarah/github/RIOT-OS/RIOT/sys/include/architecture.h:
+
+/usr/lib/gcc/arm-none-eabi/9.2.1/include-fixed/limits.h:
 
 /home/sarah/github/RIOT-OS/RIOT/cpu/cortexm_common/include/architecture_arch.h:

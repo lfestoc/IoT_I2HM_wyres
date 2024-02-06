@@ -191,14 +191,14 @@ int main(void)
 
 					case SEMTECH_LORAMAC_TX_ERROR:
 						puts("Cannot send: error");
-						_print_buffer(lpp.buffer, lpp.cursor, "Cannot send message LPP: ");
+						//_print_buffer(lpp.buffer, lpp.cursor, "Cannot send message LPP: ");
 						break;
 
 					case SEMTECH_LORAMAC_TX_CNF_FAILED:
 						puts("Fail to send: no ACK received");
-						break;
+						break;s
 					case SEMTECH_LORAMAC_TX_DONE:
-						_print_buffer(lpp.buffer, lpp.cursor, "Message sent with success: ");
+						//_print_buffer(lpp.buffer, lpp.cursor, "Message sent with success: ");
 						break;
 
         

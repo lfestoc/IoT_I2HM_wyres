@@ -13,9 +13,11 @@ BOARD ?= wyres-base
 EXTERNAL_MODULE_DIRS += ../../modules
 # Accelero : ST [LIS2DE12](https://github.com/RIOT-OS/RIOT/tree/master/tests/drivers/lis2dh12) via I2C 
 # TODO add driver
+USEMODULE += lis2dh12
 
 # Altimeter : ST [LPS22HB](https://github.com/RIOT-OS/RIOT/tree/master/tests/drivers/lpsxxx) via I2C
 USEMODULE += lps22hb
+USEMODULE += bme680_i2c
 
 # include and auto-initialize all available sensors
 USEMODULE += saul_default

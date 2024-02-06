@@ -112,7 +112,8 @@ int main(void)
     puts("I2HM LORAMAC CAYENNE SENSORS START ");
     phydat_t res;
     int duration = 60; // time in seconds between two data fetch
-    	/* initialize the ADC line */
+    
+    /* initialize the ADC line */
     if (adc_init(ADC_IN_USE) < 0) {
         printf("\r\nInitialization of ADC_LINE(%u) failed\r\n", ADC_IN_USE);
 
@@ -130,6 +131,8 @@ int main(void)
     	LED_GREEN_OFF;
 
     }
+
+
     /* initialize the light sensor */
     LIGHT_SENSOR_SUPPLY_ON;
     /* 1. auto-initialize the LoRaMAC MAC layer ( nothing to do) */
@@ -147,8 +150,6 @@ int main(void)
     double init_latitude = 45.5;
     double init_longitude = 5.5;
     double init_altitude = 10000;  // meter
-    double init_pressure = 500;    // hPa
-    double init_temperature = -20; // °C
     double init_humidity = 50;
     //double init_luninosity = 500;
     double init_battery_voltage = 3.6; // mV
@@ -176,29 +177,54 @@ int main(void)
         }
         // Lecture capteur luminosité
         sample = adc_sample(ADC_IN_USE,ADC_RES);
-        double pressure = init_pressure;      // hPa
-        double temperature = init_temperature ; // °C
-        if( sample > 0){
+        double pressure;      // hPa  pourquoi ? à supprimer
+        double temperature; // °C pourquoi ? à supprimer
+
+        // Plutôt utiliser boucle du saul pour plus de lisibilité
+/*
+        saul_reg_t *dev1 = saul_reg;
+
+        if (dev == NULL) {
+            puts("No SAUL devices present");
+            return 1;
+        }
+
+        while (dev) {
+            int dim = saul_reg_read(dev, &res);
+            printf("\nDev: %s\tType: %" PRIsflash "\n", dev->name,
+                   saul_class_to_str(dev->driver->type));
+            phydat_dump(&res, dim);
+            dev = dev->next;
+        }
+        puts("\n##########################");
+*/
+    //    xtimer_periodic_wakeup(&last_wakeup, INTERVAL);
+    }
+
+
+        /*if( sample > 0){
+
+            // Luminosity
             printf("ADC_LINE(%u): raw value: %.4i, percent: %.2d %% \r\n", ADC_IN_USE, sample, sample*100/4096);
             printf("\n%d\n", sample);
+
 			// Lecture capteur pression
 			int dim = saul_reg_read(dev, &res);
             printf("\nDev: %s\tType: %" PRIsflash "\n", dev->name,saul_class_to_str(dev->driver->type));
             phydat_dump(&res, dim);
-            
             dev = dev->next;
             pressure = res.val[0];
+
             // Lecture capteur température
             dim = saul_reg_read(dev, &res);
             printf("\nDev: %s\tType: %" PRIsflash "\n", dev->name,saul_class_to_str(dev->driver->type));
            // senml_value_t test_senml;
            // phydat_to_senml_float(&test_senml, &res,dim);
             phydat_dump(&res, dim);
-            
             temperature =res.val[0]/100.00;
            // temperature = (double)test_senml.value.value.f;
             dev = dev->next;
-        }
+        }*/
 
         sen15901_t dev_sen15901;
 		sen15901_params_t params = { 

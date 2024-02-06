@@ -53,6 +53,9 @@ USEMODULE += xtimer
 # Altimeter : ST [LPS22HB](https://github.com/RIOT-OS/RIOT/tree/master/tests/drivers/lpsxxx) via I2C
 USEMODULE += lps22hb
 
+#Accelero
+USEMODULE += lis2dh12
+
 # include and auto-initialize all available sensors
 USEMODULE += saul_default
 

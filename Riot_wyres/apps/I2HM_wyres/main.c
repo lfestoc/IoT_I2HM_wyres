@@ -37,8 +37,10 @@
 #include "fmt.h"
 
 
+
 #define ADC_MISO 			ADC_LINE(1)
 #define ADC_LIGHT_SENSOR 			ADC_LINE(0)
+
 #define ADC_RES				ADC_RES_12BIT
 #define M_PI  (3.14159265358979323846)
 

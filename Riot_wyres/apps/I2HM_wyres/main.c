@@ -307,6 +307,9 @@ int main(void)
         double pressure = 0;      // hPa  pourquoi ? à supprimer
         double temperature = 0; // °C pourquoi ? à supprimer
         double humidity = 0;
+        float x_accel = 0;
+        float y_accel = 0;
+        float z_accel = 0;
         sen15901_t dev_sen15901; //voir à mettre hors loop
         saul_reg_t *dev = saul_reg;
         sen15901_values vals;
@@ -335,30 +338,39 @@ int main(void)
         display_luminosity(&sample);
 
         // Plutôt utiliser boucle du saul pour plus de lisibilité pour pression et accéléromètre
-
+        int test_bme=0;
       while (dev) { //Attention boucle infinie à corriger
             int dim = saul_reg_read(dev, &res);
             char dev_sens_name[12];
             strcpy(dev_sens_name,saul_class_to_str(dev->driver->type)) ;
             printf("\nDev: %s\tType: %" PRIsflash "\n", dev->name,
                   dev_sens_name);
-
+            if (strcmp(dev->name,"bme680")==1)
+                {
+                    test_bme =1;
+                }
                 
-                 if ( strcmp(dev_sens_name,"SENSE_PRESS")==0) 
+                if ( strcmp(dev_sens_name,"SENSE_PRESS")==0 && test_bme == 0) 
                 {
                     pressure = res.val[0];
                        
                 }
-                if (strcmp(dev_sens_name,"SENSE_TEMP")==0) 
+                if (strcmp(dev_sens_name,"SENSE_TEMP")==0 && test_bme == 0) 
                 {
-                    
                     temperature =res.val[0]/100.00;    
                 }
                 if (strcmp(dev_sens_name,"SENSE_HUM")==0) 
                 {
                     humidity =res.val[0]/100.00;    
                 }
-                 
+                if (strcmp(dev_sens_name,"SENSE_ACCEL")==0) 
+                {
+                    x_accel = res.val[0]; 
+                    y_accel = res.val[1];  
+                    z_accel = res.val[2];   
+                    
+                }
+                
             phydat_dump(&res, dim);
             dev = dev->next;
         }
@@ -409,6 +421,8 @@ int main(void)
         cayenne_lpp_add_relative_humidity(&lpp, 2, humidity);
         cayenne_lpp_add_barometric_pressure(&lpp, 3, pressure);
         cayenne_lpp_add_luminosity(&lpp, 4, luminosity);
+        cayenne_lpp_add_accelerometer(&lpp, 5,
+                                    x_accel, y_accel, z_accel);
         //cayenne_lpp_add_gps(&lpp, 5, latitude, longitude, altitude);
         cayenne_lpp_add_analog_input(&lpp, 6, battery_voltage);
         cayenne_lpp_add_analog_input(&lpp, 7, (double)vals.water_level);
@@ -421,6 +435,7 @@ int main(void)
         printf(" humidity:        %.1f RH\n",humidity);
         printf(" pressure:        %.0f hPa\n",pressure);
         printf(" luminosity:      %.1f lux\n",luminosity);
+        printf(" accelerometer:        x=%fmg y=%fmg z=%fmg\n",x_accel, y_accel, z_accel);
         printf(" position:        lat=%.5f° lon=%.5f° alt=%.0fm\n",latitude, longitude, altitude);
         printf(" battery_voltage: %.1f mV\n",battery_voltage);
 

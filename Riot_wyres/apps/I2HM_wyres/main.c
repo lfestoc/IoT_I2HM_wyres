@@ -151,19 +151,18 @@ static void cassiniOval(double time, double a, double b, double *x, double *y)
 int initialization_adc(void)
 {
     // initialize the ADC line 
-    if ((adc_init(ADC_LIGHT_SENSOR) < 0) && (adc_init(ADC_MISO) < 0)) {
-        printf("\r\nInitialization of ADC_LINE(%u) and ADC_LINE(%u) failed\r\n", ADC_LIGHT_SENSOR, ADC_MISO);
-        return -1;
+    if ( (adc_init(ADC_MISO) < 0)) {
+        printf("\r\nInitialization of ADC_LINE(%u) \r\n", ADC_MISO);
     }
-    if (adc_init(ADC_MISO) < 0) {
-        printf("\r\nInitialization of ADC_LINE(%u) failed\r\n", ADC_MISO);
+    else  {
+        printf("\r\nSuccessfully initialized ADC_LINE(%u)\r\n", ADC_MISO);
     }
     if (adc_init(ADC_LIGHT_SENSOR) < 0) {
         printf("\r\nInitialization of ADC_LINE(%u) failed\r\n", ADC_LIGHT_SENSOR);
     }
     else {
         printf("\r\nSuccessfully initialized ADC_LINE(%u)\r\n", ADC_LIGHT_SENSOR);
-        return 1;
+        LIGHT_SENSOR_SUPPLY_ON;
     }
     return 0;
 

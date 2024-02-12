@@ -19,7 +19,7 @@
 
 int main(void)
 {
-	printf("\r\nTest light sensor\r\n");
+	printf("\r\n I2HM Test light sensor\r\n");
 
 	LED_GREEN_ON;
 	xtimer_sleep(1);

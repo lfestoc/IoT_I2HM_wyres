@@ -37,8 +37,8 @@
 #include "fmt.h"
 
 
-#define ADC_MISO 			ADC_LINE(0)
-#define ADC_LIGHT_SENSOR 			ADC_LINE(1)
+#define ADC_MISO 			ADC_LINE(1)
+#define ADC_LIGHT_SENSOR 			ADC_LINE(0)
 #define ADC_RES				ADC_RES_12BIT
 #define M_PI  (3.14159265358979323846)
 
@@ -111,21 +111,21 @@ static void cassiniOval(double time, double a, double b, double *x, double *y)
 int initialization_adc(void)
 {
     // initialize the ADC line 
-    if ((adc_init(ADC_LIGHT_SENSOR) < 0) && (adc_init(ADC_MISO) < 0)) {
-        printf("\r\nInitialization of ADC_LINE(%u) and ADC_LINE(%u) failed\r\n", ADC_LIGHT_SENSOR, ADC_MISO);
-        return -1;
-    }
     if (adc_init(ADC_MISO) < 0) {
         printf("\r\nInitialization of ADC_LINE(%u) failed\r\n", ADC_MISO);
-        return -2;
     }
-    else {
+    if (adc_init(ADC_LIGHT_SENSOR) < 0) {
+        printf("\r\nInitialization of ADC_LINE(%u) failed\r\n", ADC_LIGHT_SENSOR);
+    }
+    else
+    {
         printf("\r\nSuccessfully initialized ADC_LINE(%u)\r\n", ADC_LIGHT_SENSOR);
+        LIGHT_SENSOR_SUPPLY_ON;
         return 1;
-
     }
+    return 0;
 
-    LIGHT_SENSOR_SUPPLY_ON;
+    
 }
 
 void initialization_join_cayenne(void) //mettre int pour return 1 ou 0
@@ -143,17 +143,20 @@ void initialization_join_cayenne(void) //mettre int pour return 1 ou 0
     puts("Join procedure succeeded");
 }
 
-void display_luminosity(int sample)
+double display_luminosity(int sample)
 {
     sample = adc_sample(ADC_LIGHT_SENSOR,ADC_RES);
+    printf("SAMPLE LUMINOSITY : %d\n", sample);
+    double value = 0;
 
     if( sample > 0){
 
         // Luminosity
         printf("ADC_LINE(%u): raw value: %.4i, percent: %.2d %% \r\n", ADC_LIGHT_SENSOR, sample, sample*100/4096);
-        printf("\n%d\n", sample);
+        value = sample*100/4096;
 
     }
+    return value;
 }
 
     typedef struct {
@@ -241,11 +244,11 @@ int main(void)
     double init_longitude = 5.5;
     double init_altitude = 10000;  // meter
     double init_humidity = 50;
-    //double init_luninosity = 500;
+    //double init_luminosity = 500;
     double init_battery_voltage = 3.6; // mV
     int sample = 0;
 
-    phydat_t res;
+   // phydat_t res;
 
 
 /*-----------------------------------------------------------------*/    
@@ -266,6 +269,8 @@ int main(void)
         double pressure = 0;      // hPa  pourquoi ? à supprimer
         double temperature = 0; // °C pourquoi ? à supprimer
 
+ 
+
         sen15901_t dev_sen15901; //voir à mettre hors loop
         saul_reg_t *dev = saul_reg;
         sen15901_values vals;
@@ -282,19 +287,20 @@ int main(void)
                 LED_RED_OFF;
                 LED_GREEN_ON; 
             }
-        puts("Mesure starts");
+        puts("Mesure starts TEST");
 
         if (dev == NULL) {
             puts("No SAUL devices present");
             return 1;
         }
 
+       
         // Lecture capteur luminosité
-        display_luminosity(sample);
+        double luminosity = display_luminosity(sample);
 
         // Plutôt utiliser boucle du saul pour plus de lisibilité pour pression et accéléromètre
 
-        while (dev) { //Attention boucle infinie à corriger
+      while (dev) { //Attention boucle infinie à corriger
             int dim = saul_reg_read(dev, &res);
             printf("\nDev: %s\tType: %" PRIsflash "\n", dev->name,
                    saul_class_to_str(dev->driver->type));
@@ -323,7 +329,7 @@ int main(void)
            // temperature = (double)test_senml.value.value.f;
             dev = dev->next;*/
 
-			if (initialization_sen15901(dev_sen15901) == 1)
+			if (initialization_sen15901(dev_sen15901) == 1) //Si init sen est OK
             {   
                 vals = display_sen15901(dev_sen15901, duration);      
 	        }
@@ -342,7 +348,7 @@ int main(void)
         //double pressure = init_pressure;      // hPa
         //double temperature = init_temperature ; // °C
         double humidity = init_humidity ;
-        double luninosity = (double) sample;
+        
         double battery_voltage = init_battery_voltage; // V
 
         /**** Build cayenne payload ****/
@@ -350,7 +356,7 @@ int main(void)
         cayenne_lpp_add_temperature(&lpp, 1, temperature);
         cayenne_lpp_add_relative_humidity(&lpp, 2, humidity);
         cayenne_lpp_add_barometric_pressure(&lpp, 3, pressure);
-        cayenne_lpp_add_luminosity(&lpp, 4, luninosity);
+        cayenne_lpp_add_luminosity(&lpp, 4, luminosity);
         //cayenne_lpp_add_gps(&lpp, 5, latitude, longitude, altitude);
         cayenne_lpp_add_analog_input(&lpp, 6, battery_voltage);
         cayenne_lpp_add_analog_input(&lpp, 7, (double)vals.water_level);
@@ -362,7 +368,7 @@ int main(void)
         printf(" temperature:     %.2f °C\n",temperature);
         printf(" humidity:        %.1f RH\n",humidity);
         printf(" pressure:        %.0f hPa\n",pressure);
-        printf(" luninosity:      %.1f lux\n",luninosity);
+        printf(" luminosity:      %.1f lux\n",luminosity);
         printf(" position:        lat=%.5f° lon=%.5f° alt=%.0fm\n",latitude, longitude, altitude);
         printf(" battery_voltage: %.1f mV\n",battery_voltage);
 

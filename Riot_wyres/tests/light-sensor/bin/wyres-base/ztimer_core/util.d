@@ -1,6 +1,6 @@
-/Users/leof/Documents/GitHub/IoT/campusiot/RIOT-wyres/tests/light-sensor/bin/wyres-base/ztimer_core/util.o: \
+/Users/leof/Documents/GitHub/IoT/IoT_I2HM_wyres/Riot_wyres/tests/light-sensor/bin/wyres-base/ztimer_core/util.o: \
  /Users/leof/Documents/GitHub/IoT/RIOT-OS/RIOT/sys/ztimer/util.c \
- /Users/leof/Documents/GitHub/IoT/campusiot/RIOT-wyres/tests/light-sensor/bin/wyres-base/riotbuild/riotbuild.h \
+ /Users/leof/Documents/GitHub/IoT/IoT_I2HM_wyres/Riot_wyres/tests/light-sensor/bin/wyres-base/riotbuild/riotbuild.h \
  /Users/leof/Documents/GitHub/IoT/RIOT-OS/RIOT/core/lib/include/assert.h \
  /usr/local/Cellar/gcc-arm-none-eabi-80/20181220/lib/gcc/arm-none-eabi/8.2.1/include/stdint.h \
  /usr/local/Cellar/gcc-arm-none-eabi-80/20181220/arm-none-eabi/include/stdint.h \
@@ -105,7 +105,7 @@
  /Users/leof/Documents/GitHub/IoT/RIOT-OS/RIOT/sys/include/ztimer.h \
  /Users/leof/Documents/GitHub/IoT/RIOT-OS/RIOT/core/include/msg.h
 
-/Users/leof/Documents/GitHub/IoT/campusiot/RIOT-wyres/tests/light-sensor/bin/wyres-base/riotbuild/riotbuild.h:
+/Users/leof/Documents/GitHub/IoT/IoT_I2HM_wyres/Riot_wyres/tests/light-sensor/bin/wyres-base/riotbuild/riotbuild.h:
 
 /Users/leof/Documents/GitHub/IoT/RIOT-OS/RIOT/core/lib/include/assert.h:
 

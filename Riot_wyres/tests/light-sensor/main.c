@@ -14,7 +14,7 @@
 #include "periph/adc.h"
 #include "periph/gpio.h"
 
-#define ADC_IN_USE 			ADC_LINE(0)
+#define ADC_IN_USE 			ADC_LINE(1)
 #define ADC_RES				ADC_RES_12BIT
 
 int main(void)

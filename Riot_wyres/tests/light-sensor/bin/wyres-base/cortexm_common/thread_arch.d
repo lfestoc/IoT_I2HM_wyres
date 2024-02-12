@@ -1,6 +1,6 @@
-/Users/leof/Documents/GitHub/IoT/campusiot/RIOT-wyres/tests/light-sensor/bin/wyres-base/cortexm_common/thread_arch.o: \
+/Users/leof/Documents/GitHub/IoT/IoT_I2HM_wyres/Riot_wyres/tests/light-sensor/bin/wyres-base/cortexm_common/thread_arch.o: \
  /Users/leof/Documents/GitHub/IoT/RIOT-OS/RIOT/cpu/cortexm_common/thread_arch.c \
- /Users/leof/Documents/GitHub/IoT/campusiot/RIOT-wyres/tests/light-sensor/bin/wyres-base/riotbuild/riotbuild.h \
+ /Users/leof/Documents/GitHub/IoT/IoT_I2HM_wyres/Riot_wyres/tests/light-sensor/bin/wyres-base/riotbuild/riotbuild.h \
  /usr/local/Cellar/gcc-arm-none-eabi-80/20181220/arm-none-eabi/include/stdio.h \
  /usr/local/Cellar/gcc-arm-none-eabi-80/20181220/arm-none-eabi/include/_ansi.h \
  /usr/local/Cellar/gcc-arm-none-eabi-80/20181220/arm-none-eabi/include/newlib-nano/newlib.h \
@@ -63,7 +63,7 @@
  /Users/leof/Documents/GitHub/IoT/RIOT-OS/RIOT/sys/include/architecture.h \
  /Users/leof/Documents/GitHub/IoT/RIOT-OS/RIOT/cpu/cortexm_common/include/architecture_arch.h
 
-/Users/leof/Documents/GitHub/IoT/campusiot/RIOT-wyres/tests/light-sensor/bin/wyres-base/riotbuild/riotbuild.h:
+/Users/leof/Documents/GitHub/IoT/IoT_I2HM_wyres/Riot_wyres/tests/light-sensor/bin/wyres-base/riotbuild/riotbuild.h:
 
 /usr/local/Cellar/gcc-arm-none-eabi-80/20181220/arm-none-eabi/include/stdio.h:
 

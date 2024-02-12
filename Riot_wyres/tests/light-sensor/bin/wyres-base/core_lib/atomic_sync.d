@@ -1,6 +1,6 @@
-/Users/leof/Documents/GitHub/IoT/campusiot/RIOT-wyres/tests/light-sensor/bin/wyres-base/core_lib/atomic_sync.o: \
+/Users/leof/Documents/GitHub/IoT/IoT_I2HM_wyres/Riot_wyres/tests/light-sensor/bin/wyres-base/core_lib/atomic_sync.o: \
  /Users/leof/Documents/GitHub/IoT/RIOT-OS/RIOT/core/lib/atomic_sync.c \
- /Users/leof/Documents/GitHub/IoT/campusiot/RIOT-wyres/tests/light-sensor/bin/wyres-base/riotbuild/riotbuild.h \
+ /Users/leof/Documents/GitHub/IoT/IoT_I2HM_wyres/Riot_wyres/tests/light-sensor/bin/wyres-base/riotbuild/riotbuild.h \
  /usr/local/Cellar/gcc-arm-none-eabi-80/20181220/lib/gcc/arm-none-eabi/8.2.1/include/stddef.h \
  /usr/local/Cellar/gcc-arm-none-eabi-80/20181220/arm-none-eabi/include/stdlib.h \
  /usr/local/Cellar/gcc-arm-none-eabi-80/20181220/arm-none-eabi/include/machine/ieeefp.h \
@@ -46,7 +46,7 @@
  /Users/leof/Documents/GitHub/IoT/RIOT-OS/RIOT/core/lib/include/container.h \
  /Users/leof/Documents/GitHub/IoT/RIOT-OS/RIOT/sys/include/debug_irq_disable.h
 
-/Users/leof/Documents/GitHub/IoT/campusiot/RIOT-wyres/tests/light-sensor/bin/wyres-base/riotbuild/riotbuild.h:
+/Users/leof/Documents/GitHub/IoT/IoT_I2HM_wyres/Riot_wyres/tests/light-sensor/bin/wyres-base/riotbuild/riotbuild.h:
 
 /usr/local/Cellar/gcc-arm-none-eabi-80/20181220/lib/gcc/arm-none-eabi/8.2.1/include/stddef.h:
 

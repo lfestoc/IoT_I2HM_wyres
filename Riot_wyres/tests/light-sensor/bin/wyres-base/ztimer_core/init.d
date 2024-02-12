@@ -1,6 +1,6 @@
-/Users/leof/Documents/GitHub/IoT/campusiot/RIOT-wyres/tests/light-sensor/bin/wyres-base/ztimer_core/init.o: \
+/Users/leof/Documents/GitHub/IoT/IoT_I2HM_wyres/Riot_wyres/tests/light-sensor/bin/wyres-base/ztimer_core/init.o: \
  /Users/leof/Documents/GitHub/IoT/RIOT-OS/RIOT/sys/ztimer/init.c \
- /Users/leof/Documents/GitHub/IoT/campusiot/RIOT-wyres/tests/light-sensor/bin/wyres-base/riotbuild/riotbuild.h \
+ /Users/leof/Documents/GitHub/IoT/IoT_I2HM_wyres/Riot_wyres/tests/light-sensor/bin/wyres-base/riotbuild/riotbuild.h \
  /Users/leof/Documents/GitHub/IoT/RIOT-OS/RIOT/core/lib/include/kernel_defines.h \
  /Users/leof/Documents/GitHub/IoT/RIOT-OS/RIOT/core/lib/include/modules.h \
  /Users/leof/Documents/GitHub/IoT/RIOT-OS/RIOT/core/lib/include/riot_version.h \
@@ -15,7 +15,7 @@
  /Users/leof/Documents/GitHub/IoT/RIOT-OS/RIOT/core/lib/include/assert.h \
  /Users/leof/Documents/GitHub/IoT/RIOT-OS/RIOT/core/lib/include/container.h \
  /usr/local/Cellar/gcc-arm-none-eabi-80/20181220/lib/gcc/arm-none-eabi/8.2.1/include/stddef.h \
- /Users/leof/Documents/GitHub/IoT/campusiot/RIOT-wyres/boards/wyres-base/include/board.h \
+ /Users/leof/Documents/GitHub/IoT/IoT_I2HM_wyres/Riot_wyres/boards/wyres-base/include/board.h \
  /Users/leof/Documents/GitHub/IoT/RIOT-OS/RIOT/cpu/cortexm_common/include/cpu.h \
  /usr/local/Cellar/gcc-arm-none-eabi-80/20181220/arm-none-eabi/include/stdio.h \
  /usr/local/Cellar/gcc-arm-none-eabi-80/20181220/arm-none-eabi/include/_ansi.h \
@@ -60,7 +60,7 @@
  /Users/leof/Documents/GitHub/IoT/RIOT-OS/RIOT/core/include/sched.h \
  /Users/leof/Documents/GitHub/IoT/RIOT-OS/RIOT/core/lib/include/thread_config.h \
  /Users/leof/Documents/GitHub/IoT/RIOT-OS/RIOT/cpu/cortexm_common/include/thread_arch.h \
- /Users/leof/Documents/GitHub/IoT/campusiot/RIOT-wyres/boards/wyres-base/include/periph_conf.h \
+ /Users/leof/Documents/GitHub/IoT/IoT_I2HM_wyres/Riot_wyres/boards/wyres-base/include/periph_conf.h \
  /Users/leof/Documents/GitHub/IoT/RIOT-OS/RIOT/cpu/stm32/include/periph_cpu.h \
  /usr/local/Cellar/gcc-arm-none-eabi-80/20181220/lib/gcc/arm-none-eabi/8.2.1/include-fixed/limits.h \
  /usr/local/Cellar/gcc-arm-none-eabi-80/20181220/lib/gcc/arm-none-eabi/8.2.1/include-fixed/syslimits.h \
@@ -111,13 +111,13 @@
  /Users/leof/Documents/GitHub/IoT/RIOT-OS/RIOT/sys/include/ztimer/overhead.h \
  /Users/leof/Documents/GitHub/IoT/RIOT-OS/RIOT/sys/include/ztimer/periph_timer.h \
  /Users/leof/Documents/GitHub/IoT/RIOT-OS/RIOT/drivers/include/periph/timer.h \
- /Users/leof/Documents/GitHub/IoT/campusiot/RIOT-wyres/boards/wyres-base/include/periph_conf.h \
+ /Users/leof/Documents/GitHub/IoT/IoT_I2HM_wyres/Riot_wyres/boards/wyres-base/include/periph_conf.h \
  /Users/leof/Documents/GitHub/IoT/RIOT-OS/RIOT/sys/include/ztimer/periph_rtt.h \
  /Users/leof/Documents/GitHub/IoT/RIOT-OS/RIOT/sys/include/ztimer/periph_rtc.h \
  /Users/leof/Documents/GitHub/IoT/RIOT-OS/RIOT/sys/include/ztimer/config.h \
  /Users/leof/Documents/GitHub/IoT/RIOT-OS/RIOT/core/lib/include/log.h
 
-/Users/leof/Documents/GitHub/IoT/campusiot/RIOT-wyres/tests/light-sensor/bin/wyres-base/riotbuild/riotbuild.h:
+/Users/leof/Documents/GitHub/IoT/IoT_I2HM_wyres/Riot_wyres/tests/light-sensor/bin/wyres-base/riotbuild/riotbuild.h:
 
 /Users/leof/Documents/GitHub/IoT/RIOT-OS/RIOT/core/lib/include/kernel_defines.h:
 
@@ -147,7 +147,7 @@
 
 /usr/local/Cellar/gcc-arm-none-eabi-80/20181220/lib/gcc/arm-none-eabi/8.2.1/include/stddef.h:
 
-/Users/leof/Documents/GitHub/IoT/campusiot/RIOT-wyres/boards/wyres-base/include/board.h:
+/Users/leof/Documents/GitHub/IoT/IoT_I2HM_wyres/Riot_wyres/boards/wyres-base/include/board.h:
 
 /Users/leof/Documents/GitHub/IoT/RIOT-OS/RIOT/cpu/cortexm_common/include/cpu.h:
 
@@ -237,7 +237,7 @@
 
 /Users/leof/Documents/GitHub/IoT/RIOT-OS/RIOT/cpu/cortexm_common/include/thread_arch.h:
 
-/Users/leof/Documents/GitHub/IoT/campusiot/RIOT-wyres/boards/wyres-base/include/periph_conf.h:
+/Users/leof/Documents/GitHub/IoT/IoT_I2HM_wyres/Riot_wyres/boards/wyres-base/include/periph_conf.h:
 
 /Users/leof/Documents/GitHub/IoT/RIOT-OS/RIOT/cpu/stm32/include/periph_cpu.h:
 
@@ -339,7 +339,7 @@
 
 /Users/leof/Documents/GitHub/IoT/RIOT-OS/RIOT/drivers/include/periph/timer.h:
 
-/Users/leof/Documents/GitHub/IoT/campusiot/RIOT-wyres/boards/wyres-base/include/periph_conf.h:
+/Users/leof/Documents/GitHub/IoT/IoT_I2HM_wyres/Riot_wyres/boards/wyres-base/include/periph_conf.h:
 
 /Users/leof/Documents/GitHub/IoT/RIOT-OS/RIOT/sys/include/ztimer/periph_rtt.h:
 

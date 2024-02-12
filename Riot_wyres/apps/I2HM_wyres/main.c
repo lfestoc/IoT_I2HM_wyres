@@ -60,6 +60,39 @@
 #include "msg.h"
 #endif
 
+
+#include "periph/pm.h"
+#include "periph/gpio.h"
+#ifdef MODULE_PM_LAYERED
+
+#ifdef MODULE_PERIPH_RTC
+#include "periph/rtc.h"
+#endif
+#include "pm_layered.h"
+#endif
+
+
+
+#ifndef BTN1_INT_FLANK 
+#define BTN1_INT_FLANK  GPIO_RISING
+#endif
+/**
+ * @brief   List of shell commands for this example.
+ */
+
+#if defined(MODULE_PERIPH_GPIO_IRQ) && defined(BTN1_PIN)
+static void btn_cb(void *ctx)
+{   
+    (void) ctx;
+    puts("BTN1 pressed."); 
+    puts("Reboot...."); 
+    pm_reboot();
+    
+}
+#endif /* MODULE_PERIPH_GPIO_IRQ */
+
+
+
   extern semtech_loramac_t loramac;  /* The loramac stack device descriptor */
       /* define the required keys for OTAA, e.g over-the-air activation (the
          null arrays need to be updated with valid LoRa values) */
@@ -88,6 +121,11 @@
 
 static cayenne_lpp_t lpp;
 
+static void cb_rtc_puts(void *arg)
+{
+    puts(arg);
+}
+
 static void _print_buffer(const uint8_t *buffer, size_t len, const char *msg)
 {
     printf("%s: ", msg);
@@ -111,16 +149,22 @@ static void cassiniOval(double time, double a, double b, double *x, double *y)
 int initialization_adc(void)
 {
     // initialize the ADC line 
-    if ((adc_init(ADC_LIGHT_SENSOR) < 0) && (adc_init(ADC_MISO) < 0)) {
-        printf("\r\nInitialization of ADC_LINE(%u) and ADC_LINE(%u) failed\r\n", ADC_LIGHT_SENSOR, ADC_MISO);
+    if ((adc_init(ADC_LIGHT_SENSOR) < 0)) {
+        printf("\r\nInitialization of ADC_LINE(%u) failed\r\n", ADC_LIGHT_SENSOR);
         return -1;
+    }
+    else {
+        printf("\r\nSuccessfully initialized ADC_LINE(%u)\r\n", ADC_LIGHT_SENSOR);
+        LIGHT_SENSOR_SUPPLY_ON;
+        return 1;
+
     }
     if (adc_init(ADC_MISO) < 0) {
         printf("\r\nInitialization of ADC_LINE(%u) failed\r\n", ADC_MISO);
         return -2;
     }
     else {
-        printf("\r\nSuccessfully initialized ADC_LINE(%u)\r\n", ADC_LIGHT_SENSOR);
+        printf("\r\nSuccessfully initialized ADC_LINE(%u)\r\n", ADC_MISO);
         return 1;
 
     }
@@ -143,17 +187,18 @@ void initialization_join_cayenne(void) //mettre int pour return 1 ou 0
     puts("Join procedure succeeded");
 }
 
-void display_luminosity(int sample)
+int display_luminosity(int * sample)
 {
-    sample = adc_sample(ADC_LIGHT_SENSOR,ADC_RES);
+    *sample = adc_sample(ADC_LIGHT_SENSOR,ADC_RES);
 
-    if( sample > 0){
+    if( *sample > 0){
 
         // Luminosity
-        printf("ADC_LINE(%u): raw value: %.4i, percent: %.2d %% \r\n", ADC_LIGHT_SENSOR, sample, sample*100/4096);
-        printf("\n%d\n", sample);
+        printf("ADC_LINE(%u): raw value: %.4i, percent: %.2d %% \r\n", ADC_LIGHT_SENSOR, *sample, *sample*100/4096);
+        printf("\n%d\n", *sample);
 
     }
+    return *sample;
 }
 
     typedef struct {
@@ -231,17 +276,18 @@ sen15901_values display_sen15901(sen15901_t dev_sen15901, int duration)
 }
 
 int main(void)
-{      
-
-
+{      // definition of BTN1 interuption 
+    #if defined(MODULE_PERIPH_GPIO_IRQ) && defined(BTN1_PIN)
+    gpio_init_int(BTN1_PIN, GPIO_IN_PD, BTN1_INT_FLANK, btn_cb, NULL);
+    #endif
+    //time to get the time later 
+    struct tm time;
     //Constants and variables declarations
 
     int duration = 60; // time in seconds between two data fetch
     double init_latitude = 45.5;
     double init_longitude = 5.5;
     double init_altitude = 10000;  // meter
-    double init_humidity = 50;
-    //double init_luninosity = 500;
     double init_battery_voltage = 3.6; // mV
     int sample = 0;
 
@@ -265,7 +311,7 @@ int main(void)
     {   
         double pressure = 0;      // hPa  pourquoi ? à supprimer
         double temperature = 0; // °C pourquoi ? à supprimer
-
+        double humidity = 0 ;
         sen15901_t dev_sen15901; //voir à mettre hors loop
         saul_reg_t *dev = saul_reg;
         sen15901_values vals;
@@ -286,24 +332,42 @@ int main(void)
 
         if (dev == NULL) {
             puts("No SAUL devices present");
-            return 1;
+        
         }
 
         // Lecture capteur luminosité
-        display_luminosity(sample);
+        display_luminosity(&sample);
 
         // Plutôt utiliser boucle du saul pour plus de lisibilité pour pression et accéléromètre
 
         while (dev) { //Attention boucle infinie à corriger
             int dim = saul_reg_read(dev, &res);
+            char dev_sens_name[12];
+            strcpy(dev_sens_name,saul_class_to_str(dev->driver->type)) ;
             printf("\nDev: %s\tType: %" PRIsflash "\n", dev->name,
-                   saul_class_to_str(dev->driver->type));
+                  dev_sens_name);
+
+                
+                 if ( strcmp(dev_sens_name,"SENSE_PRESS")==0) 
+                {
+                    pressure = res.val[0];
+                       
+                }
+                if (strcmp(dev_sens_name,"SENSE_TEMP")==0) 
+                {
+                    
+                    temperature =res.val[0]/100.00;    
+                }
+                if (strcmp(dev_sens_name,"SENSE_HUM")==0) 
+                {
+                    humidity =res.val[0]/100.00;    
+                }
+                 
             phydat_dump(&res, dim);
             dev = dev->next;
         }
         puts("\n##########################");
 
-        //    xtimer_periodic_wakeup(&last_wakeup, INTERVAL);
     
 
         // Lecture capteur pression (déjà fait dans boucle saul)
@@ -327,7 +391,6 @@ int main(void)
             {   
                 vals = display_sen15901(dev_sen15901, duration);      
 	        }
-    
         
 				
         puts("Mesure ends");
@@ -341,8 +404,8 @@ int main(void)
         double altitude = init_altitude ;    // meter
         //double pressure = init_pressure;      // hPa
         //double temperature = init_temperature ; // °C
-        double humidity = init_humidity ;
-        double luninosity = (double) sample;
+       // double humidity = init_humidity ;
+        double luminosity = (double) sample;
         double battery_voltage = init_battery_voltage; // V
 
         /**** Build cayenne payload ****/
@@ -350,7 +413,7 @@ int main(void)
         cayenne_lpp_add_temperature(&lpp, 1, temperature);
         cayenne_lpp_add_relative_humidity(&lpp, 2, humidity);
         cayenne_lpp_add_barometric_pressure(&lpp, 3, pressure);
-        cayenne_lpp_add_luminosity(&lpp, 4, luninosity);
+        cayenne_lpp_add_luminosity(&lpp, 4, luminosity);
         //cayenne_lpp_add_gps(&lpp, 5, latitude, longitude, altitude);
         cayenne_lpp_add_analog_input(&lpp, 6, battery_voltage);
         cayenne_lpp_add_analog_input(&lpp, 7, (double)vals.water_level);
@@ -362,7 +425,7 @@ int main(void)
         printf(" temperature:     %.2f °C\n",temperature);
         printf(" humidity:        %.1f RH\n",humidity);
         printf(" pressure:        %.0f hPa\n",pressure);
-        printf(" luninosity:      %.1f lux\n",luninosity);
+        printf(" luminosity:      %.1f lux\n",luminosity);
         printf(" position:        lat=%.5f° lon=%.5f° alt=%.0fm\n",latitude, longitude, altitude);
         printf(" battery_voltage: %.1f mV\n",battery_voltage);
 
@@ -416,7 +479,14 @@ int main(void)
         puts("LORAMAC buffer sent");
         puts("LORAMAC start waiting");
         LED_RED_OFF;
-        ztimer_sleep(ZTIMER_SEC, 60);
+        ztimer_sleep(ZTIMER_SEC, 1);
+        
+        // getting the time of the real time clock and setting alarm 
+        rtc_get_time(&time);
+        time.tm_sec += 60;
+        rtc_set_alarm(&time, cb_rtc_puts, "The alarm rang");
+        // setting low power mode 
+        pm_set(0);
        
     }
 }

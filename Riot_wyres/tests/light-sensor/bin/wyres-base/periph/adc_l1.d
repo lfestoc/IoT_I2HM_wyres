@@ -1,6 +1,6 @@
-/Users/leof/Documents/GitHub/IoT/campusiot/RIOT-wyres/tests/light-sensor/bin/wyres-base/periph/adc_l1.o: \
+/Users/leof/Documents/GitHub/IoT/IoT_I2HM_wyres/Riot_wyres/tests/light-sensor/bin/wyres-base/periph/adc_l1.o: \
  /Users/leof/Documents/GitHub/IoT/RIOT-OS/RIOT/cpu/stm32/periph/adc_l1.c \
- /Users/leof/Documents/GitHub/IoT/campusiot/RIOT-wyres/tests/light-sensor/bin/wyres-base/riotbuild/riotbuild.h \
+ /Users/leof/Documents/GitHub/IoT/IoT_I2HM_wyres/Riot_wyres/tests/light-sensor/bin/wyres-base/riotbuild/riotbuild.h \
  /Users/leof/Documents/GitHub/IoT/RIOT-OS/RIOT/cpu/cortexm_common/include/cpu.h \
  /usr/local/Cellar/gcc-arm-none-eabi-80/20181220/arm-none-eabi/include/stdio.h \
  /usr/local/Cellar/gcc-arm-none-eabi-80/20181220/arm-none-eabi/include/_ansi.h \
@@ -96,12 +96,12 @@
  /Users/leof/Documents/GitHub/IoT/RIOT-OS/RIOT/sys/include/timex.h \
  /Users/leof/Documents/GitHub/IoT/RIOT-OS/RIOT/sys/include/time_units.h \
  /Users/leof/Documents/GitHub/IoT/RIOT-OS/RIOT/cpu/stm32/include/periph/cpu_common.h \
- /Users/leof/Documents/GitHub/IoT/campusiot/RIOT-wyres/boards/wyres-base/include/periph_conf.h \
+ /Users/leof/Documents/GitHub/IoT/IoT_I2HM_wyres/Riot_wyres/boards/wyres-base/include/periph_conf.h \
  /Users/leof/Documents/GitHub/IoT/RIOT-OS/RIOT/cpu/stm32/include/clk/clk_conf.h \
  /Users/leof/Documents/GitHub/IoT/RIOT-OS/RIOT/cpu/stm32/include/clk/cfg_clock_common_lx_u5_wx.h \
  /Users/leof/Documents/GitHub/IoT/RIOT-OS/RIOT/cpu/stm32/include/clk/l0l1/cfg_clock_default.h
 
-/Users/leof/Documents/GitHub/IoT/campusiot/RIOT-wyres/tests/light-sensor/bin/wyres-base/riotbuild/riotbuild.h:
+/Users/leof/Documents/GitHub/IoT/IoT_I2HM_wyres/Riot_wyres/tests/light-sensor/bin/wyres-base/riotbuild/riotbuild.h:
 
 /Users/leof/Documents/GitHub/IoT/RIOT-OS/RIOT/cpu/cortexm_common/include/cpu.h:
 
@@ -293,7 +293,7 @@
 
 /Users/leof/Documents/GitHub/IoT/RIOT-OS/RIOT/cpu/stm32/include/periph/cpu_common.h:
 
-/Users/leof/Documents/GitHub/IoT/campusiot/RIOT-wyres/boards/wyres-base/include/periph_conf.h:
+/Users/leof/Documents/GitHub/IoT/IoT_I2HM_wyres/Riot_wyres/boards/wyres-base/include/periph_conf.h:
 
 /Users/leof/Documents/GitHub/IoT/RIOT-OS/RIOT/cpu/stm32/include/clk/clk_conf.h:
 

@@ -21,7 +21,7 @@
 
 void board_init(void)
 {    /* initialize the boards LEDs */
-    gpio_init(LED_RED_PIN, GPIO_OUT);  /* PA3 */
+    gpio_init(LED_RED_PIN, GPIO_OUT);  /* PA15 */
     gpio_init(LED_GREEN_PIN, GPIO_OUT);  /* PA0 */
 
     gpio_init(LIGHT_SENSOR_SUPPLY_PIN, GPIO_OUT);  /* PB6 */

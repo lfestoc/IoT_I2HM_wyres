@@ -1,6 +1,6 @@
-/Users/leof/Documents/GitHub/IoT/IoT_I2HM_wyres/Riot_wyres/tests/cayenne-lpp/bin/wyres-base/isrpipe/isrpipe.o: \
+/Users/leof/Documents/GitHub/IoT/IoT_I2HM_wyres/Riot_wyres/apps/I2HM_wyres/bin/wyres-base/isrpipe/isrpipe.o: \
  /Users/leof/Documents/GitHub/IoT/RIOT-OS/RIOT/sys/isrpipe/isrpipe.c \
- /Users/leof/Documents/GitHub/IoT/IoT_I2HM_wyres/Riot_wyres/tests/cayenne-lpp/bin/wyres-base/riotbuild/riotbuild.h \
+ /Users/leof/Documents/GitHub/IoT/IoT_I2HM_wyres/Riot_wyres/apps/I2HM_wyres/bin/wyres-base/riotbuild/riotbuild.h \
  /Users/leof/Documents/GitHub/IoT/RIOT-OS/RIOT/sys/include/isrpipe.h \
  /usr/local/Cellar/gcc-arm-none-eabi-80/20181220/lib/gcc/arm-none-eabi/8.2.1/include/stdint.h \
  /usr/local/Cellar/gcc-arm-none-eabi-80/20181220/arm-none-eabi/include/stdint.h \
@@ -53,7 +53,7 @@
  /Users/leof/Documents/GitHub/IoT/RIOT-OS/RIOT/cpu/cortexm_common/include/irq_arch.h \
  /Users/leof/Documents/GitHub/IoT/RIOT-OS/RIOT/sys/include/debug_irq_disable.h
 
-/Users/leof/Documents/GitHub/IoT/IoT_I2HM_wyres/Riot_wyres/tests/cayenne-lpp/bin/wyres-base/riotbuild/riotbuild.h:
+/Users/leof/Documents/GitHub/IoT/IoT_I2HM_wyres/Riot_wyres/apps/I2HM_wyres/bin/wyres-base/riotbuild/riotbuild.h:
 
 /Users/leof/Documents/GitHub/IoT/RIOT-OS/RIOT/sys/include/isrpipe.h:
 

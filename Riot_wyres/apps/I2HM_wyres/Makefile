@@ -10,7 +10,6 @@ EXTERNAL_BOARD_DIRS ?= ../../boards
 
 # External modules
 EXTERNAL_MODULE_DIRS += ../../modules
-
 USEMODULE += loramac_utils
 USEMODULE += sen15901
 # Comment this out to disable code in RIOT that does safety checking
@@ -72,6 +71,10 @@ USEMODULE += analog_util
 
 FEATURES_REQUIRED += periph_adc
 FEATURES_OPTIONAL += periph_eeprom
+
+#power management 
+FEATURES_OPTIONAL += periph_rtc
+FEATURES_OPTIONAL += periph_gpio_irq
 
 CFLAGS += -DLORAMAC_JOIN_MIN_DATARATE=$(LORAMAC_JOIN_MIN_DATARATE)
 

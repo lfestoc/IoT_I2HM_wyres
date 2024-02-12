@@ -60,6 +60,12 @@
     "stdio.h": "c",
     "system_error": "c",
     "cstdint": "c",
-    "loramac_utils.h": "c"
+    "loramac_utils.h": "c",
+    "chrono": "c",
+    "cstdlib": "c",
+    "board.h": "c",
+    "periph_conf.h": "c",
+    "stdint.h": "c",
+    "complex": "c"
   }
 }

@@ -1,6 +1,6 @@
-/Users/leof/Documents/GitHub/IoT/campusiot/RIOT-wyres/tests/light-sensor/bin/wyres-base/core_lib/panic.o: \
+/Users/leof/Documents/GitHub/IoT/IoT_I2HM_wyres/Riot_wyres/tests/light-sensor/bin/wyres-base/core_lib/panic.o: \
  /Users/leof/Documents/GitHub/IoT/RIOT-OS/RIOT/core/lib/panic.c \
- /Users/leof/Documents/GitHub/IoT/campusiot/RIOT-wyres/tests/light-sensor/bin/wyres-base/riotbuild/riotbuild.h \
+ /Users/leof/Documents/GitHub/IoT/IoT_I2HM_wyres/Riot_wyres/tests/light-sensor/bin/wyres-base/riotbuild/riotbuild.h \
  /Users/leof/Documents/GitHub/IoT/RIOT-OS/RIOT/core/lib/include/kernel_defines.h \
  /Users/leof/Documents/GitHub/IoT/RIOT-OS/RIOT/core/lib/include/modules.h \
  /Users/leof/Documents/GitHub/IoT/RIOT-OS/RIOT/core/lib/include/riot_version.h \
@@ -98,7 +98,7 @@
  /Users/leof/Documents/GitHub/IoT/RIOT-OS/RIOT/cpu/cortexm_common/include/architecture_arch.h \
  /Users/leof/Documents/GitHub/IoT/RIOT-OS/RIOT/core/lib/include/log.h
 
-/Users/leof/Documents/GitHub/IoT/campusiot/RIOT-wyres/tests/light-sensor/bin/wyres-base/riotbuild/riotbuild.h:
+/Users/leof/Documents/GitHub/IoT/IoT_I2HM_wyres/Riot_wyres/tests/light-sensor/bin/wyres-base/riotbuild/riotbuild.h:
 
 /Users/leof/Documents/GitHub/IoT/RIOT-OS/RIOT/core/lib/include/kernel_defines.h:
 

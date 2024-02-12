@@ -1,6 +1,6 @@
-/Users/leof/Documents/GitHub/IoT/campusiot/RIOT-wyres/tests/light-sensor/bin/wyres-base/auto_init/auto_init.o: \
+/Users/leof/Documents/GitHub/IoT/IoT_I2HM_wyres/Riot_wyres/tests/light-sensor/bin/wyres-base/auto_init/auto_init.o: \
  /Users/leof/Documents/GitHub/IoT/RIOT-OS/RIOT/sys/auto_init/auto_init.c \
- /Users/leof/Documents/GitHub/IoT/campusiot/RIOT-wyres/tests/light-sensor/bin/wyres-base/riotbuild/riotbuild.h \
+ /Users/leof/Documents/GitHub/IoT/IoT_I2HM_wyres/Riot_wyres/tests/light-sensor/bin/wyres-base/riotbuild/riotbuild.h \
  /usr/local/Cellar/gcc-arm-none-eabi-80/20181220/lib/gcc/arm-none-eabi/8.2.1/include/stdint.h \
  /usr/local/Cellar/gcc-arm-none-eabi-80/20181220/arm-none-eabi/include/stdint.h \
  /usr/local/Cellar/gcc-arm-none-eabi-80/20181220/arm-none-eabi/include/machine/_default_types.h \
@@ -42,7 +42,7 @@
  /Users/leof/Documents/GitHub/IoT/RIOT-OS/RIOT/core/lib/include/xfa.h \
  /Users/leof/Documents/GitHub/IoT/RIOT-OS/RIOT/core/lib/include/macros/xtstr.h \
  /Users/leof/Documents/GitHub/IoT/RIOT-OS/RIOT/core/lib/include/modules.h \
- /Users/leof/Documents/GitHub/IoT/campusiot/RIOT-wyres/tests/light-sensor/bin/wyres-base/preprocessor/preprocessor_successor.h \
+ /Users/leof/Documents/GitHub/IoT/IoT_I2HM_wyres/Riot_wyres/tests/light-sensor/bin/wyres-base/preprocessor/preprocessor_successor.h \
  /Users/leof/Documents/GitHub/IoT/RIOT-OS/RIOT/sys/auto_init/include/auto_init_priorities.h \
  /Users/leof/Documents/GitHub/IoT/RIOT-OS/RIOT/core/lib/include/debug.h \
  /Users/leof/Documents/GitHub/IoT/RIOT-OS/RIOT/core/include/thread.h \
@@ -66,7 +66,7 @@
  /Users/leof/Documents/GitHub/IoT/RIOT-OS/RIOT/sys/include/architecture.h \
  /Users/leof/Documents/GitHub/IoT/RIOT-OS/RIOT/cpu/cortexm_common/include/architecture_arch.h
 
-/Users/leof/Documents/GitHub/IoT/campusiot/RIOT-wyres/tests/light-sensor/bin/wyres-base/riotbuild/riotbuild.h:
+/Users/leof/Documents/GitHub/IoT/IoT_I2HM_wyres/Riot_wyres/tests/light-sensor/bin/wyres-base/riotbuild/riotbuild.h:
 
 /usr/local/Cellar/gcc-arm-none-eabi-80/20181220/lib/gcc/arm-none-eabi/8.2.1/include/stdint.h:
 
@@ -150,7 +150,7 @@
 
 /Users/leof/Documents/GitHub/IoT/RIOT-OS/RIOT/core/lib/include/modules.h:
 
-/Users/leof/Documents/GitHub/IoT/campusiot/RIOT-wyres/tests/light-sensor/bin/wyres-base/preprocessor/preprocessor_successor.h:
+/Users/leof/Documents/GitHub/IoT/IoT_I2HM_wyres/Riot_wyres/tests/light-sensor/bin/wyres-base/preprocessor/preprocessor_successor.h:
 
 /Users/leof/Documents/GitHub/IoT/RIOT-OS/RIOT/sys/auto_init/include/auto_init_priorities.h:
 

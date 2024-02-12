@@ -1,6 +1,6 @@
-/Users/leof/Documents/GitHub/IoT/IoT_I2HM_wyres/Riot_wyres/tests/cayenne-lpp/bin/wyres-base/shell_cmds/semtech-loramac.o: \
+/Users/leof/Documents/GitHub/IoT/IoT_I2HM_wyres/Riot_wyres/apps/I2HM_wyres/bin/wyres-base/shell_cmds/semtech-loramac.o: \
  /Users/leof/Documents/GitHub/IoT/RIOT-OS/RIOT/sys/shell/cmds/semtech-loramac.c \
- /Users/leof/Documents/GitHub/IoT/IoT_I2HM_wyres/Riot_wyres/tests/cayenne-lpp/bin/wyres-base/riotbuild/riotbuild.h \
+ /Users/leof/Documents/GitHub/IoT/IoT_I2HM_wyres/Riot_wyres/apps/I2HM_wyres/bin/wyres-base/riotbuild/riotbuild.h \
  /usr/local/Cellar/gcc-arm-none-eabi-80/20181220/arm-none-eabi/include/stdio.h \
  /usr/local/Cellar/gcc-arm-none-eabi-80/20181220/arm-none-eabi/include/_ansi.h \
  /usr/local/Cellar/gcc-arm-none-eabi-80/20181220/arm-none-eabi/include/newlib-nano/newlib.h \
@@ -117,7 +117,7 @@
  /Users/leof/Documents/GitHub/IoT/RIOT-OS/RIOT/core/lib/include/xfa.h \
  /Users/leof/Documents/GitHub/IoT/RIOT-OS/RIOT/sys/include/flash_utils.h
 
-/Users/leof/Documents/GitHub/IoT/IoT_I2HM_wyres/Riot_wyres/tests/cayenne-lpp/bin/wyres-base/riotbuild/riotbuild.h:
+/Users/leof/Documents/GitHub/IoT/IoT_I2HM_wyres/Riot_wyres/apps/I2HM_wyres/bin/wyres-base/riotbuild/riotbuild.h:
 
 /usr/local/Cellar/gcc-arm-none-eabi-80/20181220/arm-none-eabi/include/stdio.h:
 

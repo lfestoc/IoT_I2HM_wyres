@@ -1,6 +1,6 @@
-/Users/leof/Documents/GitHub/IoT/IoT_I2HM_wyres/Riot_wyres/tests/cayenne-lpp/bin/wyres-base/shell/shell.o: \
+/Users/leof/Documents/GitHub/IoT/IoT_I2HM_wyres/Riot_wyres/apps/I2HM_wyres/bin/wyres-base/shell/shell.o: \
  /Users/leof/Documents/GitHub/IoT/RIOT-OS/RIOT/sys/shell/shell.c \
- /Users/leof/Documents/GitHub/IoT/IoT_I2HM_wyres/Riot_wyres/tests/cayenne-lpp/bin/wyres-base/riotbuild/riotbuild.h \
+ /Users/leof/Documents/GitHub/IoT/IoT_I2HM_wyres/Riot_wyres/apps/I2HM_wyres/bin/wyres-base/riotbuild/riotbuild.h \
  /usr/local/Cellar/gcc-arm-none-eabi-80/20181220/arm-none-eabi/include/string.h \
  /usr/local/Cellar/gcc-arm-none-eabi-80/20181220/arm-none-eabi/include/_ansi.h \
  /usr/local/Cellar/gcc-arm-none-eabi-80/20181220/arm-none-eabi/include/newlib-nano/newlib.h \
@@ -107,7 +107,7 @@
  /Users/leof/Documents/GitHub/IoT/RIOT-OS/RIOT/sys/include/shell_lock.h \
  /Users/leof/Documents/GitHub/IoT/RIOT-OS/RIOT/sys/include/shell.h
 
-/Users/leof/Documents/GitHub/IoT/IoT_I2HM_wyres/Riot_wyres/tests/cayenne-lpp/bin/wyres-base/riotbuild/riotbuild.h:
+/Users/leof/Documents/GitHub/IoT/IoT_I2HM_wyres/Riot_wyres/apps/I2HM_wyres/bin/wyres-base/riotbuild/riotbuild.h:
 
 /usr/local/Cellar/gcc-arm-none-eabi-80/20181220/arm-none-eabi/include/string.h:
 

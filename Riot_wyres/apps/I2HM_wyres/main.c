@@ -151,21 +151,18 @@ static void cassiniOval(double time, double a, double b, double *x, double *y)
 int initialization_adc(void)
 {
     // initialize the ADC line 
-    if ((adc_init(ADC_LIGHT_SENSOR) < 0)) {
-        printf("\r\nInitialization of ADC_LINE(%u) failed\r\n", ADC_LIGHT_SENSOR);
+    if ((adc_init(ADC_LIGHT_SENSOR) < 0) && (adc_init(ADC_MISO) < 0)) {
+        printf("\r\nInitialization of ADC_LINE(%u) and ADC_LINE(%u) failed\r\n", ADC_LIGHT_SENSOR, ADC_MISO);
         return -1;
-    }
-    else {
-        printf("\r\nSuccessfully initialized ADC_LINE(%u)\r\n", ADC_LIGHT_SENSOR);
-        LIGHT_SENSOR_SUPPLY_ON;
-        return 1;
-
     }
     if (adc_init(ADC_MISO) < 0) {
         printf("\r\nInitialization of ADC_LINE(%u) failed\r\n", ADC_MISO);
     }
+    if (adc_init(ADC_LIGHT_SENSOR) < 0) {
+        printf("\r\nInitialization of ADC_LINE(%u) failed\r\n", ADC_LIGHT_SENSOR);
+    }
     else {
-        printf("\r\nSuccessfully initialized ADC_LINE(%u)\r\n", ADC_MISO);
+        printf("\r\nSuccessfully initialized ADC_LINE(%u)\r\n", ADC_LIGHT_SENSOR);
         return 1;
     }
     return 0;
@@ -188,7 +185,7 @@ void initialization_join_cayenne(void) //mettre int pour return 1 ou 0
     puts("Join procedure succeeded");
 }
 
-int display_luminosity(int * sample)
+void display_luminosity(int * sample)
 {
     *sample = adc_sample(ADC_LIGHT_SENSOR,ADC_RES);
 
@@ -199,7 +196,6 @@ int display_luminosity(int * sample)
         printf("\n%d\n", *sample);
 
     }
-    return *sample;
 }
 
     typedef struct {
@@ -289,10 +285,9 @@ int main(void)
     double init_latitude = 45.5;
     double init_longitude = 5.5;
     double init_altitude = 10000;  // meter
-    double init_battery_voltage = 3.6; // mV
     int sample = 0;
 
-   // phydat_t res;
+    phydat_t res;
 
 
 /*-----------------------------------------------------------------*/    
@@ -312,7 +307,7 @@ int main(void)
     {   
         double pressure = 0;      // hPa  pourquoi ? à supprimer
         double temperature = 0; // °C pourquoi ? à supprimer
-        double humidity = 0 ;
+        double humidity = 0;
         sen15901_t dev_sen15901; //voir à mettre hors loop
         saul_reg_t *dev = saul_reg;
         sen15901_values vals;
@@ -406,9 +401,8 @@ int main(void)
         double altitude = init_altitude ;    // meter
         //double pressure = init_pressure;      // hPa
         //double temperature = init_temperature ; // °C
-       // double humidity = init_humidity ;
         double luminosity = (double) sample;
-        double battery_voltage = init_battery_voltage; // V
+        double battery_voltage = 3.6; // V
 
         /**** Build cayenne payload ****/
         cayenne_lpp_reset(&lpp);

@@ -37,8 +37,10 @@
 #include "fmt.h"
 
 
-#define ADC_MISO 			ADC_LINE(0)
-#define ADC_LIGHT_SENSOR 	ADC_LINE(1)
+
+#define ADC_MISO 			ADC_LINE(1)
+#define ADC_LIGHT_SENSOR 			ADC_LINE(0)
+
 #define ADC_RES				ADC_RES_12BIT
 #define M_PI  (3.14159265358979323846)
 
@@ -161,15 +163,14 @@ int initialization_adc(void)
     }
     if (adc_init(ADC_MISO) < 0) {
         printf("\r\nInitialization of ADC_LINE(%u) failed\r\n", ADC_MISO);
-        return -2;
     }
     else {
         printf("\r\nSuccessfully initialized ADC_LINE(%u)\r\n", ADC_MISO);
         return 1;
-
     }
+    return 0;
 
-    LIGHT_SENSOR_SUPPLY_ON;
+    
 }
 
 void initialization_join_cayenne(void) //mettre int pour return 1 ou 0
@@ -291,7 +292,7 @@ int main(void)
     double init_battery_voltage = 3.6; // mV
     int sample = 0;
 
-    phydat_t res;
+   // phydat_t res;
 
 
 /*-----------------------------------------------------------------*/    
@@ -328,19 +329,20 @@ int main(void)
                 LED_RED_OFF;
                 LED_GREEN_ON; 
             }
-        puts("Mesure starts");
+        puts("Mesure starts TEST");
 
         if (dev == NULL) {
             puts("No SAUL devices present");
         
         }
 
+       
         // Lecture capteur luminosité
         display_luminosity(&sample);
 
         // Plutôt utiliser boucle du saul pour plus de lisibilité pour pression et accéléromètre
 
-        while (dev) { //Attention boucle infinie à corriger
+      while (dev) { //Attention boucle infinie à corriger
             int dim = saul_reg_read(dev, &res);
             char dev_sens_name[12];
             strcpy(dev_sens_name,saul_class_to_str(dev->driver->type)) ;
@@ -387,7 +389,7 @@ int main(void)
            // temperature = (double)test_senml.value.value.f;
             dev = dev->next;*/
 
-			if (initialization_sen15901(dev_sen15901) == 1)
+			if (initialization_sen15901(dev_sen15901) == 1) //Si init sen est OK
             {   
                 vals = display_sen15901(dev_sen15901, duration);      
 	        }

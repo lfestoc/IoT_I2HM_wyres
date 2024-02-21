@@ -52,6 +52,7 @@ static const  saul_gpio_params_t saul_gpio_params[] =
         .pin  = BTN1_PIN,
         .mode = GPIO_IN_PU
     },
+    
 };
 
 #ifdef __cplusplus

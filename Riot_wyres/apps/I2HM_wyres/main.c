@@ -40,6 +40,7 @@
 
 #define ADC_MISO 			ADC_LINE(1)
 #define ADC_LIGHT_SENSOR 			ADC_LINE(0)
+#define ADC_SPEAK 			        ADC_LINE(2)
 
 #define ADC_RES				ADC_RES_12BIT
 #define M_PI  (3.14159265358979323846)
@@ -137,21 +138,11 @@ static void _print_buffer(const uint8_t *buffer, size_t len, const char *msg)
     }
 }
 
-/*
- * For emulating a track
- */
-static void cassiniOval(double time, double a, double b, double *x, double *y)
-{
-    // Exemple de paramétrisation (à ajuster en fonction de tes besoins)
-    double t = time; // Utilise le temps comme paramètre
-    *x = a * cos(t);
-    *y = b * sin(t);
-}
 
 int initialization_adc(void)
 {
     // initialize the ADC line 
-    if ( (adc_init(ADC_MISO) < 0)) {
+   if ( (adc_init(ADC_MISO) < 0)) {
         printf("\r\nInitialization of ADC_LINE(%u) \r\n", ADC_MISO);
     }
     else  {
@@ -207,14 +198,17 @@ void display_luminosity(int * sample)
 int initialization_sen15901(sen15901_t dev_sen15901) 
         {
             sen15901_params_t params = { 
-		  .adc = ADC_LINE(0), 
+		  .adc = ADC_LINE(1), 
 		  .res = ADC_RES_12BIT, 
-		  .sensor0_pin = GPIO_PIN(PORT_B, 14), 
+          // Girouette 
+		  .sensor0_pin = GPIO_PIN(PORT_B, 14), //PB14, Port MISO en bas de la carte 
 		  .sensor0_mode = GPIO_IN, 
-		  .sensor1_pin = EXTERNAL_GPIO_PIN, 
+          // anémomètre 
+		  .sensor1_pin = EXTERNAL_GPIO_PIN, // PA8, en bas à droite de la carte
 		  .sensor1_mode = GPIO_IN_PD, 
 		  .sensor1_flank = GPIO_RISING, 
-		  .sensor2_pin = BTN1_PIN, 
+		 // Pluviomètre
+          .sensor2_pin = GPIO_PIN(PORT_B, 15), // PB15, Port SD en bas de la carte 
 		  .sensor2_mode = GPIO_IN_PD, 
 		  .sensor2_flank = GPIO_RISING
           };
@@ -233,6 +227,7 @@ int initialization_sen15901(sen15901_t dev_sen15901)
 
 sen15901_values display_sen15901(sen15901_t dev_sen15901, int duration)
 {
+    ztimer_sleep(ZTIMER_SEC, 60);
     int res;
     sen15901_values vals;
     vals.orientation = -1;
@@ -281,9 +276,6 @@ int main(void)
     //Constants and variables declarations
 
     int duration = 60; // time in seconds between two data fetch
-    double init_latitude = 45.5;
-    double init_longitude = 5.5;
-    double init_altitude = 10000;  // meter
     int sample = 0;
 
     phydat_t res;
@@ -297,15 +289,15 @@ int main(void)
 
     initialization_adc();
 
-    initialization_join_cayenne();
+   // initialization_join_cayenne();
     
 
 /*-----------------------------------------------------------------*/   
     
     while (true)
     {   
-        double pressure = 0;      // hPa  pourquoi ? à supprimer
-        double temperature = 0; // °C pourquoi ? à supprimer
+        double pressure = 0;      // hPa  
+        double temperature = 0; // °C 
         double humidity = 0;
         float x_accel = 0;
         float y_accel = 0;
@@ -315,7 +307,8 @@ int main(void)
         sen15901_values vals;
 
         LED_GREEN_ON;
-        //wait 5 sec before starting mesure
+
+        //wait 10 sec before starting mesure
         puts("\n mesure starts in 10");
         for(int i=0;i<5;i++)
 			{
@@ -332,14 +325,13 @@ int main(void)
             puts("No SAUL devices present");
         
         }
-
        
         // Lecture capteur luminosité
         display_luminosity(&sample);
 
-        // Plutôt utiliser boucle du saul pour plus de lisibilité pour pression et accéléromètre
+        //Boucle lecture des capteur bm680, lis2dh12, lpsxx
         int test_bme=0;
-      while (dev) { //Attention boucle infinie à corriger
+      while (dev) { 
             int dim = saul_reg_read(dev, &res);
             char dev_sens_name[12];
             strcpy(dev_sens_name,saul_class_to_str(dev->driver->type)) ;
@@ -376,25 +368,7 @@ int main(void)
         }
         puts("\n##########################");
 
-    
-
-        // Lecture capteur pression (déjà fait dans boucle saul)
-		/*	int dim = saul_reg_read(dev, &res);
-            printf("\nDev: %s\tType: %" PRIsflash "\n", dev->name,saul_class_to_str(dev->driver->type));
-            phydat_dump(&res, dim);
-            dev = dev->next;
-            pressure = res.val[0];*/
-
-            // Lecture capteur température à remplacer par le bme
-            /*dim = saul_reg_read(dev, &res);
-            printf("\nDev: %s\tType: %" PRIsflash "\n", dev->name,saul_class_to_str(dev->driver->type));
-           // senml_value_t test_senml;
-           // phydat_to_senml_float(&test_senml, &res,dim);
-            phydat_dump(&res, dim);
-            temperature =res.val[0]/100.00;
-           // temperature = (double)test_senml.value.value.f;
-            dev = dev->next;*/
-
+        // Lecture station météo ( pluviomètre, anémomètre, gyrouette)
 			if (initialization_sen15901(dev_sen15901) == 1) //Si init sen est OK
             {   
                 vals = display_sen15901(dev_sen15901, duration);      
@@ -404,14 +378,10 @@ int main(void)
         puts("Mesure ends");
         
 
-        double latitude;
-        double longitude;
-        cassiniOval(0, 1, 2, &latitude, &longitude);
-        latitude = init_latitude;
-        longitude = init_longitude;
-        double altitude = init_altitude ;    // meter
-        //double pressure = init_pressure;      // hPa
-        //double temperature = init_temperature ; // °C
+     
+       /* double latitude = 45.5;
+        double longitude = 5.5;
+        double altitude = 10000;  */// meter
         double luminosity = (double) sample;
         double battery_voltage = 3.6; // V
 
@@ -436,16 +406,8 @@ int main(void)
         printf(" pressure:        %.0f hPa\n",pressure);
         printf(" luminosity:      %.1f lux\n",luminosity);
         printf(" accelerometer:        x=%fmg y=%fmg z=%fmg\n",x_accel, y_accel, z_accel);
-        printf(" position:        lat=%.5f° lon=%.5f° alt=%.0fm\n",latitude, longitude, altitude);
+      //  printf(" position:        lat=%.5f° lon=%.5f° alt=%.0fm\n",latitude, longitude, altitude);
         printf(" battery_voltage: %.1f mV\n",battery_voltage);
-
-       // uint8_t ucnf = LORAMAC_TX_UNCNF;  /* Default: confirmable */
-      //  uint8_t port = CONFIG_LORAMAC_DEFAULT_TX_PORT; /* Default: 2 */
-       // semtech_loramac_set_tx_mode(&loramac, ucnf);
-        //semtech_loramac_set_tx_port(&loramac, port);
-        //semtech_loramac_set_dr(&loramac, 5);
-        // _print_buffer(lpp.buffer, lpp.cursor, "LPP: ");
-       // semtech_loramac_set_class(&lorama, loramac_class_t cls);
 
         /*Sending of the buffer */
         puts("LORAMAC start sending buffer ");

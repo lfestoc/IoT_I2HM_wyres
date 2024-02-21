@@ -237,7 +237,8 @@ static const i2c_conf_t i2c_config[] = {
 
 static const adc_conf_t adc_config[] = {
     { GPIO_PIN(PORT_A, 3), 3}, // Light sensor
-    { GPIO_PIN(PORT_B, 14), 20}
+    { GPIO_PIN(PORT_B, 14), 20} //miso 
+    
 };
 
 #define ADC_NUMOF           ARRAY_SIZE(adc_config)

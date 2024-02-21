@@ -196,7 +196,7 @@ int main(void)
 
 					case SEMTECH_LORAMAC_TX_CNF_FAILED:
 						puts("Fail to send: no ACK received");
-						break;s
+						break;
 					case SEMTECH_LORAMAC_TX_DONE:
 						//_print_buffer(lpp.buffer, lpp.cursor, "Message sent with success: ");
 						break;

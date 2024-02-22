@@ -58,13 +58,6 @@ USEMODULE += lis2dh12
 # include and auto-initialize all available sensors
 USEMODULE += saul_default
 
-# include BM680 driver I2C
-USEMODULE += bme680_i2c
-
-ifeq ($(ENABLE_FP),1)
-  USEMODULE += bme680_fp
-endif
-
 USEMODULE += fmt
 
 USEMODULE += analog_util
@@ -77,5 +70,15 @@ FEATURES_OPTIONAL += periph_rtc
 FEATURES_OPTIONAL += periph_gpio_irq
 
 CFLAGS += -DLORAMAC_JOIN_MIN_DATARATE=$(LORAMAC_JOIN_MIN_DATARATE)
+
+# Ajout de l'option station méteo (pluviomètre, anémomètre, girouette)
+#CFLAGS += -DSEN15901_FUNCTIONS_ENABLED
+# Ajout de l'option bm680 ( Température, humidité, pression)
+#CFLAGS += -DBME680_FUNCTIONS_ENABLED
+# include BM680 driver I2C
+USEMODULE += bme680_i2c
+ifeq ($(ENABLE_FP),1)
+  USEMODULE += bme680_fp
+endif
 
 include $(RIOTBASE)/Makefile.include

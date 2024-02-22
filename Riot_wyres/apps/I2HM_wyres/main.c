@@ -37,7 +37,6 @@
 #include "fmt.h"
 
 
-
 #define ADC_MISO 			ADC_LINE(1)
 #define ADC_LIGHT_SENSOR 			ADC_LINE(0)
 #define ADC_SPEAK 			        ADC_LINE(2)
@@ -142,12 +141,14 @@ static void _print_buffer(const uint8_t *buffer, size_t len, const char *msg)
 int initialization_adc(void)
 {
     // initialize the ADC line 
-   if ( (adc_init(ADC_MISO) < 0)) {
+#ifdef SEN15901_FUNCTIONS_ENABLED
+   if ( (adc_init(ADC_MISO) < 0)) { // adc pour girouette 
         printf("\r\nInitialization of ADC_LINE(%u) \r\n", ADC_MISO);
     }
     else  {
         printf("\r\nSuccessfully initialized ADC_LINE(%u)\r\n", ADC_MISO);
     }
+#endif
     if (adc_init(ADC_LIGHT_SENSOR) < 0) {
         printf("\r\nInitialization of ADC_LINE(%u) failed\r\n", ADC_LIGHT_SENSOR);
     }
@@ -187,8 +188,9 @@ void display_luminosity(int * sample)
 
     }
 }
+#ifdef SEN15901_FUNCTIONS_ENABLED
 
-    typedef struct {
+  typedef struct {
     uint16_t wind_speed;
     uint16_t orientation;
     uint16_t water_level;
@@ -226,7 +228,8 @@ int initialization_sen15901(sen15901_t dev_sen15901)
         }
 
 sen15901_values display_sen15901(sen15901_t dev_sen15901, int duration)
-{
+{   
+    
     ztimer_sleep(ZTIMER_SEC, 60);
     int res;
     sen15901_values vals;
@@ -265,6 +268,9 @@ sen15901_values display_sen15901(sen15901_t dev_sen15901, int duration)
     }
     return vals;
 }
+    
+#endif
+  
 
 int main(void)
 {      // definition of BTN1 interuption 
@@ -275,7 +281,7 @@ int main(void)
     struct tm time;
     //Constants and variables declarations
 
-    int duration = 60; // time in seconds between two data fetch
+    
     int sample = 0;
 
     phydat_t res;
@@ -296,16 +302,18 @@ int main(void)
     
     while (true)
     {   
-        double pressure = 0;      // hPa  
-        double temperature = 0; // °C 
-        double humidity = 0;
-        float x_accel = 0;
-        float y_accel = 0;
-        float z_accel = 0;
-        sen15901_t dev_sen15901; //voir à mettre hors loop
+        double pressure = 0;        // hPa  
+        double temperature = 0;     // °C 
+        double humidity = 0;        // % humidty
+        float x_accel = 0;          // m.s-2
+        float y_accel = 0;          // m.s-2
+        float z_accel = 0;          // m.s-2
         saul_reg_t *dev = saul_reg;
+#ifdef SEN15901_FUNCTIONS_ENABLED 
+        sen15901_t dev_sen15901; //voir à mettre hors loop
         sen15901_values vals;
-
+        int duration = 60; // time in seconds between two data fetch
+#endif
         LED_GREEN_ON;
 
         //wait 10 sec before starting mesure
@@ -329,7 +337,8 @@ int main(void)
         // Lecture capteur luminosité
         display_luminosity(&sample);
 
-        //Boucle lecture des capteur bm680, lis2dh12, lpsxx
+        // Boucle lecture des capteur bme680, lis2dh12, lpsxx
+        
         int test_bme=0;
       while (dev) { 
             int dim = saul_reg_read(dev, &res);
@@ -337,10 +346,13 @@ int main(void)
             strcpy(dev_sens_name,saul_class_to_str(dev->driver->type)) ;
             printf("\nDev: %s\tType: %" PRIsflash "\n", dev->name,
                   dev_sens_name);
-            if (strcmp(dev->name,"bme680")==1)
+            
+                #ifdef BME680_FUNCTIONS_ENABLED
+                if (strcmp(dev->name,"bme680")==1)
                 {
                     test_bme =1;
                 }
+                #endif
                 
                 if ( strcmp(dev_sens_name,"SENSE_PRESS")==0 && test_bme == 0) 
                 {
@@ -360,7 +372,6 @@ int main(void)
                     x_accel = res.val[0]; 
                     y_accel = res.val[1];  
                     z_accel = res.val[2];   
-                    
                 }
                 
             phydat_dump(&res, dim);
@@ -368,12 +379,20 @@ int main(void)
         }
         puts("\n##########################");
 
+#ifdef SEN15901_FUNCTIONS_ENABLED
+
         // Lecture station météo ( pluviomètre, anémomètre, gyrouette)
 			if (initialization_sen15901(dev_sen15901) == 1) //Si init sen est OK
             {   
-                vals = display_sen15901(dev_sen15901, duration);      
+               /* rtc_get_time(&time);
+                time.tm_sec += 60;
+                rtc_set_alarm(&time, cb_rtc_puts, "The alarm rang");
+                // setting low power mode 
+                pm_set(1);*/
+                vals = display_sen15901(dev_sen15901, duration);  
+                  
 	        }
-        
+#endif
 				
         puts("Mesure ends");
         
@@ -388,17 +407,20 @@ int main(void)
         /**** Build cayenne payload ****/
         cayenne_lpp_reset(&lpp);
         cayenne_lpp_add_temperature(&lpp, 1, temperature);
+        #ifdef BME680_FUNCTIONS_ENABLED
         cayenne_lpp_add_relative_humidity(&lpp, 2, humidity);
+        #endif
         cayenne_lpp_add_barometric_pressure(&lpp, 3, pressure);
         cayenne_lpp_add_luminosity(&lpp, 4, luminosity);
         cayenne_lpp_add_accelerometer(&lpp, 5,
                                     x_accel, y_accel, z_accel);
         //cayenne_lpp_add_gps(&lpp, 5, latitude, longitude, altitude);
         cayenne_lpp_add_analog_input(&lpp, 6, battery_voltage);
+#ifdef SEN15901_FUNCTIONS_ENABLED
         cayenne_lpp_add_analog_input(&lpp, 7, (double)vals.water_level);
 		cayenne_lpp_add_analog_input(&lpp, 8, (double)vals.wind_speed);
 		cayenne_lpp_add_analog_input(&lpp, 9, (double)vals.orientation);
-
+#endif
         printf("\n==== Point #test ====\n");
 
         printf(" temperature:     %.2f °C\n",temperature);
@@ -411,8 +433,8 @@ int main(void)
 
         /*Sending of the buffer */
         puts("LORAMAC start sending buffer ");
-        printf("tx mode : %d",semtech_loramac_get_tx_mode(&loramac));
-        printf("\n dr : %d",semtech_loramac_get_dr(&loramac));
+        printf("\ntx mode : %d",semtech_loramac_get_tx_mode(&loramac));
+        printf("\n dr : %d\n",semtech_loramac_get_dr(&loramac));
 
     LED_GREEN_OFF;
     LED_RED_ON;
@@ -449,13 +471,30 @@ int main(void)
         
     }   
         puts("LORAMAC buffer sent");
+        // clear GPIO for consumption ( not efficient for the moment) 
+        /*
+        gpio_clear(LED_RED_PIN);                // PA15 
+        gpio_clear(LED_GREEN_PIN);              // PA0 
+        gpio_clear(LIGHT_SENSOR_SUPPLY_PIN);    // PB6 
+        gpio_clear(BTN1_PIN);                   // PB3 
+        gpio_clear(SX127X_PARAM_SPI_NSS );      //SPI1_CS 
+        gpio_set(SX127X_PARAM_RESET);
+        gpio_clear(SX127X_PARAM_RESET);         // PA2 
+        gpio_clear(SX127X_PARAM_DIO0);          // PA10 
+        gpio_clear(SX127X_PARAM_DIO1);          // PB10 
+        gpio_clear(SX127X_PARAM_DIO2);          // PB11 
+        gpio_clear(SX127X_PARAM_DIO3);          // PB7 
+        gpio_clear(SX127X_PARAM_DIO4) ;         // PB5 
+        gpio_clear(SX127X_PARAM_DIO5) ;         // PB4 
+        */
         puts("LORAMAC start waiting");
         LED_RED_OFF;
         ztimer_sleep(ZTIMER_SEC, 1);
         
         // getting the time of the real time clock and setting alarm 
         rtc_get_time(&time);
-        time.tm_sec += 60;
+       // time.tm_sec += 60;
+        time.tm_sec += 600; // ten minutes between wake up 
         rtc_set_alarm(&time, cb_rtc_puts, "The alarm rang");
         // setting low power mode 
         pm_set(0);

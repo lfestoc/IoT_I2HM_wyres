@@ -36,10 +36,9 @@
 #include "sen15901.h"
 #include "fmt.h"
 
-
-#define ADC_MISO 			ADC_LINE(1)
-#define ADC_LIGHT_SENSOR 			ADC_LINE(0)
-#define ADC_SPEAK 			        ADC_LINE(2)
+// Definition des adc 
+#define ADC_MISO 			ADC_LINE(1) // ADC of pin SPI MISO (for wind direction)
+#define ADC_LIGHT_SENSOR 			ADC_LINE(0) //Adc of  LIGHT SENSOR
 
 #define ADC_RES				ADC_RES_12BIT
 #define M_PI  (3.14159265358979323846)
@@ -52,7 +51,7 @@
 #define DR_INIT                         LORAMAC_DR_5
 #include "ztimer.h"
 
-#include "cayenne_lpp.h"
+#include "cayenne_lpp.h" // Sensors Encoding package 
 #include <stdio.h>
 //#include "net/loramac.h"     /* core loramac definitions */
 #include "semtech_loramac.h" /* package API */
@@ -63,7 +62,7 @@
 #endif
 
 
-#include "periph/pm.h"
+#include "periph/pm.h" //Power management 
 #include "periph/gpio.h"
 #ifdef MODULE_PM_LAYERED
 
@@ -79,7 +78,7 @@
 #define BTN1_INT_FLANK  GPIO_RISING
 #endif
 /**
- * @brief   List of shell commands for this example.
+ * @brief  Interruption with magnetic button for reboot
  */
 
 #if defined(MODULE_PERIPH_GPIO_IRQ) && defined(BTN1_PIN)
@@ -127,7 +126,9 @@ static void cb_rtc_puts(void *arg)
 {
     puts(arg);
 }
-
+/**
+ * @brief  print the lpp buffer 
+ */
 static void _print_buffer(const uint8_t *buffer, size_t len, const char *msg)
 {
     printf("%s: ", msg);
@@ -137,6 +138,9 @@ static void _print_buffer(const uint8_t *buffer, size_t len, const char *msg)
     }
 }
 
+/**
+ * @brief  Initialization of adc if connected
+ */
 
 int initialization_adc(void)
 {
@@ -161,7 +165,11 @@ int initialization_adc(void)
     
 }
 
-void initialization_join_cayenne(void) //mettre int pour return 1 ou 0
+/**
+ * @brief  Initialization and join procedure LoRa
+ */
+
+void initialization_join_LoRa(void) //mettre int pour return 1 ou 0
 {
     
     /* 1. auto-initialize the LoRaMAC MAC layer ( nothing to do) */
@@ -169,12 +177,16 @@ void initialization_join_cayenne(void) //mettre int pour return 1 ou 0
     semtech_loramac_set_deveui(&loramac, deveui);
     semtech_loramac_set_appeui(&loramac, appeui);
     semtech_loramac_set_appkey(&loramac, appkey);
-    puts("LORAMAC CAYENNE join procedure ");
+    puts("I2HM LoRa join procedure ");
       /* 3. join the network */
      /* start the OTAA join procedure (and retries in required) */
     /*uint8_t joinRes = */ loramac_utils_join_retry_loop(&loramac, DR_INIT, JOIN_NEXT_RETRY_TIME, SECONDS_PER_DAY);
     puts("Join procedure succeeded");
 }
+
+/**
+ * @brief  Read and display luminosity sensor datas 
+ */
 
 void display_luminosity(int * sample)
 {
@@ -196,6 +208,9 @@ void display_luminosity(int * sample)
     uint16_t water_level;
 } sen15901_values;
 
+/**
+ * @brief  Initialization of meteo station (Wind speed, wind direction, rain)
+ */
 
 int initialization_sen15901(sen15901_t dev_sen15901) 
         {
@@ -226,6 +241,9 @@ int initialization_sen15901(sen15901_t dev_sen15901)
             }
 		
         }
+/**
+ * @brief  return value from meteo station (Wind speed, wind direction, rain)
+ */
 
 sen15901_values display_sen15901(sen15901_t dev_sen15901, int duration)
 {   
@@ -294,8 +312,9 @@ int main(void)
     //Sensors initializations
 
     initialization_adc();
-
-   // initialization_join_cayenne();
+    
+    //Join procedure Lora
+    initialization_join_LoRa();
     
 
 /*-----------------------------------------------------------------*/   
@@ -334,10 +353,10 @@ int main(void)
         
         }
        
-        // Lecture capteur luminosité
+        // Reading luminosity sensors 
         display_luminosity(&sample);
 
-        // Boucle lecture des capteur bme680, lis2dh12, lpsxx
+        // Reading loop of sensors : bme680, lis2dh12, lpsxx
         
         int test_bme=0;
       while (dev) { 
@@ -347,7 +366,7 @@ int main(void)
             printf("\nDev: %s\tType: %" PRIsflash "\n", dev->name,
                   dev_sens_name);
             
-                #ifdef BME680_FUNCTIONS_ENABLED
+                #ifdef BME680_FUNCTIONS_ENABLED // if bm680 enabled, we take its values for temerature and pressure 
                 if (strcmp(dev->name,"bme680")==1)
                 {
                     test_bme =1;
